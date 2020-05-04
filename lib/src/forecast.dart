@@ -1,3 +1,7 @@
+import 'package:fhir_r4/fhir_r4.dart' as fhir_r4;
+import 'package:fhir_stu3/fhir_stu3.dart' as fhir_stu3;
+import 'package:fhir_dstu2/fhir_dstu2.dart' as fhir_dstu2;
+
 import 'antigen.dart';
 import 'dose.dart';
 import 'groupForecast.dart';
@@ -17,10 +21,55 @@ class Forecast {
     this.patient,
   });
 
-  Forecast.createForecast(VaxPatient newPatient) {
-    patient = newPatient;
+  List<GroupForecast> createR4Forecast(
+    fhir_r4.Bundle patientBundle,
+    fhir_r4.Bundle immunizationBundle,
+    fhir_r4.Bundle recommendationBundle,
+    fhir_r4.Bundle conditionBundle,
+  ) {
+    patient = VaxPatient.fromR4Bundles(
+      patientBundle,
+      immunizationBundle,
+      recommendationBundle,
+      conditionBundle,
+    );
     loadHx();
     getForecast();
+    return groupForecast;
+  }
+
+  List<GroupForecast> createStu3Forecast(
+    fhir_stu3.Bundle patientBundle,
+    fhir_stu3.Bundle immunizationBundle,
+    fhir_stu3.Bundle recommendationBundle,
+    fhir_stu3.Bundle conditionBundle,
+  ) {
+    patient = VaxPatient.fromStu3Bundles(
+      patientBundle,
+      immunizationBundle,
+      recommendationBundle,
+      conditionBundle,
+    );
+    loadHx();
+    getForecast();
+    return groupForecast;
+  }
+
+  List<GroupForecast> createDstu2Forecast(
+    fhir_dstu2.Bundle patientBundle,
+    fhir_dstu2.Bundle immunizationBundle,
+    fhir_dstu2.Bundle recommendationBundle,
+    fhir_dstu2.Bundle conditionBundle,
+  ) {
+    patient = VaxPatient.fromDstu2Bundles(
+      patientBundle,
+      immunizationBundle,
+      recommendationBundle,
+      conditionBundle,
+    );
+    loadHx();
+    getForecast();
+    return groupForecast;
   }
 
   void loadHx() {
