@@ -1,0 +1,151 @@
+import 'antigen.dart';
+import 'dose.dart';
+import 'groupForecast.dart';
+import 'supportingData/antigenSupportingData/classes/indication.dart';
+import 'supportingData/antigenSupportingData/classes/series.dart';
+import 'supportingData/supportingData.dart';
+import 'vaxPatient/vaxPatient.dart';
+
+class Forecast {
+  Map<String, Antigen> antigens;
+  List<GroupForecast> groupForecast;
+  VaxPatient patient;
+
+  Forecast({
+    this.antigens,
+    this.groupForecast,
+    this.patient,
+  });
+
+  Forecast.createForecast(VaxPatient newPatient) {
+    patient = newPatient;
+    loadHx();
+    getForecast();
+  }
+
+  void loadHx() {
+    antigens = <String, Antigen>{};
+    loadSupportingData();
+    antigens.removeWhere((ag, antigen) => antigen.groups == null);
+  }
+
+  void loadSupportingData() {
+    SupportingData.antigenSupportingData.forEach((ag, seriesGroup) {
+      antigens[ag] = Antigen(patient: patient, targetDisease: ag);
+      seriesGroup.series.forEach((series) {
+        if (isRelevant(series)) {
+          antigens[ag].newSeries(series);
+        }
+      });
+      loadScheduleSupportingData(ag);
+    });
+  }
+
+  bool isRelevant(Series series) {
+    return isAppropriateGender(series.requiredGender)
+        ? series.seriesType == 'Standard'
+            ? true
+            : doesIndicationApply(series.indication)
+        : false;
+  }
+
+  bool isAppropriateGender(String requiredGender) {
+    //if for some reason we don't know the patient's gender,
+    //we assume it's appropriate
+    return requiredGender == null
+        ? true
+        : patient.sex == null
+            ? requiredGender.toLowerCase() == 'male'
+            : !(requiredGender.toLowerCase() == 'male' &&
+                    patient.sex.toLowerCase() == 'female' ||
+                requiredGender.toLowerCase() == 'female' &&
+                    patient.sex.toLowerCase() == 'male' ||
+                requiredGender.toLowerCase() == 'unknown' &&
+                    patient.sex.toLowerCase() == 'male');
+  }
+
+  bool doesIndicationApply(Map<String, Indication> indications) {
+    if (patient.conditions.isNotEmpty) {
+      for (final condition in patient.conditions) {
+        if (indications.keys.contains(condition)) {
+          var indication = indications[condition];
+          if (patient.dob.minIfNull(indication.beginAge) <=
+                  patient.assessmentDate &&
+              patient.assessmentDate <
+                  patient.dob.maxIfNull(indication.endAge)) {
+            return true;
+          }
+        }
+      }
+    }
+    return false;
+  }
+
+  void loadScheduleSupportingData(String ag) {
+    for (final dose in patient.pastImmunizations) {
+      if (SupportingData.isAgInCvx(dose.cvx, ag)) {
+        for (final group in antigens[ag].groups) {
+          for (final series in group.vaxSeries) {
+            series.pastDoses.add(Dose.copy(dose));
+          }
+        }
+      }
+    }
+  }
+
+  void getForecast() {
+//remove after testing ******************************************************//
+    antigens.removeWhere(
+        (ag, antigen) => antigen.seriesVaccineGroup != patient.seriesGroup);
+//***************************************************************************//
+    antigens.forEach((ag, antigen) => antigen.getForecast());
+    groupForecast = <GroupForecast>[];
+    antigens.forEach((ag, antigen) => identifyAndEvaluateVaccineGroup(antigen));
+    groupForecast.forEach((forecast) => forecast.convertNull());
+  }
+
+  void identifyAndEvaluateVaccineGroup(Antigen antigen) {
+    antigen.groups.forEach((seriesGroup) {
+      if (antigen.isSingleAgVaxGroup()) {
+        groupForecast.add(GroupForecast.singleAg(seriesGroup.vaxSeries[0]));
+      } else {
+        var alreadyIncluded = false;
+        for (final forecast in groupForecast) {
+          alreadyIncluded = alreadyIncluded ||
+              forecast.seriesVaccineGroup == antigen.seriesVaccineGroup;
+        }
+        if (!alreadyIncluded) {
+          var newGroupForecast = GroupForecast();
+          var incomplete = false;
+          var immune = true;
+          var contraindication = false;
+          for (final ag in antigens.keys) {
+            if (antigens[ag].seriesVaccineGroup == antigen.seriesVaccineGroup) {
+              for (final series in antigens[ag].groups) {
+                var curSeries = series.vaxSeries[0];
+                incomplete =
+                    incomplete || curSeries.seriesStatus == 'not complete';
+                immune = immune && curSeries.seriesStatus == 'immune';
+                contraindication = contraindication ||
+                    curSeries.seriesStatus == 'contraindicated';
+                newGroupForecast.applyMultiAgLogic(curSeries);
+              }
+            }
+          }
+          newGroupForecast.finalDates();
+          if (immune) {
+            newGroupForecast.groupStatus = 'immune';
+          } else if (contraindication) {
+            newGroupForecast.groupStatus = 'contraindicated';
+          } else if (incomplete) {
+            newGroupForecast.groupStatus = 'not complete';
+          } else {
+            newGroupForecast.groupStatus = 'complete';
+          }
+          newGroupForecast.seriesVaccineGroup = antigen.seriesVaccineGroup;
+          groupForecast.add(newGroupForecast);
+        }
+      }
+    });
+  }
+}
