@@ -1,0 +1,173 @@
+{
+    "resourceType": "Bundle",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Immunization",
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/sid/cvx",
+                            "code": "45"
+                        }
+                    ],
+                    "text": "HepB unspecified formulation"
+                },
+                "patient": {
+                    "id": "testBaby",
+                    "resourceType": "Patient"
+                },
+                "occurrenceDateTime": "2020-01-01 00:00:00.000"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Immunization"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Immunization",
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/sid/cvx",
+                            "code": "45"
+                        }
+                    ],
+                    "text": "HepB unspecified formulation"
+                },
+                "patient": {
+                    "id": "testBaby",
+                    "resourceType": "Patient"
+                },
+                "occurrenceDateTime": "2020-03-10 00:00:00.000"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Immunization"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Immunization",
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/sid/cvx",
+                            "code": "107"
+                        }
+                    ],
+                    "text": "DTaP unspecified formulation"
+                },
+                "patient": {
+                    "id": "testBaby",
+                    "resourceType": "Patient"
+                },
+                "occurrenceDateTime": "2020-03-10 00:00:00.000"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Immunization"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Immunization",
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/sid/cvx",
+                            "code": "17"
+                        }
+                    ],
+                    "text": "Hib unspecified formulation"
+                },
+                "patient": {
+                    "id": "testBaby",
+                    "resourceType": "Patient"
+                },
+                "occurrenceDateTime": "2020-03-10 00:00:00.000"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Immunization"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Immunization",
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/sid/cvx",
+                            "code": "122"
+                        }
+                    ],
+                    "text": "Rotavirus unspecified formulation"
+                },
+                "patient": {
+                    "id": "testBaby",
+                    "resourceType": "Patient"
+                },
+                "occurrenceDateTime": "2020-03-10 00:00:00.000"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Immunization"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Immunization",
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/sid/cvx",
+                            "code": "109"
+                        }
+                    ],
+                    "text": "Pneumoccocal unspecified formulation"
+                },
+                "patient": {
+                    "id": "testBaby",
+                    "resourceType": "Patient"
+                },
+                "occurrenceDateTime": "2020-03-10 00:00:00.000"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Immunization"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Immunization",
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/sid/cvx",
+                            "code": "89"
+                        }
+                    ],
+                    "text": "Polio unspecified formulation"
+                },
+                "patient": {
+                    "id": "testBaby",
+                    "resourceType": "Patient"
+                },
+                "occurrenceDateTime": "2020-03-10 00:00:00.000"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Immunization"
+            }
+        }
+    ]
+}

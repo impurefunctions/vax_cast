@@ -1,0 +1,62 @@
+entry:
+- resource:
+    vaccineCode:
+      text: HepB unspecified formulation
+      coding:
+      - {code: '45', system: 'http://hl7.org/fhir/sid/cvx'}
+    id: 05f1f3d1-7d4b-4318-95af-a0e36c4d841c
+    occurrenceDateTime: '2020-01-01 00:00:00.000'
+- resource:
+    status: completed
+    patient: {id: testBaby, reference: Patient/testBaby}
+    vaccineCode:
+      text: HepB unspecified formulation
+      coding:
+      - {code: '45', system: 'http://hl7.org/fhir/sid/cvx'}
+    id: a1673077-708f-44b3-a1f3-9aebfe9fb896
+    occurrenceDateTime: '2020-03-10 00:00:00.000'
+- resource:
+    status: completed
+    patient: {id: testBaby, reference: Patient/testBaby}
+    vaccineCode:
+      text: DTaP unspecified formulation
+      coding:
+      - {code: '107', system: 'http://hl7.org/fhir/sid/cvx'}
+    id: 70ebbe03-3166-416c-bcf1-0e5aeb85357e
+    occurrenceDateTime: '2020-03-10 00:00:00.000'
+- resource:
+    status: completed
+    patient: {id: testBaby, reference: Patient/testBaby}
+    vaccineCode:
+      text: Hib unspecified formulation
+      coding:
+      - {code: '17', system: 'http://hl7.org/fhir/sid/cvx'}
+    id: 42f56270-f932-4f88-bff6-ef0a89df4c70
+    occurrenceDateTime: '2020-03-10 00:00:00.000'
+- resource:
+    status: completed
+    patient: {id: testBaby, reference: Patient/testBaby}
+    vaccineCode:
+      text: Rotavirus unspecified formulation
+      coding:
+      - {code: '122', system: 'http://hl7.org/fhir/sid/cvx'}
+    id: 89e2dc65-b709-4c41-9054-8209a694a38b
+    occurrenceDateTime: '2020-03-10 00:00:00.000'
+- resource:
+    status: completed
+    patient: {id: testBaby, reference: Patient/testBaby}
+    vaccineCode:
+      text: Pneumoccocal unspecified formulation
+      coding:
+      - {code: '109', system: 'http://hl7.org/fhir/sid/cvx'}
+    id: 72ae0cd1-844b-4c7a-a931-e27b788ac1fd
+    occurrenceDateTime: '2020-03-10 00:00:00.000'
+- resource:
+    status: completed
+    patient: {id: testBaby, reference: Patient/testBaby}
+    vaccineCode:
+      text: Polio unspecified formulation
+      coding:
+      - {code: '89', system: 'http://hl7.org/fhir/sid/cvx'}
+    id: dc468b72-a929-42ed-8a67-53b48ac100ea
+    occurrenceDateTime: '2020-03-10 00:00:00.000'

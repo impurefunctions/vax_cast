@@ -21,12 +21,32 @@ class Forecast {
     this.patient,
   });
 
-  List<GroupForecast> createR4Forecast(
+  void readSupportingData() async => await SupportingData.load();
+
+  Future<List<GroupForecast>> r4Forecast(
+      fhir_r4.Patient patient,
+      List<fhir_r4.Immunization> immunizations,
+      List<fhir_r4.ImmunizationRecommendation> recommendations,
+      List<fhir_r4.Condition> conditions) async {
+    await readSupportingData();
+    this.patient = VaxPatient.fromR4(
+      patient,
+      immunizations,
+      recommendations,
+      conditions,
+    );
+    loadHx();
+    getForecast();
+    return groupForecast;
+  }
+
+  Future<List<GroupForecast>> createR4Forecast(
     fhir_r4.Bundle patientBundle,
     fhir_r4.Bundle immunizationBundle,
     fhir_r4.Bundle recommendationBundle,
     fhir_r4.Bundle conditionBundle,
-  ) {
+  ) async {
+    await readSupportingData();
     patient = VaxPatient.fromR4Bundles(
       patientBundle,
       immunizationBundle,
@@ -38,12 +58,13 @@ class Forecast {
     return groupForecast;
   }
 
-  List<GroupForecast> createStu3Forecast(
+  Future<List<GroupForecast>> createStu3Forecast(
     fhir_stu3.Bundle patientBundle,
     fhir_stu3.Bundle immunizationBundle,
     fhir_stu3.Bundle recommendationBundle,
     fhir_stu3.Bundle conditionBundle,
-  ) {
+  ) async {
+    await readSupportingData();
     patient = VaxPatient.fromStu3Bundles(
       patientBundle,
       immunizationBundle,
@@ -55,12 +76,13 @@ class Forecast {
     return groupForecast;
   }
 
-  List<GroupForecast> createDstu2Forecast(
+  Future<List<GroupForecast>> createDstu2Forecast(
     fhir_dstu2.Bundle patientBundle,
     fhir_dstu2.Bundle immunizationBundle,
     fhir_dstu2.Bundle recommendationBundle,
     fhir_dstu2.Bundle conditionBundle,
-  ) {
+  ) async {
+    await readSupportingData();
     patient = VaxPatient.fromDstu2Bundles(
       patientBundle,
       immunizationBundle,
@@ -144,8 +166,8 @@ class Forecast {
 
   void getForecast() {
 //remove after testing ******************************************************//
-    antigens.removeWhere(
-        (ag, antigen) => antigen.seriesVaccineGroup != patient.seriesGroup);
+    // antigens.removeWhere(
+    //     (ag, antigen) => antigen.seriesVaccineGroup != patient.seriesGroup);
 //***************************************************************************//
     antigens.forEach((ag, antigen) => antigen.getForecast());
     groupForecast = <GroupForecast>[];
