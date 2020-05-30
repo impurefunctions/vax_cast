@@ -1,0 +1,82 @@
+{
+    "seriesVaccineGroupToAntigenMap": {
+        "seriesVaccineGroupMap": [
+            {
+                "name": "Cholera",
+                "antigen": "Cholera"
+            },
+            {
+                "name": "DTaP/Tdap/Td",
+                "antigen": "Tetanus"
+            },
+            {
+                "name": "HepA",
+                "antigen": "HepA"
+            },
+            {
+                "name": "HepB",
+                "antigen": "HepB"
+            },
+            {
+                "name": "Hib",
+                "antigen": "Hib"
+            },
+            {
+                "name": "HPV",
+                "antigen": "HPV"
+            },
+            {
+                "name": "Influenza",
+                "antigen": "Influenza"
+            },
+            {
+                "name": "Japanese Encephalitis",
+                "antigen": "Japanese Encephalitis"
+            },
+            {
+                "name": "Meningococcal",
+                "antigen": "Meningococcal"
+            },
+            {
+                "name": "Meningococcal B",
+                "antigen": "Meningococcal B"
+            },
+            {
+                "name": "MMR",
+                "antigen": "Rubella"
+            },
+            {
+                "name": "Pneumococcal",
+                "antigen": "Pneumococcal"
+            },
+            {
+                "name": "Polio",
+                "antigen": "Polio"
+            },
+            {
+                "name": "Rabies",
+                "antigen": "Rabies"
+            },
+            {
+                "name": "Rotavirus",
+                "antigen": "Rotavirus"
+            },
+            {
+                "name": "Typhoid",
+                "antigen": "Typhoid"
+            },
+            {
+                "name": "Varicella",
+                "antigen": "Varicella"
+            },
+            {
+                "name": "Yellow Fever",
+                "antigen": "Yellow Fever"
+            },
+            {
+                "name": "Zoster",
+                "antigen": "Zoster"
+            }
+        ]
+    }
+}

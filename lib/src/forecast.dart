@@ -1,6 +1,6 @@
-import 'package:fhir_r4/fhir_r4.dart' as fhir_r4;
-import 'package:fhir_stu3/fhir_stu3.dart' as fhir_stu3;
-import 'package:fhir_dstu2/fhir_dstu2.dart' as fhir_dstu2;
+import 'package:fhir/fhir_r4.dart' as fhir_r4;
+import 'package:fhir/fhir_stu3.dart' as fhir_stu3;
+import 'package:fhir/fhir_dstu2.dart' as fhir_dstu2;
 
 import 'antigen.dart';
 import 'dose.dart';

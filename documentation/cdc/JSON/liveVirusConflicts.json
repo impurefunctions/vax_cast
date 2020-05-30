@@ -1,0 +1,4218 @@
+{
+    "liveVirusConflicts": {
+        "liveVirusConflict": [
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles-Rubella",
+                    "cvx": "04"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "26 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "26 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "26 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "28 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "24 days",
+                "conflictEndInterval": "28 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "26 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "26 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "26 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "MMR",
+                    "cvx": "03"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Measles- Rubella",
+                    "cvx": "04"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Measles",
+                    "cvx": "05"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Rubella",
+                    "cvx": "06"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Mumps",
+                    "cvx": "07"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Varicella",
+                    "cvx": "21"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever",
+                    "cvx": "37"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "26 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Rubella-Mumps",
+                    "cvx": "38"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Smallpox",
+                    "cvx": "75"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "MMRV",
+                    "cvx": "94"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV",
+                    "cvx": "111"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Zoster live",
+                    "cvx": "121"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "H1N1 LAIV",
+                    "cvx": "125"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV4",
+                    "cvx": "149"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Influenza LAIV Unspecified",
+                    "cvx": "151"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Hep A, live attenuated",
+                    "cvx": "169"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "30 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever vaccine - alt",
+                    "cvx": "183"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "26 days",
+                "conflictEndInterval": "30 days"
+            },
+            {
+                "previous": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "current": {
+                    "vaccineType": "Yellow Fever, unspecified",
+                    "cvx": "184"
+                },
+                "conflictBeginInterval": "1 day",
+                "minConflictEndInterval": "26 days",
+                "conflictEndInterval": "30 days"
+            }
+        ]
+    }
+}

@@ -44,37 +44,33 @@ VaxPatient _$VaxPatientFromR4Bundles(
   fhir_r4.Bundle recommendationBundle,
   fhir_r4.Bundle conditionBundle,
 ) {
+  var patient =
+      fhir_r4.Patient.fromJson(patientBundle.entry[0].resource.toJson());
+  var recommendation = fhir_r4.ImmunizationRecommendation.fromJson(
+      recommendationBundle.entry[0].resource.toJson());
   var newPatient = VaxPatient(
-    dob: VaxDate.fromString(
-        patientBundle.entry[0].resource.birthDate.toString()),
-    sex: patientBundle.entry[0].resource.gender.toString() == 'other'
+    dob: VaxDate.fromString(patient.birthDate.toString()),
+    sex: patient.gender.toString() == 'other'
         ? 'Unknown'
-        : patientBundle.entry[0].resource.gender.toString()[0].toUpperCase() +
-            patientBundle.entry[0].resource.gender.toString().substring(
-                1, patientBundle.entry[0].resource.gender.toString().length),
+        : patient.gender.toString()[0].toUpperCase() +
+            patient.gender
+                .toString()
+                .substring(1, patient.gender.toString().length),
     liveVirusList: <Dose>[],
     pastImmunizations: <Dose>[],
     conditions: <String>[],
-    assessmentDate: VaxDate.fromString(
-        recommendationBundle.entry[0].resource.date.toString()),
+    assessmentDate: VaxDate.fromString(recommendation.date.toString()),
     recommendations: VaxRecommendations(
         earliestDate: VaxDate.fromString(
-          recommendationBundle
-              .entry[0].resource.recommendation[0].dateCriterion[0].value
-              .toString(),
+          recommendation.recommendation[0].dateCriterion[0].value.toString(),
         ),
         recommendedDate: VaxDate.fromString(
-          recommendationBundle
-              .entry[0].resource.recommendation[0].dateCriterion[1].value
-              .toString(),
+          recommendation.recommendation[0].dateCriterion[1].value.toString(),
         ),
         pastDueDate: VaxDate.fromString(
-          recommendationBundle
-              .entry[0].resource.recommendation[0].dateCriterion[2].value
-              .toString(),
+          recommendation.recommendation[0].dateCriterion[2].value.toString(),
         )),
-    seriesGroup:
-        recommendationBundle.entry[0].resource.recommendation[0].series,
+    seriesGroup: recommendation.recommendation[0].series,
   );
   immunizationBundle.entry
       .forEach((entry) => newPatient.addToVaxListR4(entry.resource));

@@ -1,0 +1,82 @@
+{
+    "seriesVaccineGroups": {
+        "seriesVaccineGroup": [
+            {
+                "name": "Cholera",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "DTaP/Tdap/Td",
+                "administerFullseriesVaccineGroup": "No"
+            },
+            {
+                "name": "HepA",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "HepB",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "Hib",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "HPV",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "Influenza",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "Japanese Encephalitis",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "Meningococcal",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "Meningococcal B",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "MMR",
+                "administerFullseriesVaccineGroup": "Yes"
+            },
+            {
+                "name": "Pneumococcal",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "Polio",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "Rabies",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "Rotavirus",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "Typhoid",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "Varicella",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "Yellow Fever",
+                "administerFullseriesVaccineGroup": null
+            },
+            {
+                "name": "Zoster",
+                "administerFullseriesVaccineGroup": null
+            }
+        ]
+    }
+}

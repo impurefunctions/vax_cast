@@ -1,0 +1,2304 @@
+{
+    "immunity": null,
+    "contraindications": {
+        "vaccineGroup": {
+            "groupContraindication": [
+                {
+                    "observationCode": "095",
+                    "observationTitle": "Severe allergic reaction after previous dose of Meningococcal",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Meningococcal vaccine.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "080",
+                    "observationTitle": "Adverse reaction to vaccine component",
+                    "contraindicationText": "Do not vaccinate if the patient has had an adverse reaction to a vaccine component.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                }
+            ]
+        },
+        "vaccine": {
+            "vaccineContraindication": [
+                {
+                    "observationCode": "154",
+                    "observationTitle": "HIV/AIDS - severely immunocompromised",
+                    "contraindicationText": "Do not vaccinate with Meningococcal MCV4P (Menactra) if the patient is between the ages of 9 months and 2 years and is severely immunocompromised due to HIV/AIDS.",
+                    "contraindicationGuidance": null,
+                    "contraindicatedVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "2 months",
+                            "endAge": "2 years"
+                        }
+                    ]
+                },
+                {
+                    "observationCode": "155",
+                    "observationTitle": "HIV/AIDS - not severely immunocompromised",
+                    "contraindicationText": "Do not vaccinate with Meningococcal MCV4P (Menactra) if the patient is between the ages of 9 months and 2 years and is severely immunocompromised due to HIV/AIDS.",
+                    "contraindicationGuidance": null,
+                    "contraindicatedVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "2 months",
+                            "endAge": "2 years"
+                        }
+                    ]
+                },
+                {
+                    "observationCode": "160",
+                    "observationTitle": "Anatomical or functional asplenia",
+                    "contraindicationText": "Do not vaccinate with Meningococcal MCV4P (Menactra) if the patient is between the ages of 9 months and 2 years and has anatomical or functional asplenia.",
+                    "contraindicationGuidance": null,
+                    "contraindicatedVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "2 months",
+                            "endAge": "2 years"
+                        }
+                    ]
+                },
+                {
+                    "observationCode": "117",
+                    "observationTitle": "Severe allergic reaction to diphtheria toxoid",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to diphtheria toxoid.",
+                    "contraindicationGuidance": null,
+                    "contraindicatedVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": null,
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": null,
+                            "endAge": null
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "series": [
+        {
+            "seriesName": "Meningococcal ACWY 2-dose series",
+            "targetDisease": "Meningococcal",
+            "seriesVaccineGroup": "Meningococcal",
+            "seriesAdminGuidance": null,
+            "seriesType": "Standard",
+            "equivalentSeriesGroups": "2",
+            "requiredGender": null,
+            "defaultSeries": "Yes",
+            "productPath": "No",
+            "seriesGroupName": "Standard",
+            "seriesGroup": "1",
+            "seriesPriority": "A",
+            "seriesPreference": "1",
+            "minAgeToStart": null,
+            "maxAgeToStart": null,
+            "indication": null,
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "10 years",
+                            "minAge": "11 years",
+                            "earliestRecAge": "11 years",
+                            "latestRecAge": "13 years + 4 weeks",
+                            "maxAge": "19 years",
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MPSV4",
+                            "cvx": "32",
+                            "beginAge": "2 years - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal ACWY, unspecified",
+                            "cvx": "108",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": [
+                        {
+                            "context": "Evaluation",
+                            "setLogic": "n/a",
+                            "set": [
+                                {
+                                    "setID": "1",
+                                    "setDescription": "Target Dose is not needed if the current dose was administered on or after 16 years - 4 days of age",
+                                    "effectiveDate": null,
+                                    "cessationDate": null,
+                                    "conditionLogic": null,
+                                    "condition": [
+                                        {
+                                            "conditionID": "1",
+                                            "conditionType": "Age",
+                                            "startDate": null,
+                                            "endDate": null,
+                                            "beginAge": "16 years - 4 days",
+                                            "endAge": null,
+                                            "interval": null,
+                                            "doseCount": null,
+                                            "doseType": null,
+                                            "doseCountLogic": null,
+                                            "vaccineTypes": null,
+                                            "seriesGroups": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "context": "Forecast",
+                            "setLogic": "n/a",
+                            "set": [
+                                {
+                                    "setID": "2",
+                                    "setDescription": "Target Dose is not required for those who are 16 years of age or older",
+                                    "effectiveDate": null,
+                                    "cessationDate": null,
+                                    "conditionLogic": null,
+                                    "condition": [
+                                        {
+                                            "conditionID": "1",
+                                            "conditionType": "Age",
+                                            "startDate": null,
+                                            "endDate": null,
+                                            "beginAge": "16 years",
+                                            "endAge": null,
+                                            "interval": null,
+                                            "doseCount": null,
+                                            "doseType": null,
+                                            "doseCountLogic": null,
+                                            "vaccineTypes": null,
+                                            "seriesGroups": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": "16 years - 4 days",
+                            "minAge": "16 years",
+                            "earliestRecAge": "16 years",
+                            "latestRecAge": "17 years + 4 weeks",
+                            "maxAge": "19 years",
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "8 weeks - 4 days",
+                            "minInt": "8 weeks",
+                            "earliestRecInt": "4 years",
+                            "latestRecInt": "6 years + 4 weeks",
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal ACWY, unspecified",
+                            "cvx": "108",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                }
+            ]
+        },
+        {
+            "seriesName": "Meningococcal ACWY risk start before 7 months 4-dose series",
+            "targetDisease": "Meningococcal",
+            "seriesVaccineGroup": "Meningococcal",
+            "seriesAdminGuidance": "If MenACWY-D is used, it should be administered at least 4 weeks after completion of all PCV doses.",
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": null,
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "No",
+            "seriesGroupName": "Increased Risk",
+            "seriesGroup": "2",
+            "seriesPriority": "A",
+            "seriesPreference": null,
+            "minAgeToStart": "2 months",
+            "maxAgeToStart": "7 months",
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Persons at risk during an outbreak",
+                        "code": "070"
+                    },
+                    "description": "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup",
+                    "beginAge": "2 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Persistent complement, properdin, or factor B deficiency",
+                        "code": "151"
+                    },
+                    "description": "Administer to persons who have persistent complement deficiencies",
+                    "beginAge": "2 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "HIV/AIDS - severely immunocompromised",
+                        "code": "154"
+                    },
+                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                    "beginAge": "2 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "HIV/AIDS - not severely immunocompromised",
+                        "code": "155"
+                    },
+                    "description": "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                    "beginAge": "2 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Anatomical or functional asplenia",
+                        "code": "160"
+                    },
+                    "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
+                    "beginAge": "2 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
+                        "code": "164"
+                    },
+                    "description": "Administer to persons who travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
+                    "beginAge": "2 months",
+                    "endAge": null,
+                    "guidance": null
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "2 months - 4 days",
+                            "minAge": "2 months",
+                            "earliestRecAge": "2 months",
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "8 weeks - 4 days",
+                            "minInt": "8 weeks",
+                            "earliestRecInt": "8 weeks",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 3,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "8 weeks - 4 days",
+                            "minInt": "8 weeks",
+                            "earliestRecInt": "8 weeks",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 4,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "6 months - 4 days",
+                            "minInt": "6 months",
+                            "earliestRecInt": "6 months",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 5,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "3 years - 4 days",
+                            "minInt": "3 years",
+                            "earliestRecInt": "3 years",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": [
+                        {
+                            "context": "Both",
+                            "setLogic": "n/a",
+                            "set": [
+                                {
+                                    "setID": "1",
+                                    "setDescription": "Dose is not required if the patient has received 1 or more doses after the age of 7 years",
+                                    "effectiveDate": null,
+                                    "cessationDate": null,
+                                    "conditionLogic": null,
+                                    "condition": [
+                                        {
+                                            "conditionID": "1",
+                                            "conditionType": "Vaccine Count by Age",
+                                            "startDate": null,
+                                            "endDate": null,
+                                            "beginAge": "7 years",
+                                            "endAge": null,
+                                            "interval": null,
+                                            "doseCount": "0",
+                                            "doseType": "Valid",
+                                            "doseCountLogic": "greater than",
+                                            "vaccineTypes": null,
+                                            "seriesGroups": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 6,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "5 years - 4 days",
+                            "minInt": "5 years",
+                            "earliestRecInt": "5 years",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "Yes",
+                    "seasonalRecommendation": null
+                }
+            ]
+        },
+        {
+            "seriesName": "Meningococcal ACWY risk start after 7 months 2-dose series",
+            "targetDisease": "Meningococcal",
+            "seriesVaccineGroup": "Meningococcal",
+            "seriesAdminGuidance": "If MenACWY-D is used, it should be administered at least 4 weeks after completion of all PCV doses.",
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": null,
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "No",
+            "seriesGroupName": "Increased Risk",
+            "seriesGroup": "2",
+            "seriesPriority": "A",
+            "seriesPreference": null,
+            "minAgeToStart": "7 months",
+            "maxAgeToStart": "2 years",
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Persons at risk during an outbreak",
+                        "code": "070"
+                    },
+                    "description": "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup",
+                    "beginAge": "7 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Persistent complement, properdin, or factor B deficiency",
+                        "code": "151"
+                    },
+                    "description": "Administer to persons who have persistent complement deficiencies",
+                    "beginAge": "7 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "HIV/AIDS - severely immunocompromised",
+                        "code": "154"
+                    },
+                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                    "beginAge": "7 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "HIV/AIDS - not severely immunocompromised",
+                        "code": "155"
+                    },
+                    "description": "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                    "beginAge": "7 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Anatomical or functional asplenia",
+                        "code": "160"
+                    },
+                    "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
+                    "beginAge": "7 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
+                        "code": "164"
+                    },
+                    "description": "Administer to persons who travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
+                    "beginAge": "7 months",
+                    "endAge": null,
+                    "guidance": "If an infant is receiving the vaccine prior to travel, 2 doses may be administered as early as 8 weeks apart."
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "7 months",
+                            "minAge": "7 months",
+                            "earliestRecAge": "7 months",
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "12 weeks - 4 days",
+                            "minInt": "12 weeks",
+                            "earliestRecInt": "12 weeks",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 3,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "3 years - 4 days",
+                            "minInt": "3 years",
+                            "earliestRecInt": "3 years",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": [
+                        {
+                            "context": "Both",
+                            "setLogic": "n/a",
+                            "set": [
+                                {
+                                    "setID": "1",
+                                    "setDescription": "Dose is not required if the patient has received 1 or more doses after the age of 7 years",
+                                    "effectiveDate": null,
+                                    "cessationDate": null,
+                                    "conditionLogic": null,
+                                    "condition": [
+                                        {
+                                            "conditionID": "1",
+                                            "conditionType": "Vaccine Count by Age",
+                                            "startDate": null,
+                                            "endDate": null,
+                                            "beginAge": "7 years",
+                                            "endAge": null,
+                                            "interval": null,
+                                            "doseCount": "0",
+                                            "doseType": "Valid",
+                                            "doseCountLogic": "greater than",
+                                            "vaccineTypes": null,
+                                            "seriesGroups": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 4,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "5 years - 4 days",
+                            "minInt": "5 years",
+                            "earliestRecInt": "5 years",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "Yes",
+                    "seasonalRecommendation": null
+                }
+            ]
+        },
+        {
+            "seriesName": "Meningococcal ACWY risk Hib-MenCY-TT 4-dose series",
+            "targetDisease": "Meningococcal",
+            "seriesVaccineGroup": "Meningococcal",
+            "seriesAdminGuidance": null,
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": null,
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "Yes",
+            "seriesGroupName": "Increased Risk",
+            "seriesGroup": "2",
+            "seriesPriority": "A",
+            "seriesPreference": null,
+            "minAgeToStart": "2 months",
+            "maxAgeToStart": "16 months",
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Persons at risk during an outbreak",
+                        "code": "070"
+                    },
+                    "description": "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup",
+                    "beginAge": "2 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Persistent complement, properdin, or factor B deficiency",
+                        "code": "151"
+                    },
+                    "description": "Administer to persons who have persistent complement deficiencies",
+                    "beginAge": "2 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Anatomical or functional asplenia",
+                        "code": "160"
+                    },
+                    "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
+                    "beginAge": "2 months",
+                    "endAge": null,
+                    "guidance": null
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "6 weeks",
+                            "minAge": "2 months",
+                            "earliestRecAge": "2 months",
+                            "latestRecAge": null,
+                            "maxAge": "18 months",
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": null,
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal C/Y-HIB PRP",
+                            "cvx": "148",
+                            "beginAge": "6 weeks",
+                            "endAge": "19 months"
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": "18 months",
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "8 weeks - 4 days",
+                            "minInt": "8 weeks",
+                            "earliestRecInt": "8 weeks",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": null,
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal C/Y-HIB PRP",
+                            "cvx": "148",
+                            "beginAge": "6 weeks",
+                            "endAge": "19 months"
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 3,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": "18 months",
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "8 weeks - 4 days",
+                            "minInt": "8 weeks",
+                            "earliestRecInt": "8 weeks",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": null,
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal C/Y-HIB PRP",
+                            "cvx": "148",
+                            "beginAge": "6 weeks",
+                            "endAge": "19 months"
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": [
+                        {
+                            "context": "Both",
+                            "setLogic": "n/a",
+                            "set": [
+                                {
+                                    "setID": "1",
+                                    "setDescription": "Dose is not required if the patient has received 0 doses before the age of 12 months",
+                                    "effectiveDate": null,
+                                    "cessationDate": null,
+                                    "conditionLogic": null,
+                                    "condition": [
+                                        {
+                                            "conditionID": "1",
+                                            "conditionType": "Vaccine Count by Age",
+                                            "startDate": null,
+                                            "endDate": null,
+                                            "beginAge": "6 weeks",
+                                            "endAge": "12 months",
+                                            "interval": null,
+                                            "doseCount": "0",
+                                            "doseType": "Valid",
+                                            "doseCountLogic": "equal to",
+                                            "vaccineTypes": null,
+                                            "seriesGroups": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 4,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": "18 months",
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "6 months - 4 days",
+                            "minInt": "6 months",
+                            "earliestRecInt": "6 months",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": null,
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal C/Y-HIB PRP",
+                            "cvx": "148",
+                            "beginAge": "6 weeks",
+                            "endAge": "19 months"
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": [
+                        {
+                            "context": "Both",
+                            "setLogic": "n/a",
+                            "set": [
+                                {
+                                    "setID": "1",
+                                    "setDescription": "Dose is not required if the patient has received 0 doses before the age of 12 months",
+                                    "effectiveDate": null,
+                                    "cessationDate": null,
+                                    "conditionLogic": null,
+                                    "condition": [
+                                        {
+                                            "conditionID": "1",
+                                            "conditionType": "Vaccine Count by Age",
+                                            "startDate": null,
+                                            "endDate": null,
+                                            "beginAge": "6 weeks",
+                                            "endAge": "12 months",
+                                            "interval": null,
+                                            "doseCount": "0",
+                                            "doseType": "Valid",
+                                            "doseCountLogic": "equal to",
+                                            "vaccineTypes": null,
+                                            "seriesGroups": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 5,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "3 years - 4 days",
+                            "minInt": "3 years",
+                            "earliestRecInt": "3 years",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": [
+                        {
+                            "context": "Both",
+                            "setLogic": "n/a",
+                            "set": [
+                                {
+                                    "setID": "1",
+                                    "setDescription": "Dose is not required if the patient has received 1 or more doses after the age of 7 years",
+                                    "effectiveDate": null,
+                                    "cessationDate": null,
+                                    "conditionLogic": null,
+                                    "condition": [
+                                        {
+                                            "conditionID": "1",
+                                            "conditionType": "Vaccine Count by Age",
+                                            "startDate": null,
+                                            "endDate": null,
+                                            "beginAge": "7 years",
+                                            "endAge": null,
+                                            "interval": null,
+                                            "doseCount": "0",
+                                            "doseType": "Valid",
+                                            "doseCountLogic": "greater than",
+                                            "vaccineTypes": null,
+                                            "seriesGroups": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 6,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "5 years - 4 days",
+                            "minInt": "5 years",
+                            "earliestRecInt": "5 years",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "Yes",
+                    "seasonalRecommendation": null
+                }
+            ]
+        },
+        {
+            "seriesName": "Meningococcal ACWY risk 2-dose series",
+            "targetDisease": "Meningococcal",
+            "seriesVaccineGroup": "Meningococcal",
+            "seriesAdminGuidance": "If MenACWY-D is used, it should be administered at least 4 weeks after completion of all PCV doses.",
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": null,
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "No",
+            "seriesGroupName": "Increased Risk",
+            "seriesGroup": "2",
+            "seriesPriority": "A",
+            "seriesPreference": null,
+            "minAgeToStart": "2 months",
+            "maxAgeToStart": null,
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Persistent complement, properdin, or factor B deficiency",
+                        "code": "151"
+                    },
+                    "description": "Administer to persons who have persistent complement deficiencies",
+                    "beginAge": "2 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "HIV/AIDS - severely immunocompromised",
+                        "code": "154"
+                    },
+                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                    "beginAge": "2 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "HIV/AIDS - not severely immunocompromised",
+                        "code": "155"
+                    },
+                    "description": "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                    "beginAge": "2 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Anatomical or functional asplenia",
+                        "code": "160"
+                    },
+                    "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
+                    "beginAge": "2 years",
+                    "endAge": null,
+                    "guidance": null
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "2 months - 4 days",
+                            "minAge": "2 years",
+                            "earliestRecAge": "2 years",
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "8 weeks - 4 days",
+                            "minInt": "8 weeks",
+                            "earliestRecInt": "8 weeks",
+                            "latestRecInt": "12 weeks",
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 3,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "3 years - 4 days",
+                            "minInt": "3 years",
+                            "earliestRecInt": "3 years",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": [
+                        {
+                            "context": "Both",
+                            "setLogic": "n/a",
+                            "set": [
+                                {
+                                    "setID": "1",
+                                    "setDescription": "Dose is not required if the patient has received 1 or more doses after the age of 7 years",
+                                    "effectiveDate": null,
+                                    "cessationDate": null,
+                                    "conditionLogic": null,
+                                    "condition": [
+                                        {
+                                            "conditionID": "1",
+                                            "conditionType": "Vaccine Count by Age",
+                                            "startDate": null,
+                                            "endDate": null,
+                                            "beginAge": "7 years",
+                                            "endAge": null,
+                                            "interval": null,
+                                            "doseCount": "0",
+                                            "doseType": "Valid",
+                                            "doseCountLogic": "greater than",
+                                            "vaccineTypes": null,
+                                            "seriesGroups": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 4,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "5 years - 4 days",
+                            "minInt": "5 years",
+                            "earliestRecInt": "5 years",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "Yes",
+                    "seasonalRecommendation": null
+                }
+            ]
+        },
+        {
+            "seriesName": "Meningococcal ACWY risk 1-dose series",
+            "targetDisease": "Meningococcal",
+            "seriesVaccineGroup": "Meningococcal",
+            "seriesAdminGuidance": "Persons with HIV infection who are recommended routinely to receive vaccine should receive a 2-dose primary series, administered 8-12 weeks apart, because evidence suggests that persons with HIV do not respond optimally to a single dose.",
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": null,
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "No",
+            "seriesGroupName": "Increased Risk",
+            "seriesGroup": "2",
+            "seriesPriority": "B",
+            "seriesPreference": null,
+            "minAgeToStart": "2 years",
+            "maxAgeToStart": null,
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "College students living in residence halls",
+                        "code": "046"
+                    },
+                    "description": "Administer to college students living in residence halls.",
+                    "beginAge": "19 years",
+                    "endAge": "22 years",
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Microbiologists routinely exposed to Neisseria meningitidis",
+                        "code": "050"
+                    },
+                    "description": "Administer to microbiologists routinely exposed to Neisseria meningitidis",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Military recruits",
+                        "code": "064"
+                    },
+                    "description": "Administer to military recruits.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Persons at risk during an outbreak",
+                        "code": "070"
+                    },
+                    "description": "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup.",
+                    "beginAge": "2 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
+                        "code": "164"
+                    },
+                    "description": "Administer to persons who travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic.",
+                    "beginAge": "2 years",
+                    "endAge": null,
+                    "guidance": null
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "2 years - 4 days",
+                            "minAge": "2 years",
+                            "earliestRecAge": "2 years",
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MPSV4",
+                            "cvx": "32",
+                            "beginAge": "2 years - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "3 years - 4 days",
+                            "minInt": "3 years",
+                            "earliestRecInt": "3 years",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": "56 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": [
+                        {
+                            "context": "Both",
+                            "setLogic": "n/a",
+                            "set": [
+                                {
+                                    "setID": "1",
+                                    "setDescription": "Dose is not required if the patient has received 1 or more doses after the age of 7 years",
+                                    "effectiveDate": null,
+                                    "cessationDate": null,
+                                    "conditionLogic": null,
+                                    "condition": [
+                                        {
+                                            "conditionID": "1",
+                                            "conditionType": "Vaccine Count by Age",
+                                            "startDate": null,
+                                            "endDate": null,
+                                            "beginAge": "7 years",
+                                            "endAge": null,
+                                            "interval": null,
+                                            "doseCount": "0",
+                                            "doseType": "Valid",
+                                            "doseCountLogic": "greater than",
+                                            "vaccineTypes": null,
+                                            "seriesGroups": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 3,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "5 years - 4 days",
+                            "minInt": "5 years",
+                            "earliestRecInt": "5 years",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Meningococcal, MCV4P",
+                            "cvx": "114",
+                            "beginAge": "9 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Meningococcal, MCV4O",
+                            "cvx": "136",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "Yes",
+                    "seasonalRecommendation": null
+                }
+            ]
+        }
+    ]
+}

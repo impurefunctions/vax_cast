@@ -1,0 +1,1355 @@
+{
+    "immunity": {
+        "clinicalHistory": [
+            {
+                "guidelineCode": "018",
+                "guidelineTitle": "Laboratory Evidence of Immunity or confirmation of Hepatitis A disease"
+            }
+        ]
+    },
+    "contraindications": {
+        "vaccineGroup": {
+            "groupContraindication": [
+                {
+                    "observationCode": "080",
+                    "observationTitle": "Adverse reaction to vaccine component",
+                    "contraindicationText": "Do not vaccinate if the patient has had an adverse reaction to a vaccine component.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "096",
+                    "observationTitle": "Severe allergic reaction after previous dose of Hepatitis A",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Hepatitis A vaccine.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "107",
+                    "observationTitle": "Severe allergic reaction to neomycin",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to neomycin.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "112",
+                    "observationTitle": "Hypersensitivity to alum",
+                    "contraindicationText": "Do not vaccinate if the patient has a hypersensitivity to alum.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                }
+            ]
+        },
+        "vaccine": {
+            "vaccineContraindication": [
+                {
+                    "observationCode": "110",
+                    "observationTitle": "Hypersensitivity to yeast",
+                    "contraindicationText": "Do not vaccinate if the patient has a hypersensitivity to yeast.",
+                    "contraindicationGuidance": null,
+                    "contraindicatedVaccine": [
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": null,
+                            "endAge": null
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "series": [
+        {
+            "seriesName": "HepA 2-dose series",
+            "targetDisease": "HepA",
+            "seriesVaccineGroup": "HepA",
+            "seriesAdminGuidance": null,
+            "seriesType": "Standard",
+            "equivalentSeriesGroups": "2",
+            "requiredGender": null,
+            "defaultSeries": "Yes",
+            "productPath": "No",
+            "seriesGroupName": "Standard",
+            "seriesGroup": "1",
+            "seriesPriority": "A",
+            "seriesPreference": "1",
+            "minAgeToStart": null,
+            "maxAgeToStart": "19 years",
+            "indication": null,
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "12 months - 4 days",
+                            "minAge": "12 months",
+                            "earliestRecAge": "12 months",
+                            "latestRecAge": "24 months + 4 weeks",
+                            "maxAge": "19 years",
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Hep A, adult",
+                            "cvx": "52",
+                            "beginAge": "19 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "1",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Hep A, ped/adol, 2 dose",
+                            "cvx": "83",
+                            "beginAge": "12 months",
+                            "endAge": "19 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Hep A, pediatric, Unspecified",
+                            "cvx": "31",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, adult",
+                            "cvx": "52",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Hep A, ped/adol, 2 dose",
+                            "cvx": "83",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, Unspecified",
+                            "cvx": "85",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": "18 months - 4 days",
+                            "minAge": "18 months",
+                            "earliestRecAge": "18 months",
+                            "latestRecAge": "24 months + 4 weeks",
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "6 months - 4 days",
+                            "minInt": "6 months",
+                            "earliestRecInt": "6 months",
+                            "latestRecInt": "19 months + 4 weeks",
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": {
+                        "fromPrevious": "N",
+                        "fromTargetDose": "1",
+                        "absMinInt": "6 months",
+                        "effectiveDate": null,
+                        "cessationDate": null
+                    },
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Hep A, adult",
+                            "cvx": "52",
+                            "beginAge": "19 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "1",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Hep A, ped/adol, 2 dose",
+                            "cvx": "83",
+                            "beginAge": "12 months",
+                            "endAge": "19 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Hep A, pediatric, Unspecified",
+                            "cvx": "31",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, adult",
+                            "cvx": "52",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Hep A, ped/adol, 2 dose",
+                            "cvx": "83",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, Unspecified",
+                            "cvx": "85",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                }
+            ]
+        },
+        {
+            "seriesName": "HepA risk 1-dose series",
+            "targetDisease": "HepA",
+            "seriesVaccineGroup": "HepA",
+            "seriesAdminGuidance": null,
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": null,
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "No",
+            "seriesGroupName": "Increased Risk",
+            "seriesGroup": "3",
+            "seriesPriority": "A",
+            "seriesPreference": "1",
+            "minAgeToStart": "6 months",
+            "maxAgeToStart": "12 months",
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Travelling Internationally",
+                        "code": "048"
+                    },
+                    "description": "Administer to persons who will be travelling internationally.",
+                    "beginAge": "6 months",
+                    "endAge": "12 months",
+                    "guidance": null
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "6 months - 4 days",
+                            "minAge": "6 months",
+                            "earliestRecAge": "6 months",
+                            "latestRecAge": "12 months",
+                            "maxAge": "12 months",
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Hep A, ped/adol, 2 dose",
+                            "cvx": "83",
+                            "beginAge": "12 months",
+                            "endAge": "19 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Hep A, pediatric, Unspecified",
+                            "cvx": "31",
+                            "beginAge": "6 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, adult",
+                            "cvx": "52",
+                            "beginAge": "6 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Hep A, ped/adol, 2 dose",
+                            "cvx": "83",
+                            "beginAge": "6 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, Unspecified",
+                            "cvx": "85",
+                            "beginAge": "6 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "6 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                }
+            ]
+        },
+        {
+            "seriesName": "HepA risk 2-dose series",
+            "targetDisease": "HepA",
+            "seriesVaccineGroup": "HepA",
+            "seriesAdminGuidance": null,
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": "1",
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "No",
+            "seriesGroupName": "Increased Risk",
+            "seriesGroup": "2",
+            "seriesPriority": "A",
+            "seriesPreference": "1",
+            "minAgeToStart": "19 years",
+            "maxAgeToStart": null,
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Patient seeks protection",
+                        "code": "001"
+                    },
+                    "description": "Administer to persons seeking protection.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Receives clotting factor concentrates",
+                        "code": "006"
+                    },
+                    "description": "Administer to persons who receive clotting factor concentrates.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Chronic liver disease",
+                        "code": "015"
+                    },
+                    "description": "Administer to persons who have chronic liver disease.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Men who have sex with men",
+                        "code": "036"
+                    },
+                    "description": "Administer to men who have sex with men.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Illicit drug use",
+                        "code": "040"
+                    },
+                    "description": "Administer to persons who use illicit drugs.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Close contact with international adoptee during first 60 days",
+                        "code": "044"
+                    },
+                    "description": "Administer to persons who will have close contact with an international adoptee during the first 60 days.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": "The first dose of the 2-dose hepatitis A vaccine series should be administered as soon as adoption is planned, ideally 2 or more weeks before the arrival of the adoptee."
+                },
+                {
+                    "observationCode": {
+                        "text": "Working with Hepatitis A virus in research setting",
+                        "code": "049"
+                    },
+                    "description": "Administer to persons who work with Hepatitis A virus in a research setting.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Occupational exposure for Hepatitis A",
+                        "code": "059"
+                    },
+                    "description": "Administer to persons who have an occupational exposure for Hepatitis A",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Homelessness",
+                        "code": "121"
+                    },
+                    "description": "Administer to persons who are experiencing homelessness.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Travel to or working in countries that have high or intermediate endemicity of Hepatitis A",
+                        "code": "142"
+                    },
+                    "description": "Administer to persons traveling to or working in countries that have high or intermediate endemicity of Hepatitis A.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "HIV/AIDS - severely immunocompromised",
+                        "code": "154"
+                    },
+                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "HIV/AIDS - not severely immunocompromised",
+                        "code": "155"
+                    },
+                    "description": "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "12 months - 4 days",
+                            "minAge": "12 months",
+                            "earliestRecAge": "12 months",
+                            "latestRecAge": "24 months + 4 weeks",
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Hep A, adult",
+                            "cvx": "52",
+                            "beginAge": "19 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "1",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Hep A, ped/adol, 2 dose",
+                            "cvx": "83",
+                            "beginAge": "12 months",
+                            "endAge": "19 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Hep A, pediatric, Unspecified",
+                            "cvx": "31",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, adult",
+                            "cvx": "52",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Hep A, ped/adol, 2 dose",
+                            "cvx": "83",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, Unspecified",
+                            "cvx": "85",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "6 months - 4 days",
+                            "minInt": "6 months",
+                            "earliestRecInt": "6 months",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": {
+                        "fromPrevious": "N",
+                        "fromTargetDose": "1",
+                        "absMinInt": "6 months",
+                        "effectiveDate": null,
+                        "cessationDate": null
+                    },
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Hep A, adult",
+                            "cvx": "52",
+                            "beginAge": "19 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "1",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Hep A, pediatric, Unspecified",
+                            "cvx": "31",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, adult",
+                            "cvx": "52",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Hep A, ped/adol, 2 dose",
+                            "cvx": "83",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, Unspecified",
+                            "cvx": "85",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                }
+            ]
+        },
+        {
+            "seriesName": "HepA risk Twinrix 3 dose series",
+            "targetDisease": "HepA",
+            "seriesVaccineGroup": "HepA",
+            "seriesAdminGuidance": null,
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": "1",
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "Yes",
+            "seriesGroupName": "Increased Risk",
+            "seriesGroup": "2",
+            "seriesPriority": "A",
+            "seriesPreference": "2",
+            "minAgeToStart": "19 years",
+            "maxAgeToStart": null,
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Patient seeks protection",
+                        "code": "001"
+                    },
+                    "description": "Administer to persons seeking protection.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Receives clotting factor concentrates",
+                        "code": "006"
+                    },
+                    "description": "Administer to persons who receive clotting factor concentrates.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Chronic liver disease",
+                        "code": "015"
+                    },
+                    "description": "Administer to persons who have chronic liver disease.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Men who have sex with men",
+                        "code": "036"
+                    },
+                    "description": "Administer to men who have sex with men.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Illicit drug use",
+                        "code": "040"
+                    },
+                    "description": "Administer to persons who use illicit drugs.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Close contact with international adoptee during first 60 days",
+                        "code": "044"
+                    },
+                    "description": "Administer to persons who will have close contact with an international adoptee during the first 60 days.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": "The first dose of the 2-dose hepatitis A vaccine series should be administered as soon as adoption is planned, ideally 2 or more weeks before the arrival of the adoptee."
+                },
+                {
+                    "observationCode": {
+                        "text": "Working with Hepatitis A virus in research setting",
+                        "code": "049"
+                    },
+                    "description": "Administer to persons who work with Hepatitis A virus in a research setting.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Occupational exposure for Hepatitis A",
+                        "code": "059"
+                    },
+                    "description": "Administer to persons who have an occupational exposure for Hepatitis A",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Homelessness",
+                        "code": "121"
+                    },
+                    "description": "Administer to persons who are experiencing homelessness.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Travel to or working in countries that have high or intermediate endemicity of Hepatitis A",
+                        "code": "142"
+                    },
+                    "description": "Administer to persons traveling to or working in countries that have high or intermediate endemicity of Hepatitis A.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "HIV/AIDS - severely immunocompromised",
+                        "code": "154"
+                    },
+                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "HIV/AIDS - not severely immunocompromised",
+                        "code": "155"
+                    },
+                    "description": "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "18 years - 4 days",
+                            "minAge": "18 years",
+                            "earliestRecAge": "18 years",
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "18 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "1",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Hep A, pediatric, Unspecified",
+                            "cvx": "31",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, adult",
+                            "cvx": "52",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Hep A, ped/adol, 2 dose",
+                            "cvx": "83",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, Unspecified",
+                            "cvx": "85",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "18 years - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "4 weeks - 4 days",
+                            "minInt": "4 weeks",
+                            "earliestRecInt": "4 weeks",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "18 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "1",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Hep A, pediatric, Unspecified",
+                            "cvx": "31",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, adult",
+                            "cvx": "52",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Hep A, ped/adol, 2 dose",
+                            "cvx": "83",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, Unspecified",
+                            "cvx": "85",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "18 years - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 3,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "5 months - 4 days",
+                            "minInt": "5 months",
+                            "earliestRecInt": "5 months",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        },
+                        {
+                            "fromPrevious": "N",
+                            "fromTargetDose": "1",
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "6 months - 4 days",
+                            "minInt": "6 months",
+                            "earliestRecInt": "6 months",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "18 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "1",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Hep A, pediatric, Unspecified",
+                            "cvx": "31",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, adult",
+                            "cvx": "52",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Hep A, ped/adol, 2 dose",
+                            "cvx": "83",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "Hep A, Unspecified",
+                            "cvx": "85",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "18 years - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                }
+            ]
+        },
+        {
+            "seriesName": "HepA risk Twinrix 4 dose Series",
+            "targetDisease": "HepA",
+            "seriesVaccineGroup": "HepA",
+            "seriesAdminGuidance": null,
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": "1",
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "Yes",
+            "seriesGroupName": "Increased Risk",
+            "seriesGroup": "2",
+            "seriesPriority": "A",
+            "seriesPreference": "3",
+            "minAgeToStart": "19 years",
+            "maxAgeToStart": null,
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Patient seeks protection",
+                        "code": "001"
+                    },
+                    "description": "Administer to persons seeking protection.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Receives clotting factor concentrates",
+                        "code": "006"
+                    },
+                    "description": "Administer to persons who receive clotting factor concentrates.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Chronic liver disease",
+                        "code": "015"
+                    },
+                    "description": "Administer to persons who have chronic liver disease.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Men who have sex with men",
+                        "code": "036"
+                    },
+                    "description": "Administer to men who have sex with men.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Illicit drug use",
+                        "code": "040"
+                    },
+                    "description": "Administer to persons who use illicit drugs.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Close contact with international adoptee during first 60 days",
+                        "code": "044"
+                    },
+                    "description": "Administer to persons who will have close contact with an international adoptee during the first 60 days.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": "The first dose of the 2-dose hepatitis A vaccine series should be administered as soon as adoption is planned, ideally 2 or more weeks before the arrival of the adoptee."
+                },
+                {
+                    "observationCode": {
+                        "text": "Working with Hepatitis A virus in research setting",
+                        "code": "049"
+                    },
+                    "description": "Administer to persons who work with Hepatitis A virus in a research setting.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Occupational exposure for Hepatitis A",
+                        "code": "059"
+                    },
+                    "description": "Administer to persons who have an occupational exposure for Hepatitis A",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Homelessness",
+                        "code": "121"
+                    },
+                    "description": "Administer to persons who are experiencing  homelessness.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Travel to or working in countries that have high or intermediate endemicity of Hepatitis A",
+                        "code": "142"
+                    },
+                    "description": "Administer to persons traveling to or working in countries that have high or intermediate endemicity of Hepatitis A.",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "HIV/AIDS - severely immunocompromised",
+                        "code": "154"
+                    },
+                    "description": "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "HIV/AIDS - not severely immunocompromised",
+                        "code": "155"
+                    },
+                    "description": "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+                    "beginAge": "19 years",
+                    "endAge": null,
+                    "guidance": null
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "18 years - 4 days",
+                            "minAge": "18 years",
+                            "earliestRecAge": "18 years",
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "18 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "1",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "18 years - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "7 days",
+                            "minInt": "7 days",
+                            "earliestRecInt": "7 days",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "18 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "1",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "18 years - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 3,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "14 days",
+                            "minInt": "14 days",
+                            "earliestRecInt": "14 days",
+                            "latestRecInt": "23 days",
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "18 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "1",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "18 years - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 4,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "N",
+                            "fromTargetDose": "1",
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "12 months - 4 days",
+                            "minInt": "12 months",
+                            "earliestRecInt": "12 months",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "18 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "1",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "HepA-HepB",
+                            "cvx": "104",
+                            "beginAge": "18 years - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                }
+            ]
+        }
+    ]
+}

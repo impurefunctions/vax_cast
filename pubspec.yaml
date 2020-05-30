@@ -13,12 +13,8 @@ dependencies:
   intl: ^0.16.1
   built_value: ^7.0.9
   freezed: ^0.10.7
-  fhir_r4:
-    path: /home/grey/dev/fhir_r4
-  fhir_stu3:
-    path: /home/grey/dev/fhir_stu3
-  fhir_dstu2:
-      path: /home/grey/dev/fhir_dstu2
+  fhir:
+    path: /home/grey/dev/fhir
 
 dev_dependencies:
   pedantic: ^1.9.0

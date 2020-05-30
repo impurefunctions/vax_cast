@@ -1,0 +1,618 @@
+{
+    "immunity": {
+        "clinicalHistory": [
+            {
+                "guidelineCode": "023",
+                "guidelineTitle": "Laboratory Evidence of Immunity or confirmation of Varicella disease"
+            },
+            {
+                "guidelineCode": "024",
+                "guidelineTitle": "Healthcare provider verified history of or diagnosis of Varicella"
+            },
+            {
+                "guidelineCode": "025",
+                "guidelineTitle": "Healthcare provider verified history or diagnosis of Herpes Zoster"
+            }
+        ],
+        "dateOfBirth": {
+            "immunityBirthDate": "01/01/1980",
+            "birthCountry": "U.S.",
+            "exclusion": [
+                {
+                    "exclusionCode": "055",
+                    "exclusionTitle": "Health care personnel"
+                },
+                {
+                    "exclusionCode": "007",
+                    "exclusionTitle": "Pregnant"
+                },
+                {
+                    "exclusionCode": "003",
+                    "exclusionTitle": "Immunocompromised"
+                }
+            ]
+        }
+    },
+    "contraindications": {
+        "vaccineGroup": {
+            "groupContraindication": [
+                {
+                    "observationCode": "007",
+                    "observationTitle": "Pregnant",
+                    "contraindicationText": "Do not vaccinate if the patient is pregnant.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "012",
+                    "observationTitle": "Family history of altered immunocompetence",
+                    "contraindicationText": "Do not vaccinate if the patient has a family history of altered immunocompetence",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "031",
+                    "observationTitle": "Tuberculosis",
+                    "contraindicationText": "Do not vaccinate if the patient has active untreated tuberculosis.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "080",
+                    "observationTitle": "Adverse reaction to vaccine component",
+                    "contraindicationText": "Do not vaccinate if the patient has had an adverse reaction to a vaccine component.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "089",
+                    "observationTitle": "Severe allergic reaction after previous dose of Varicella",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Varicella vaccine.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "102",
+                    "observationTitle": "Severe allergic reaction to gelatin",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to gelatin.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "107",
+                    "observationTitle": "Severe allergic reaction to neomycin",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to neomycin.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "125",
+                    "observationTitle": "Tetanus IG administration",
+                    "contraindicationText": "Do not vaccinate if the patient has had Tetanus IG administered in the previous 3 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "126",
+                    "observationTitle": "Hep A IG administration",
+                    "contraindicationText": "Do not vaccinate if the patient has had Hepatitis A IG administered in the previous 3 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "127",
+                    "observationTitle": "Hep B IG administration",
+                    "contraindicationText": "Do not vaccinate if the patient has had Hepatitis B IG administered in the previous 3 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "128",
+                    "observationTitle": "Rabies IG administration",
+                    "contraindicationText": "Do not vaccinate if the patient has had Rabies IG administered in the previous 4 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "129",
+                    "observationTitle": "Varicella IG administration",
+                    "contraindicationText": "Do not vaccinate if the patient has had Varicella IG administered in the previous 5 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "130",
+                    "observationTitle": "Measles prophylaxis IG administration - Standard",
+                    "contraindicationText": "Do not vaccinate if the patient has had Measles IG at a standard dose (0.25 mL/kg) administered in the previous 5 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "131",
+                    "observationTitle": "Measles prophylaxis IG administration - Immunocompromised Contact",
+                    "contraindicationText": "Do not vaccinate if the patient has had Measles IG at an immunocompromised dose (0.5 mL/kg) administered in the previous 6 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "132",
+                    "observationTitle": "RBC [adenine-saline added] blood transfusion",
+                    "contraindicationText": "Do not vaccinate if the patient has received a blood transfusion of adenine-saline added RBCs in the previous 3 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "133",
+                    "observationTitle": "Packed RBC blood transfusion",
+                    "contraindicationText": "Do not vaccinate if the patient has received a blood transfusion of packed RBCs in the previous 6 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "134",
+                    "observationTitle": "Whole blood transfusion",
+                    "contraindicationText": "Do not vaccinate if the patient has received a whole blood transfusion in the previous 6 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "135",
+                    "observationTitle": "Plasma/platelet products blood transfusion",
+                    "contraindicationText": "Do not vaccinate if the patient has received a blood transfusion of plasma or platelet product in the previous 7 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "136",
+                    "observationTitle": "Cytomegalovirus IGIV",
+                    "contraindicationText": "Do not vaccinate if the patient has received Cytomegalovirus IGIV in the previous 6 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "137",
+                    "observationTitle": "IGIV - Replacement therapy for immune deficiencies",
+                    "contraindicationText": "Do not vaccinate if the patient has received IGIV (Replacement therapy for immune deficiencies) in the previous 8 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "138",
+                    "observationTitle": "IGIV - Immune thrombocytopenic purpura treatment",
+                    "contraindicationText": "Do not vaccinate if the patient has received IGIV (Immune thrombocytopenic purpura treatment (400 mg/kg IV)) in the previous 8 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "139",
+                    "observationTitle": "IGIV - Postexposure varicella prophylaxis",
+                    "contraindicationText": "Do not vaccinate if the patient has received IGIV (Postexposure varicella prophylaxis) in the previous 8 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "140",
+                    "observationTitle": "IGIV - Immune thrombocytopenic purpura treatment",
+                    "contraindicationText": "Do not vaccinate if the patient has received IGIV (Immune thrombocytopenic purpura treatment (1000 mg/kg IV)) in the previous 10 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "141",
+                    "observationTitle": "IGIV - Kawasaki disease",
+                    "contraindicationText": "Do not vaccinate if the patient has received IGIV (Kawasaki disease) in the previous 11 months.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "147",
+                    "observationTitle": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
+                    "contraindicationText": "Do not vaccinate if the patient has complete cell-mediated or humoral T-lymphocyte defects (e.g., severe combined immunodeficiency [SCID] disease, complete DiGeorge syndrome).",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "148",
+                    "observationTitle": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
+                    "contraindicationText": "Do not vaccinate if the patient has partial cell-mediated or humoral T-lymphocyte defects (e.g., most patients with DiGeorge syndrome, Wiskott-Aldrich syndrome, ataxia- telangiectasia).",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "150",
+                    "observationTitle": "T-lymphocyte [cell-mediated and humoral] - interferon-gamma or interferon-alpha",
+                    "contraindicationText": "Do not vaccinate if the patient has cell-mediated or humoral T-lymphocyte defects related to interferon-gamma or interferon-alpha.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "153",
+                    "observationTitle": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
+                    "contraindicationText": "Do not vaccinate if the patient has a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "154",
+                    "observationTitle": "HIV/AIDS - severely immunocompromised",
+                    "contraindicationText": "Do not vaccinate if the patient has HIV/AIDS and is severely immunocompromised (See the CDC general recommendations for a definition of \"severely immunocompromised\").",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "156",
+                    "observationTitle": "Generalized malignant neoplasm",
+                    "contraindicationText": "Do not vaccinate if the patient has generalized malignant neoplasm.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "157",
+                    "observationTitle": "Transplantation",
+                    "contraindicationText": "Do not vaccinate if the patient received a transplant.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "158",
+                    "observationTitle": "Immunosuppressive therapy",
+                    "contraindicationText": "Do not vaccinate if the patient is undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies. ",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "159",
+                    "observationTitle": "Radiation therapy",
+                    "contraindicationText": "Do not vaccinate if the patient is undergoing radiation therapy.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "168",
+                    "observationTitle": "Chemotherapy",
+                    "contraindicationText": "Do not vaccinate if the patient is undergoing chemotherapy, including 14 days before the start of therapy and 3 months after the completion of therapy.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                }
+            ]
+        }
+    },
+    "series": [
+        {
+            "seriesName": "Varicella childhood 2-dose series",
+            "targetDisease": "Varicella",
+            "seriesVaccineGroup": "Varicella",
+            "seriesAdminGuidance": null,
+            "seriesType": "Standard",
+            "equivalentSeriesGroups": null,
+            "requiredGender": null,
+            "defaultSeries": "Yes",
+            "productPath": "No",
+            "seriesGroupName": "Standard",
+            "seriesGroup": "1",
+            "seriesPriority": "A",
+            "seriesPreference": "1",
+            "minAgeToStart": null,
+            "maxAgeToStart": "13 years",
+            "indication": null,
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "12 months - 4 days",
+                            "minAge": "12 months",
+                            "earliestRecAge": "12 months",
+                            "latestRecAge": "16 months + 4 weeks",
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
+                            "beginAge": "12 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "MMRV",
+                            "cvx": "94",
+                            "beginAge": "12 months",
+                            "endAge": "13 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "MMRV",
+                            "cvx": "94",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Zoster Live",
+                            "cvx": "121",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "50 years"
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": "13 months",
+                            "minAge": "15 months",
+                            "earliestRecAge": "4 years",
+                            "latestRecAge": "7 years + 4 weeks",
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "12 weeks - 4 days",
+                            "minInt": "12 weeks",
+                            "earliestRecInt": "3 years",
+                            "latestRecInt": "6 years + 4 weeks",
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": {
+                        "fromPrevious": "Y",
+                        "fromTargetDose": null,
+                        "absMinInt": "4 weeks",
+                        "effectiveDate": null,
+                        "cessationDate": null
+                    },
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
+                            "beginAge": "12 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "MMRV",
+                            "cvx": "94",
+                            "beginAge": "12 months",
+                            "endAge": "13 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "MMRV",
+                            "cvx": "94",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Zoster Live",
+                            "cvx": "121",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "50 years"
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                }
+            ]
+        },
+        {
+            "seriesName": "Varicella 13+ 2-dose series",
+            "targetDisease": "Varicella",
+            "seriesVaccineGroup": "Varicella",
+            "seriesAdminGuidance": "Vaccination should be emphasized for those who have close contact with persons at high risk for severe disease or are at high risk for exposure or transmission. Pregnant women should be assessed for evidence of varicella immunity. Women who do not have evidence of immunity should receive the first dose of varicella vaccine upon completion or termination of pregnancy and before discharge from the health care facility. ",
+            "seriesType": "Standard",
+            "equivalentSeriesGroups": null,
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "No",
+            "seriesGroupName": "Standard",
+            "seriesGroup": "1",
+            "seriesPriority": "A",
+            "seriesPreference": "2",
+            "minAgeToStart": null,
+            "maxAgeToStart": "50 years",
+            "indication": null,
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "13 years",
+                            "minAge": "13 years",
+                            "earliestRecAge": "13 years",
+                            "latestRecAge": "13 years",
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
+                            "beginAge": "12 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "MMRV",
+                            "cvx": "94",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Zoster Live",
+                            "cvx": "121",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "50 years"
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "4 weeks - 4 days",
+                            "minInt": "4 weeks",
+                            "earliestRecInt": "4 weeks",
+                            "latestRecInt": "8 weeks",
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
+                            "beginAge": "12 months",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Varicella",
+                            "cvx": "21",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "MMRV",
+                            "cvx": "94",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "Zoster Live",
+                            "cvx": "121",
+                            "beginAge": "12 months - 4 days",
+                            "endAge": "50 years"
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                }
+            ]
+        }
+    ]
+}

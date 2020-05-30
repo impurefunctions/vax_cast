@@ -1,0 +1,1033 @@
+{
+    "immunity": null,
+    "contraindications": {
+        "vaccineGroup": {
+            "groupContraindication": [
+                {
+                    "observationCode": "116",
+                    "observationTitle": "Severe allergic reaction after previous dose of Meningococcal B",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Meningococcal B vaccine.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "080",
+                    "observationTitle": "Adverse reaction to vaccine component",
+                    "contraindicationText": "Do not vaccinate if the patient has had an adverse reaction to a vaccine component.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                }
+            ]
+        }
+    },
+    "series": [
+        {
+            "seriesName": "Meningococcal B risk 2-dose series MenB-4C Patient Seeks Protection",
+            "targetDisease": "Meningococcal B",
+            "seriesVaccineGroup": "Meningococcal B",
+            "seriesAdminGuidance": null,
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": "2",
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "Yes",
+            "seriesGroupName": "Patient Seeks Protection",
+            "seriesGroup": "1",
+            "seriesPriority": "A",
+            "seriesPreference": null,
+            "minAgeToStart": "10 years",
+            "maxAgeToStart": null,
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Patient seeks protection",
+                        "code": "001"
+                    },
+                    "description": "Administer to persons seeking protection.",
+                    "beginAge": "16 years",
+                    "endAge": "24 years",
+                    "guidance": "A MenB vaccine series may be administered to adolescents and young adults to provide short-term protection against most strains of serogroup B meningococcal disease. The preferred age for MenB vaccination is 16-18 years (recommendation Category B)."
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "10 years - 4 days",
+                            "minAge": "10 years",
+                            "earliestRecAge": "10 years",
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, OMV",
+                            "cvx": "163",
+                            "beginAge": "10 years",
+                            "endAge": null,
+                            "tradeName": "Bexsero",
+                            "mvx": "NOV",
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, OMV",
+                            "cvx": "163",
+                            "beginAge": "10 years - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "0 days",
+                            "minInt": "4 weeks",
+                            "earliestRecInt": "4 weeks",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": "20170518"
+                        },
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "4 weeks - 4 days",
+                            "minInt": "4 weeks",
+                            "earliestRecInt": "4 weeks",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": "20170519",
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, OMV",
+                            "cvx": "163",
+                            "beginAge": "10 years",
+                            "endAge": null,
+                            "tradeName": "Bexsero",
+                            "mvx": "NOV",
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, OMV",
+                            "cvx": "163",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "meningococcal B, unspecified",
+                            "cvx": "164",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                }
+            ]
+        },
+        {
+            "seriesName": "Meningococcal B risk 2-dose series MenB-FHbp",
+            "targetDisease": "Meningococcal B",
+            "seriesVaccineGroup": "Meningococcal B",
+            "seriesAdminGuidance": "A 2-dose series for MenB-FHbp (Trumenba) which is used only for healthy adolescents and young adults who are not at increased risk for meningococcal disease.",
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": "2",
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "Yes",
+            "seriesGroupName": "Patient Seeks Protection",
+            "seriesGroup": "1",
+            "seriesPriority": "A",
+            "seriesPreference": null,
+            "minAgeToStart": "16 years",
+            "maxAgeToStart": null,
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Patient seeks protection",
+                        "code": "001"
+                    },
+                    "description": "Administer to persons seeking protection.",
+                    "beginAge": "16 years",
+                    "endAge": "24 years",
+                    "guidance": "A MenB vaccine series may be administered to adolescents and young adults to provide short-term protection against most strains of serogroup B meningococcal disease. The preferred age for MenB vaccination is 16-18 years (recommendation Category B)."
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "10 years - 4 days",
+                            "minAge": "10 years",
+                            "earliestRecAge": "10 years",
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, recombinant",
+                            "cvx": "162",
+                            "beginAge": "10 years",
+                            "endAge": null,
+                            "tradeName": "Trumenba",
+                            "mvx": "PFR",
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, recombinant",
+                            "cvx": "162",
+                            "beginAge": "10 years - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "4 months - 4 days",
+                            "minInt": "4 months",
+                            "earliestRecInt": "4 months",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        },
+                        {
+                            "fromPrevious": "N",
+                            "fromTargetDose": "1",
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "6 months - 4 days",
+                            "minInt": "6 months",
+                            "earliestRecInt": "6 months",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, recombinant",
+                            "cvx": "162",
+                            "beginAge": "10 years",
+                            "endAge": null,
+                            "tradeName": "Trumenba",
+                            "mvx": "PFR",
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, recombinant",
+                            "cvx": "162",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "meningococcal B, unspecified",
+                            "cvx": "164",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                }
+            ]
+        },
+        {
+            "seriesName": "Meningococcal B risk 2-dose series MenB-4C Increased Risk",
+            "targetDisease": "Meningococcal B",
+            "seriesVaccineGroup": "Meningococcal B",
+            "seriesAdminGuidance": null,
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": null,
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "Yes",
+            "seriesGroupName": "Increased Risk",
+            "seriesGroup": "2",
+            "seriesPriority": "A",
+            "seriesPreference": null,
+            "minAgeToStart": "10 years",
+            "maxAgeToStart": null,
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Undergoing elective splenectomy",
+                        "code": "002"
+                    },
+                    "description": "Administered to persons who are undergoing elective splenectomy if they have not previously received Meningococcal B vaccine. ",
+                    "beginAge": "10 years",
+                    "endAge": null,
+                    "guidance": "Vaccination 14 or more days before splenectomy is suggested."
+                },
+                {
+                    "observationCode": {
+                        "text": "Microbiologists routinely exposed to Neisseria meningitidis",
+                        "code": "050"
+                    },
+                    "description": "Administer to microbiologists routinely exposed to isolates of Neisseria meningitidis.",
+                    "beginAge": "10 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Persons at risk during an outbreak",
+                        "code": "070"
+                    },
+                    "description": "Administer to persons identified as at increased risk because of a serogroup B meningococcal disease outbreak",
+                    "beginAge": "10 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Persistent complement, properdin, or factor B deficiency",
+                        "code": "151"
+                    },
+                    "description": "Administer to persons who have persistent complement component deficiencies, including inherited or chronic deficiencies in C3, C5-9, properdin, factor D, factor H, or who are taking eculizumab (Soliris).",
+                    "beginAge": "10 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Anatomical or functional asplenia",
+                        "code": "160"
+                    },
+                    "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
+                    "beginAge": "10 years",
+                    "endAge": null,
+                    "guidance": null
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "10 years - 4 days",
+                            "minAge": "10 years",
+                            "earliestRecAge": "10 years",
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, OMV",
+                            "cvx": "163",
+                            "beginAge": "10 years",
+                            "endAge": null,
+                            "tradeName": "Bexsero",
+                            "mvx": "NOV",
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, OMV",
+                            "cvx": "163",
+                            "beginAge": "10 years - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "0 days",
+                            "minInt": "4 weeks",
+                            "earliestRecInt": "4 weeks",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": "20170518"
+                        },
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "4 weeks - 4 days",
+                            "minInt": "4 weeks",
+                            "earliestRecInt": "4 weeks",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": "20170519",
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, OMV",
+                            "cvx": "163",
+                            "beginAge": "10 years",
+                            "endAge": null,
+                            "tradeName": "Bexsero",
+                            "mvx": "NOV",
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, OMV",
+                            "cvx": "163",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "meningococcal B, unspecified",
+                            "cvx": "164",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 3,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "1 years - 4 days",
+                            "minInt": "1 year",
+                            "earliestRecInt": "1 year",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, OMV",
+                            "cvx": "163",
+                            "beginAge": "10 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, OMV",
+                            "cvx": "163",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "meningococcal B, unspecified",
+                            "cvx": "164",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 4,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "2 years - 4 days",
+                            "minInt": "2 years",
+                            "earliestRecInt": "2 years",
+                            "latestRecInt": "4 years",
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, OMV",
+                            "cvx": "163",
+                            "beginAge": "10 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, OMV",
+                            "cvx": "163",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "meningococcal B, unspecified",
+                            "cvx": "164",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "Yes",
+                    "seasonalRecommendation": null
+                }
+            ]
+        },
+        {
+            "seriesName": "Meningococcal B risk 3-dose series MenB-FHbp Increased Risk",
+            "targetDisease": "Meningococcal B",
+            "seriesVaccineGroup": "Meningococcal B",
+            "seriesAdminGuidance": null,
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": null,
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "Yes",
+            "seriesGroupName": "Increased Risk",
+            "seriesGroup": "2",
+            "seriesPriority": "A",
+            "seriesPreference": null,
+            "minAgeToStart": "10 years",
+            "maxAgeToStart": null,
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Undergoing elective splenectomy",
+                        "code": "002"
+                    },
+                    "description": "Administered to persons who are undergoing elective splenectomy if they have not previously received Meningococcal B vaccine. ",
+                    "beginAge": "10 years",
+                    "endAge": null,
+                    "guidance": "Vaccination 14 or more days before splenectomy is suggested."
+                },
+                {
+                    "observationCode": {
+                        "text": "Microbiologists routinely exposed to Neisseria meningitidis",
+                        "code": "050"
+                    },
+                    "description": "Administer to microbiologists routinely exposed to isolates of Neisseria meningitidis.",
+                    "beginAge": "10 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Persons at risk during an outbreak",
+                        "code": "070"
+                    },
+                    "description": "Administer to persons identified as at increased risk because of a serogroup B meningococcal disease outbreak",
+                    "beginAge": "10 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Persistent complement, properdin, or factor B deficiency",
+                        "code": "151"
+                    },
+                    "description": "Administer to persons 10 years or older with persistent complement component deficiencies, including inherited or chronic deficiencies in C3, C5-9, properdin, factor D, factor H, or who are taking eculizumab (Soliris).",
+                    "beginAge": "10 years",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Anatomical or functional asplenia",
+                        "code": "160"
+                    },
+                    "description": "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
+                    "beginAge": "10 years",
+                    "endAge": null,
+                    "guidance": null
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "10 years - 4 days",
+                            "minAge": "10 years",
+                            "earliestRecAge": "10 years",
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, recombinant",
+                            "cvx": "162",
+                            "beginAge": "10 years",
+                            "endAge": null,
+                            "tradeName": "Trumenba",
+                            "mvx": "PFR",
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, recombinant",
+                            "cvx": "162",
+                            "beginAge": "10 years - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "0 days",
+                            "minInt": "4 weeks",
+                            "earliestRecInt": "4 weeks",
+                            "latestRecInt": "8 weeks",
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": "20170518"
+                        },
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "4 weeks - 4 days",
+                            "minInt": "4 weeks",
+                            "earliestRecInt": "4 weeks",
+                            "latestRecInt": "8 weeks",
+                            "intervalPriority": null,
+                            "effectiveDate": "20170519",
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, recombinant",
+                            "cvx": "162",
+                            "beginAge": "10 years",
+                            "endAge": null,
+                            "tradeName": "Trumenba",
+                            "mvx": "PFR",
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, recombinant",
+                            "cvx": "162",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": [
+                        {
+                            "context": "Evaluation",
+                            "setLogic": "n/a",
+                            "set": [
+                                {
+                                    "setID": "1",
+                                    "setDescription": "Dose is not required once 6 months has passed since the previous dose",
+                                    "effectiveDate": null,
+                                    "cessationDate": null,
+                                    "conditionLogic": null,
+                                    "condition": [
+                                        {
+                                            "conditionID": "1",
+                                            "conditionType": "Interval",
+                                            "startDate": null,
+                                            "endDate": null,
+                                            "beginAge": null,
+                                            "endAge": null,
+                                            "interval": "6 months",
+                                            "doseCount": null,
+                                            "doseType": null,
+                                            "doseCountLogic": null,
+                                            "vaccineTypes": null,
+                                            "seriesGroups": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 3,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "0 days",
+                            "minInt": "4 months",
+                            "earliestRecInt": "4 months",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": "20170518"
+                        },
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "4 months - 4 days",
+                            "minInt": "4 months",
+                            "earliestRecInt": "4 months",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": "20170519",
+                            "cessationDate": null
+                        },
+                        {
+                            "fromPrevious": "N",
+                            "fromTargetDose": "1",
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "0 days",
+                            "minInt": "6 months",
+                            "earliestRecInt": "6 months",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, recombinant",
+                            "cvx": "162",
+                            "beginAge": "10 years",
+                            "endAge": null,
+                            "tradeName": "Trumenba",
+                            "mvx": "PFR",
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, recombinant",
+                            "cvx": "162",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "meningococcal B, unspecified",
+                            "cvx": "164",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 4,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "1 years - 4 days",
+                            "minInt": "1 year",
+                            "earliestRecInt": "1 year",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, recombinant",
+                            "cvx": "162",
+                            "beginAge": "10 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, recombinant",
+                            "cvx": "162",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "meningococcal B, unspecified",
+                            "cvx": "164",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 5,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "2 years - 4 days",
+                            "minInt": "2 years",
+                            "earliestRecInt": "2 years",
+                            "latestRecInt": "4 years",
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, recombinant",
+                            "cvx": "162",
+                            "beginAge": "10 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "meningococcal B, recombinant",
+                            "cvx": "162",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        },
+                        {
+                            "vaccineType": "meningococcal B, unspecified",
+                            "cvx": "164",
+                            "beginAge": "10 years",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "Yes",
+                    "seasonalRecommendation": null
+                }
+            ]
+        }
+    ]
+}

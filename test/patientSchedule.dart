@@ -1,193 +1,205 @@
 import 'dart:convert';
 
-import 'package:fhir_r4/fhir_r4.dart';
+import 'package:fhir/fhir_r4.dart' as fhir_r4;
+import 'package:fhir/r4/resource_types/foundation/other/other.enums.dart';
+import 'package:fhir/r4/resource_types/resource_types.enums.dart';
 import 'package:vax_cast/src/forecast.dart';
 
-var rec = ImmunizationRecommendation(
-  date: FhirDateTime('2020-05-01'),
-  patient: Reference(id: 'testBaby'),
+var rec = fhir_r4.ImmunizationRecommendation(
+  resourceType: 'ImmunizationRecommendation',
+  date: fhir_r4.FhirDateTime('2020-05-01'),
+  patient: fhir_r4.Reference(id: 'testBaby'),
   recommendation: [
-    ImmunizationRecommendationRecommendation(
+    fhir_r4.ImmunizationRecommendationRecommendation(
       series: 'DTAP',
       dateCriterion: [
-        ImmunizationRecommendationDateCriterion(
-          code: CodeableConcept(text: 'Earliest_Date'),
-          value: FhirDateTime('2999-12-31'),
+        fhir_r4.ImmunizationRecommendationDateCriterion(
+          code: fhir_r4.CodeableConcept(text: 'Earliest_Date'),
+          value: fhir_r4.FhirDateTime('2999-12-31'),
         ),
-        ImmunizationRecommendationDateCriterion(
-          code: CodeableConcept(text: 'Recommended_Date'),
-          value: FhirDateTime('2999-12-31'),
+        fhir_r4.ImmunizationRecommendationDateCriterion(
+          code: fhir_r4.CodeableConcept(text: 'Recommended_Date'),
+          value: fhir_r4.FhirDateTime('2999-12-31'),
         ),
-        ImmunizationRecommendationDateCriterion(
-          code: CodeableConcept(text: 'Past_Due_Date'),
-          value: FhirDateTime('2999-12-31'),
+        fhir_r4.ImmunizationRecommendationDateCriterion(
+          code: fhir_r4.CodeableConcept(text: 'Past_Due_Date'),
+          value: fhir_r4.FhirDateTime('2999-12-31'),
         ),
       ],
-      forecastStatus: CodeableConcept(text: 'Complete'),
+      forecastStatus: fhir_r4.CodeableConcept(text: 'Complete'),
     ),
   ],
 );
-var pat = Patient(
-  id: Id('testBaby'),
-  name: [HumanName(family: 'testBaby')],
-  gender: PatientGender('female'),
-  birthDate: Date('2020-01-01'),
+var pat = fhir_r4.Patient(
+  resourceType: 'Patient',
+  id: fhir_r4.Id('testBaby'),
+  name: [fhir_r4.HumanName(family: 'testBaby')],
+  gender: Gender.female,
+  birthDate: fhir_r4.Date('2020-01-01'),
 );
 
-var hepB1 = Immunization(
-  occurrenceDateTime: FhirDateTime('2020-01-01'),
-  status: Code('completed'),
-  vaccineCode: CodeableConcept(
+var hepB1 = fhir_r4.Immunization(
+  resourceType: 'Immunization',
+  occurrenceDateTime: fhir_r4.FhirDateTime('2020-01-01'),
+  status: fhir_r4.Code('completed'),
+  vaccineCode: fhir_r4.CodeableConcept(
     text: 'HepB unspecified formulation',
     coding: [
-      Coding(
-        code: Code('45'),
-        system: FhirUri("http://hl7.org/fhir/sid/cvx"),
+      fhir_r4.Coding(
+        code: fhir_r4.Code('45'),
+        system: fhir_r4.FhirUri("http://hl7.org/fhir/sid/cvx"),
       )
     ],
   ),
-  patient: Reference(id: 'testBaby'),
+  patient: fhir_r4.Reference(id: 'testBaby'),
 );
 
-var hepB2 = Immunization(
-  occurrenceDateTime: FhirDateTime('2020-03-10'),
-  status: Code('completed'),
-  vaccineCode: CodeableConcept(
+var hepB2 = fhir_r4.Immunization(
+  resourceType: 'Immunization',
+  occurrenceDateTime: fhir_r4.FhirDateTime('2020-03-10'),
+  status: fhir_r4.Code('completed'),
+  vaccineCode: fhir_r4.CodeableConcept(
     text: 'HepB unspecified formulation',
     coding: [
-      Coding(
-        code: Code('45'),
-        system: FhirUri("http://hl7.org/fhir/sid/cvx"),
+      fhir_r4.Coding(
+        code: fhir_r4.Code('45'),
+        system: fhir_r4.FhirUri("http://hl7.org/fhir/sid/cvx"),
       )
     ],
   ),
-  patient: Reference(id: 'testBaby'),
+  patient: fhir_r4.Reference(id: 'testBaby'),
 );
 
-var dtap1 = Immunization(
-  occurrenceDateTime: FhirDateTime('2020-03-10'),
-  status: Code('completed'),
-  vaccineCode: CodeableConcept(
+var dtap1 = fhir_r4.Immunization(
+  resourceType: 'Immunization',
+  occurrenceDateTime: fhir_r4.FhirDateTime('2020-03-10'),
+  status: fhir_r4.Code('completed'),
+  vaccineCode: fhir_r4.CodeableConcept(
     text: 'DTaP unspecified formulation',
     coding: [
-      Coding(
-        code: Code('107'),
-        system: FhirUri("http://hl7.org/fhir/sid/cvx"),
+      fhir_r4.Coding(
+        code: fhir_r4.Code('107'),
+        system: fhir_r4.FhirUri("http://hl7.org/fhir/sid/cvx"),
       )
     ],
   ),
-  patient: Reference(id: 'testBaby'),
+  patient: fhir_r4.Reference(id: 'testBaby'),
 );
 
-var hib1 = Immunization(
-  occurrenceDateTime: FhirDateTime('2020-03-10'),
-  status: Code('completed'),
-  vaccineCode: CodeableConcept(
+var hib1 = fhir_r4.Immunization(
+  resourceType: 'Immunization',
+  occurrenceDateTime: fhir_r4.FhirDateTime('2020-03-10'),
+  status: fhir_r4.Code('completed'),
+  vaccineCode: fhir_r4.CodeableConcept(
     text: 'Hib unspecified formulation',
     coding: [
-      Coding(
-        code: Code('17'),
-        system: FhirUri("http://hl7.org/fhir/sid/cvx"),
+      fhir_r4.Coding(
+        code: fhir_r4.Code('17'),
+        system: fhir_r4.FhirUri("http://hl7.org/fhir/sid/cvx"),
       )
     ],
   ),
-  patient: Reference(id: 'testBaby'),
+  patient: fhir_r4.Reference(id: 'testBaby'),
 );
 
-var rv1 = Immunization(
-  occurrenceDateTime: FhirDateTime('2020-03-10'),
-  status: Code('completed'),
-  vaccineCode: CodeableConcept(
+var rv1 = fhir_r4.Immunization(
+  resourceType: 'Immunization',
+  occurrenceDateTime: fhir_r4.FhirDateTime('2020-03-10'),
+  status: fhir_r4.Code('completed'),
+  vaccineCode: fhir_r4.CodeableConcept(
     text: 'Rotavirus unspecified formulation',
     coding: [
-      Coding(
-        code: Code('122'),
-        system: FhirUri("http://hl7.org/fhir/sid/cvx"),
+      fhir_r4.Coding(
+        code: fhir_r4.Code('122'),
+        system: fhir_r4.FhirUri("http://hl7.org/fhir/sid/cvx"),
       )
     ],
   ),
-  patient: Reference(id: 'testBaby'),
+  patient: fhir_r4.Reference(id: 'testBaby'),
 );
 
-var pcv1 = Immunization(
-  occurrenceDateTime: FhirDateTime('2020-03-10'),
-  status: Code('completed'),
-  vaccineCode: CodeableConcept(
+var pcv1 = fhir_r4.Immunization(
+  resourceType: 'Immunization',
+  occurrenceDateTime: fhir_r4.FhirDateTime('2020-03-10'),
+  status: fhir_r4.Code('completed'),
+  vaccineCode: fhir_r4.CodeableConcept(
     text: 'Pneumoccocal unspecified formulation',
     coding: [
-      Coding(
-        code: Code('109'),
-        system: FhirUri("http://hl7.org/fhir/sid/cvx"),
+      fhir_r4.Coding(
+        code: fhir_r4.Code('109'),
+        system: fhir_r4.FhirUri("http://hl7.org/fhir/sid/cvx"),
       )
     ],
   ),
-  patient: Reference(id: 'testBaby'),
+  patient: fhir_r4.Reference(id: 'testBaby'),
 );
 
-var polio = Immunization(
-  occurrenceDateTime: FhirDateTime('2020-03-10'),
-  status: Code('completed'),
-  vaccineCode: CodeableConcept(
+var polio = fhir_r4.Immunization(
+  resourceType: 'Immunization',
+  occurrenceDateTime: fhir_r4.FhirDateTime('2020-03-10'),
+  status: fhir_r4.Code('completed'),
+  vaccineCode: fhir_r4.CodeableConcept(
     text: 'Polio unspecified formulation',
     coding: [
-      Coding(
-        code: Code('89'),
-        system: FhirUri("http://hl7.org/fhir/sid/cvx"),
+      fhir_r4.Coding(
+        code: fhir_r4.Code('89'),
+        system: fhir_r4.FhirUri("http://hl7.org/fhir/sid/cvx"),
       )
     ],
   ),
-  patient: Reference(id: 'testBaby'),
+  patient: fhir_r4.Reference(id: 'testBaby'),
 );
 
-var testBundle = Bundle(
+var testBundle = fhir_r4.Bundle(
+  resourceType: 'Bundle',
   entry: [
-    BundleEntry(
+    fhir_r4.BundleEntry(
         resource: pat,
-        request: BundleRequest(
-          method: BundleRequestMethod('PUT'),
-          url: FhirUri('Patient'),
+        request: fhir_r4.BundleRequest(
+          method: RequestMethod.put,
+          url: fhir_r4.FhirUri('Patient'),
         )),
-    BundleEntry(
+    fhir_r4.BundleEntry(
         resource: hepB1,
-        request: BundleRequest(
-          method: BundleRequestMethod('PUT'),
-          url: FhirUri('Immunization'),
+        request: fhir_r4.BundleRequest(
+          method: RequestMethod.put,
+          url: fhir_r4.FhirUri('Immunization'),
         )),
-    BundleEntry(
+    fhir_r4.BundleEntry(
         resource: hepB2,
-        request: BundleRequest(
-          method: BundleRequestMethod('PUT'),
-          url: FhirUri('Immunization'),
+        request: fhir_r4.BundleRequest(
+          method: RequestMethod.put,
+          url: fhir_r4.FhirUri('Immunization'),
         )),
-    BundleEntry(
+    fhir_r4.BundleEntry(
         resource: dtap1,
-        request: BundleRequest(
-          method: BundleRequestMethod('PUT'),
-          url: FhirUri('Immunization'),
+        request: fhir_r4.BundleRequest(
+          method: RequestMethod.put,
+          url: fhir_r4.FhirUri('Immunization'),
         )),
-    BundleEntry(
+    fhir_r4.BundleEntry(
         resource: hib1,
-        request: BundleRequest(
-          method: BundleRequestMethod('PUT'),
-          url: FhirUri('Immunization'),
+        request: fhir_r4.BundleRequest(
+          method: RequestMethod.put,
+          url: fhir_r4.FhirUri('Immunization'),
         )),
-    BundleEntry(
+    fhir_r4.BundleEntry(
         resource: rv1,
-        request: BundleRequest(
-          method: BundleRequestMethod('PUT'),
-          url: FhirUri('Immunization'),
+        request: fhir_r4.BundleRequest(
+          method: RequestMethod.put,
+          url: fhir_r4.FhirUri('Immunization'),
         )),
-    BundleEntry(
+    fhir_r4.BundleEntry(
         resource: pcv1,
-        request: BundleRequest(
-          method: BundleRequestMethod('PUT'),
-          url: FhirUri('Immunization'),
+        request: fhir_r4.BundleRequest(
+          method: RequestMethod.put,
+          url: fhir_r4.FhirUri('Immunization'),
         )),
-    BundleEntry(
+    fhir_r4.BundleEntry(
         resource: polio,
-        request: BundleRequest(
-          method: BundleRequestMethod('PUT'),
-          url: FhirUri('Immunization'),
+        request: fhir_r4.BundleRequest(
+          method: RequestMethod.put,
+          url: fhir_r4.FhirUri('Immunization'),
         )),
   ],
 );
@@ -203,14 +215,14 @@ void main() async {
     pcv1,
   ], [
     rec
-  ], <Condition>[]);
+  ], <fhir_r4.Condition>[]);
   forecast.forEach((group) {
     print(
         '${group.seriesVaccineGroup}:${group.targetDisease}:${group.groupEarliestDate}');
   });
 }
 
-var immBundle = Bundle.fromJson(jsonDecode("""{
+var immBundle = fhir_r4.Bundle.fromJson(jsonDecode("""{
  "query-time": 7,
  "meta": {
   "versionId": "56102"

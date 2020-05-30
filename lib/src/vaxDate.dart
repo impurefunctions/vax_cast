@@ -1,5 +1,5 @@
-import 'package:date_utils/date_utils.dart';
 import 'package:intl/intl.dart';
+import 'package:date_utils/date_utils.dart';
 
 class VaxDate extends DateTime {
   VaxDate(int year, int month, int day) : super(year, month, day);

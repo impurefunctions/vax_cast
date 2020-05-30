@@ -1,0 +1,473 @@
+{
+    "immunity": null,
+    "contraindications": {
+        "vaccineGroup": {
+            "groupContraindication": [
+                {
+                    "observationCode": "080",
+                    "observationTitle": "Adverse reaction to vaccine component",
+                    "contraindicationText": "Do not vaccinate if the patient has had an adverse reaction to a vaccine component.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "082",
+                    "observationTitle": "Severe allergic reaction after previous dose of Japanese Encephalitis",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Japanese Encephalitis vaccine.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                },
+                {
+                    "observationCode": "115",
+                    "observationTitle": "Severe allergic reaction to protamine sulfate",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to protamine sulfate.",
+                    "contraindicationGuidance": null,
+                    "beginAge": null,
+                    "endAge": null
+                }
+            ]
+        }
+    },
+    "series": [
+        {
+            "seriesName": "Japanese Encephalitis risk 2-dose series",
+            "targetDisease": "Japanese Encephalitis",
+            "seriesVaccineGroup": "Japanese Encephalitis",
+            "seriesAdminGuidance": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: http://wwwnc.cdc.gov/travel/yellowbook/2014/chapter-3-infectious-diseases-related-to-travel/japanese-encephalitis\\n",
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": null,
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "No",
+            "seriesGroupName": "Increased Risk",
+            "seriesGroup": "1",
+            "seriesPriority": "A",
+            "seriesPreference": "1",
+            "minAgeToStart": "2 months",
+            "maxAgeToStart": null,
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Longer-term (e.g., 1 month or more) travel to a JE-endemic area",
+                        "code": "165"
+                    },
+                    "description": "Administer to persons who plan for longer-term (e.g., ? 1 month) travel to JE-endemic areas.",
+                    "beginAge": "2 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Moving to JE-endemic country to take up residence",
+                        "code": "173"
+                    },
+                    "description": "Administer to persons who plan to move to JE-endemic countries to take up residence.",
+                    "beginAge": "2 months",
+                    "endAge": null,
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Frequent travel to JE-endemic areas",
+                        "code": "174"
+                    },
+                    "description": "Administer to persons who frequently travel to JE-endemic areas.",
+                    "beginAge": "2 months",
+                    "endAge": null,
+                    "guidance": null
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "2 months - 4 days",
+                            "minAge": "2 months",
+                            "earliestRecAge": "2 months",
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "2 months",
+                            "endAge": "3 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.25",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "3 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "4 weeks - 4 days",
+                            "minInt": "4 weeks",
+                            "earliestRecInt": "4 weeks",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "2 months",
+                            "endAge": "3 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.25",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "3 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 3,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "12 months - 4 days",
+                            "minInt": "12 months",
+                            "earliestRecInt": "12 months",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "2 months",
+                            "endAge": "3 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.25",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "3 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                }
+            ]
+        },
+        {
+            "seriesName": "Japanese Encephalitis risk 2-dose series 18-64 years",
+            "targetDisease": "Japanese Encephalitis",
+            "seriesVaccineGroup": "Japanese Encephalitis",
+            "seriesAdminGuidance": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: http://wwwnc.cdc.gov/travel/yellowbook/2014/chapter-3-infectious-diseases-related-to-travel/japanese-encephalitis\\n",
+            "seriesType": "Risk",
+            "equivalentSeriesGroups": null,
+            "requiredGender": null,
+            "defaultSeries": "No",
+            "productPath": "No",
+            "seriesGroupName": "Increased Risk",
+            "seriesGroup": "1",
+            "seriesPriority": "A",
+            "seriesPreference": "1",
+            "minAgeToStart": "18 years",
+            "maxAgeToStart": "65 years",
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Longer-term (e.g., 1 month or more) travel to a JE-endemic area",
+                        "code": "165"
+                    },
+                    "description": "Administer to persons who plan for longer-term (e.g., ? 1 month) travel to JE-endemic areas.",
+                    "beginAge": "18 years",
+                    "endAge": "65 years",
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Moving to JE-endemic country to take up residence",
+                        "code": "173"
+                    },
+                    "description": "Administer to persons who plan to move to JE-endemic countries to take up residence.",
+                    "beginAge": "18 years",
+                    "endAge": "65 years",
+                    "guidance": null
+                },
+                {
+                    "observationCode": {
+                        "text": "Frequent travel to JE-endemic areas",
+                        "code": "174"
+                    },
+                    "description": "Administer to persons who frequently travel to JE-endemic areas.",
+                    "beginAge": "18 years",
+                    "endAge": "65 years",
+                    "guidance": null
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": 1,
+                    "age": [
+                        {
+                            "absMinAge": "18 years - 4 days",
+                            "minAge": "18 years",
+                            "earliestRecAge": "18 years",
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": null,
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "3 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 2,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": "65 years",
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "7 days",
+                            "minInt": "7 days",
+                            "earliestRecInt": "7 days",
+                            "latestRecInt": "28 days",
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "3 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                },
+                {
+                    "doseNumber": 3,
+                    "age": [
+                        {
+                            "absMinAge": null,
+                            "minAge": null,
+                            "earliestRecAge": null,
+                            "latestRecAge": null,
+                            "maxAge": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "fromTargetDose": null,
+                            "fromMostRecent": null,
+                            "fromRelevantObs": null,
+                            "absMinInt": "12 months - 4 days",
+                            "minInt": "12 months",
+                            "earliestRecInt": "12 months",
+                            "latestRecInt": null,
+                            "intervalPriority": null,
+                            "effectiveDate": null,
+                            "cessationDate": null
+                        }
+                    ],
+                    "allowableInterval": null,
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "2 months",
+                            "endAge": "3 years",
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.25",
+                            "forecastVaccineType": "N"
+                        },
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "3 years",
+                            "endAge": null,
+                            "tradeName": null,
+                            "mvx": null,
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Japanese Encephalitis, VC",
+                            "cvx": "134",
+                            "beginAge": "2 months - 4 days",
+                            "endAge": null
+                        }
+                    ],
+                    "inadvertentVaccine": null,
+                    "conditionalSkip": null,
+                    "recurringDose": "No",
+                    "seasonalRecommendation": null
+                }
+            ]
+        }
+    ]
+}

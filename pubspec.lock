@@ -183,24 +183,10 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.1"
-  fhir_dstu2:
+  fhir:
     dependency: "direct main"
     description:
-      path: "/home/grey/dev/fhir_dstu2"
-      relative: false
-    source: path
-    version: "0.0.1"
-  fhir_r4:
-    dependency: "direct main"
-    description:
-      path: "/home/grey/dev/fhir_r4"
-      relative: false
-    source: path
-    version: "0.0.1"
-  fhir_stu3:
-    dependency: "direct main"
-    description:
-      path: "/home/grey/dev/fhir_stu3"
+      path: "/home/grey/dev/fhir"
       relative: false
     source: path
     version: "0.0.1"
