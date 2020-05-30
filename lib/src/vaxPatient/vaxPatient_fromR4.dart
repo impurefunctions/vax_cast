@@ -73,8 +73,8 @@ VaxPatient _$VaxPatientFromR4Bundles(
     seriesGroup: recommendation.recommendation[0].series,
   );
   immunizationBundle.entry
-      .forEach((entry) => newPatient.addToVaxListR4(entry.resource));
+      .forEach((entry) => newPatient.addToVaxListR4(fhir_r4.Immunization.fromJson(entry.resource.toJson())));
   conditionBundle.entry
-      .forEach((entry) => newPatient.addToConditionListR4(entry.resource));
+      .forEach((entry) => newPatient.addToConditionListR4(fhir_r4.Condition.fromJson(entry.resource.toJson())));
   return newPatient;
 }
