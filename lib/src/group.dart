@@ -23,7 +23,6 @@ class Group {
   int numCompleteSeries;
   int defaultSeries;
   int prioritizedSeries;
-
   bool bestGroup;
 
   Group(Series series, VaxPatient newPatient) {

@@ -24,7 +24,7 @@ void main() async {
       // printAntigen(vaccineForecast, 'Diphtheria');
       // printAntigen(vaccineForecast, 'Pertussis');
       // printAntigen(vaccineForecast, 'Tetanus');
-      // printAntigen(vaccineForecast, 'Influenza');
+      // printAntigen(vaccineForecast[0], 'Influenza');
       // printAntigen(vaccineForecast, 'HPV');
       // printAntigen(vaccineForecast, 'HepB');
       // printAntigen(vaccineForecast, 'Hib');
@@ -33,8 +33,6 @@ void main() async {
       // printAntigen(vaccineForecast, 'Rubella');
       // printAntigen(vaccineForecast, 'Polio');
       if (differentThanCDC(vaccineForecast[0], rec)) {
-        print(total);
-        print(patientId);
         print(rec.recommendation[0].series);
         totalWrong += 1;
         printEarliest(vaccineForecast[0], rec);
@@ -48,15 +46,8 @@ void main() async {
   print('total: $total');
 }
 
-void printAntigen(Forecast vaccineForecast, String antigen) {
-  print(vaccineForecast.antigens[antigen].groups[0].vaxSeries[0].seriesName
-      .toString());
-  print(vaccineForecast.antigens[antigen].groups[0].vaxSeries[0].targetDoses
-      .toString());
-  var statuses = '';
-  vaccineForecast.antigens[antigen].groups[0].vaxSeries[0].pastDoses
-      .forEach((dose) => statuses += dose.evalReason.toString() + ', ');
-  print(statuses + '\n');
+void printAntigen(GroupForecast vaccineForecast, String antigen) {
+  print(vaccineForecast.seriesName.toString());
 }
 
 void printEarliest(GroupForecast group, ImmunizationRecommendation rec) {

@@ -17,7 +17,6 @@ class Dose {
   String status; //extranous, not valid, sub-standard, valid
   String evalReason;
   VaxPatient patient;
-
   String mvx;
   int vol;
   bool preferVax;
@@ -101,8 +100,6 @@ class Dose {
                   VaxDate.min().fromNullableString(recommendation.startDate);
 
   void setSeasonStatus() {
-    targetDose = null;
-    targetDoseStatus = 'not satisfied';
     targetDose = null;
     targetDoseStatus = 'not satisfied';
     evalReason = 'given outside seasonal recommendation';
@@ -402,7 +399,7 @@ class Dose {
 
   void validDose(int targetDose) {
     this.targetDose = targetDose;
-    targetDoseStatus = 'satisfied';
+    targetDoseStatus ??= 'satisfied';
     valid = true;
     status = 'valid';
     evalReason = 'valid dose';

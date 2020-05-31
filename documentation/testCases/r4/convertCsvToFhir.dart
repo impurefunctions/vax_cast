@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:FhirVCA/domain/vaxDate.dart';
-import 'package:fhir/fhir.dart';
+import 'package:fhir/fhir_r4.dart';
+import 'package:vax_cast/vax_cast.dart';
 
 void main() {
   final file = File('./lib/infrastructure/testCases/spreadsheets/healthy.csv');
@@ -22,7 +22,7 @@ void processLines(List<String> lines) async {
       patientBundle.entry.add(BundleEntry(
           resource: getPatient(row),
           request: BundleRequest(
-              method: BundleRequestMethod('PUT'), url: FhirUri('Patient'))));
+              method: RequestMethod.put, url: FhirUri('Patient'))));
       //run through the doses of the vaccines given
       for (var i = 8; i < 45; i += 6) {
         //if there's no date given for the vaccine, ignore that vaccine
@@ -31,14 +31,13 @@ void processLines(List<String> lines) async {
           immunizationBundle.entry.add(BundleEntry(
               resource: immunization,
               request: BundleRequest(
-                  method: BundleRequestMethod('PUT'),
-                  url: FhirUri('Immunization'))));
+                  method: RequestMethod.put, url: FhirUri('Immunization'))));
         }
       }
       recommendationBundle.entry.add(BundleEntry(
           resource: getImmunizationRecommendation(row),
           request: BundleRequest(
-              method: BundleRequestMethod('PUT'),
+              method: RequestMethod.put,
               url: FhirUri('ImmunizationRecommendation'))));
     }
   }
@@ -62,8 +61,9 @@ ImmunizationRecommendation getImmunizationRecommendation(List<String> row) {
       ImmunizationRecommendationRecommendation(
           forecastStatus: CodeableConcept(text: 'Not Complete'),
           //fill in dose number of the recommendation
-          doseNumberPositiveInt:
-              row[50] != '-' && row[50] != '' ? int.parse(row[50]) : null,
+          doseNumberPositiveInt: row[50] != '-' && row[50] != ''
+              ? PositiveInt(int.parse(row[50]))
+              : null,
           dateCriterion: [
             //include the date criteria from the test cases
             ImmunizationRecommendationDateCriterion(
@@ -92,35 +92,38 @@ ImmunizationRecommendation getImmunizationRecommendation(List<String> row) {
 Immunization getImmunization(List<String> row, int i) {
   if (row[i] != null && row[i] != '') {
     var immunization = Immunization(
-        resourceType: 'Immunization',
-        patient: Reference(reference: 'Patient/${row[0]}'),
-        occurrenceDateTime: FhirDateTime(getDateTime(row[i]).toString()),
-        status: Code('completed'),
-        vaccineCode: CodeableConcept(
-            //what is the vaccine called
-            text: row[i + 1],
-            coding: [
-              //record cvx code
-              Coding(
-                system: FhirUri('http://hl7.org/fhir/sid/cvx'),
-                code: Code(row[i + 2]),
-              )
-            ]));
+      resourceType: 'Immunization',
+      patient: Reference(reference: 'Patient/${row[0]}'),
+      occurrenceDateTime: FhirDateTime(getDateTime(row[i]).toString()),
+      status: Code('completed'),
+      vaccineCode: CodeableConcept(
+        //what is the vaccine called
+        text: row[i + 1],
+        coding: [
+          //record cvx code
+          Coding(
+            system: FhirUri('http://hl7.org/fhir/sid/cvx'),
+            code: Code(row[i + 2]),
+          ),
+        ],
+      ),
+      reasonCode: row[i + 4] != ''
+          ? [
+              CodeableConcept(
+                  text:
+                      'Evaluation_Status_${(i - 8) / 6 + 1}: ${row[i + 4] == '' ? null : row[i + 4]}'
+                      '\nEvaluation_Reason_${(i - 8) / 6 + 1}: ${row[i + 5] == '' ? null : row[i + 5]}'),
+            ]
+          : null,
+    );
     if (row[i + 3] != null && row[i + 3] != '') {
       immunization.vaccineCode.coding.add(
-          //I think this is the code system URL for MVX codes
-          Coding(
-        system: FhirUri('http://hl7.org/fhir/v2/0227'),
-        code: Code(row[i + 3]),
-      ));
-    }
-    if (row[i + 4] != '') {
-      immunization.reasonCode = [
-        CodeableConcept(
-            text:
-                'Evaluation_Status_${(i - 8) / 6 + 1}: ${row[i + 4] == '' ? null : row[i + 4]}'
-                '\nEvaluation_Reason_${(i - 8) / 6 + 1}: ${row[i + 5] == '' ? null : row[i + 5]}'),
-      ];
+        //I think this is the code system URL for MVX codes
+        Coding(
+          system: FhirUri('http://hl7.org/fhir/v2/0227'),
+          code: Code(row[i + 3]),
+        ),
+      );
     }
     return immunization;
   } else {
@@ -146,15 +149,19 @@ Patient getPatient(List<String> row) {
     resourceType: 'Patient',
     id: Id(row[0]),
     birthDate: Date(getDateTime(row[2]).toString()),
-    gender: PatientGender(row[3] == 'M' ? 'male' : 'female'),
+    gender: row[3] == 'M' ? Gender.male : Gender.female,
     //family name is the brief description of the case
-    name: [HumanName(family: row[1], given: [])],
+    name: [
+      HumanName(
+        family: row[1],
+        given: row[7] != null && row[7] != ''
+            ? ['Series_Status: ${row[7]}']
+            : null,
+        text: row[62] != null && row[62] != '' ? row[62] : null,
+      ),
+    ],
   );
-  //add the series status to given names
-  row[7] != null && row[7] != ''
-      ? patient.name[0].given.add('Series_Status: ${row[7]}')
-      : null;
-  row[62] != null && row[62] != '' ? patient.name[0].text = row[62] : null;
+
   //these are the columns that state the dose evaluation status and reason, if available
   for (final eval in [12, 18, 24, 30, 36, 42, 48]) {
     if (row[eval] != '') {

@@ -55,6 +55,15 @@ class Forecast {
     );
     loadHx();
     getForecast();
+    // antigens.forEach((key, value) {
+    //   print(value.groups[0].vaxSeries[0].targetDoses);
+    //   print(value.groups[0].vaxSeries[0].targetDose);
+    //   value.groups[0].vaxSeries[0].pastDoses.forEach((element) {
+    //     print(element.status);
+    //     print(element.targetDoseStatus);
+    //     });
+    // });
+
     return groupForecast;
   }
 

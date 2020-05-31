@@ -85,7 +85,7 @@ class VaxSeries {
             if (seriesStatus == 'not complete') {
               evaluatePastDose(dose);
               if (dose.valid && seriesStatus == 'not complete') {
-                completeTargetDose('satisfied', dose.dateGiven);
+                completeTargetDose(dose.targetDoseStatus, dose.dateGiven);
               }
             }
           } else {
@@ -163,6 +163,9 @@ class VaxSeries {
         seriesDose.last.recurringDose == 'Yes') {
       if (seriesDose.last.seasonalRecommendation == null) {
         targetDose -= 1;
+      } else if (status == 'skipped') {
+        seriesStatus = 'complete';
+        targetDoses[targetDose - 1] = status;
       } else if (VaxDate.max().fromNullableString(
                   seriesDose.last.seasonalRecommendation.endDate) >
               dateGiven &&
@@ -175,8 +178,16 @@ class VaxSeries {
         targetDose -= 1;
       }
     } else {
-      if (targetDose == seriesDose.length) seriesStatus = 'complete';
-      targetDoses[targetDose - 1] = status;
+      if (seriesDose[targetDose - 1].seasonalRecommendation != null) {
+        if (status == 'not satisfied') {
+          targetDose -= 1;
+        } else {
+          targetDoses[targetDose - 1] = status;
+        }
+      } else {
+        if (targetDose == seriesDose.length) seriesStatus = 'complete';
+        targetDoses[targetDose - 1] = status;
+      }
     }
   }
 
