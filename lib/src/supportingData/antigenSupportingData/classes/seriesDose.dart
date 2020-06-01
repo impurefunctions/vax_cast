@@ -101,10 +101,4 @@ class SeriesDose {
         seasonalRecommendation != null ? seasonalRecommendation.toJson() : null;
     return data;
   }
-
-  bool isInadvertentDose(String cvx) => inadvertentVaccine == null
-      ? false
-      : inadvertentVaccine.indexWhere((vaccine) => vaccine.cvx == cvx) == -1
-          ? false
-          : true;
 }

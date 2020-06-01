@@ -29,12 +29,9 @@ class Group {
     patient = newPatient;
     anySeriesComplete = false;
     vaxSeries = [VaxSeries(series, patient)];
-
-    if (series.equivalentSeriesGroups == null) {
-      equivalentGroups = null;
-    } else {
-      equivalentGroups = series.equivalentSeriesGroups;
-    }
+    series.equivalentSeriesGroups == null
+        ? equivalentGroups = null
+        : equivalentGroups = series.equivalentSeriesGroups;
     seriesGroup = series.seriesGroup;
     highestPriority = 'Z';
     numProdValidSeries = 0;
@@ -50,7 +47,6 @@ class Group {
     numCompleteSeries = 0;
     defaultSeries = -1;
     prioritizedSeries = -1;
-
     bestGroup = false;
   }
 
@@ -275,10 +271,13 @@ class Group {
   void getNumProdSeries(VaxSeries series) =>
       numProdValidSeries += series.isProductSeries ? 1 : 0;
 
-  void getHighestNumValidDoses(VaxSeries series) =>
-      highestNumValidDoses = highestNumValidDoses >= series.targetDose
-          ? highestNumValidDoses
-          : series.targetDose;
+  void getHighestNumValidDoses(VaxSeries series) {
+    var count = 0;
+    series.targetDoses.forEach((dose) => count += dose == 'valid' ? 1 : 0);
+
+    highestNumValidDoses =
+        highestNumValidDoses >= count ? highestNumValidDoses : count;
+  }
 
   void getNumProdValidSeries(VaxSeries series) => numProdValidSeries +=
       series.isProductSeries && series.allDosesValid ? 1 : 0;

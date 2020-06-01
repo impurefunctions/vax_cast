@@ -19,7 +19,9 @@ class Forecast {
     this.antigens,
     this.groupForecast,
     this.patient,
-  });
+  }) {
+    this.antigens = <String, Antigen>{};
+  }
 
   void readSupportingData() async => await SupportingData.load();
 
@@ -55,15 +57,6 @@ class Forecast {
     );
     loadHx();
     getForecast();
-    // antigens.forEach((key, value) {
-    //   print(value.groups[0].vaxSeries[0].targetDoses);
-    //   print(value.groups[0].vaxSeries[0].targetDose);
-    //   value.groups[0].vaxSeries[0].pastDoses.forEach((element) {
-    //     print(element.status);
-    //     print(element.targetDoseStatus);
-    //     });
-    // });
-
     return groupForecast;
   }
 
@@ -104,7 +97,6 @@ class Forecast {
   }
 
   void loadHx() {
-    antigens = <String, Antigen>{};
     loadSupportingData();
     antigens.removeWhere((ag, antigen) => antigen.groups == null);
   }
@@ -112,37 +104,32 @@ class Forecast {
   void loadSupportingData() {
     SupportingData.antigenSupportingData.forEach((ag, seriesGroup) {
       antigens[ag] = Antigen(patient: patient, targetDisease: ag);
-      seriesGroup.series.forEach((series) {
-        if (isRelevant(series)) {
-          antigens[ag].newSeries(series);
-        }
-      });
+      for (var series in seriesGroup.series) {
+        if (isRelevant(series)) antigens[ag].newSeries(series);
+      }
       loadScheduleSupportingData(ag);
     });
   }
 
-  bool isRelevant(Series series) {
-    return isAppropriateGender(series.requiredGender)
-        ? series.seriesType == 'Standard'
-            ? true
-            : doesIndicationApply(series.indication)
-        : false;
-  }
+  bool isRelevant(Series series) => isAppropriateGender(series.requiredGender)
+      ? series.seriesType == 'Standard'
+          ? true
+          : doesIndicationApply(series.indication)
+      : false;
 
-  bool isAppropriateGender(String requiredGender) {
-    //if for some reason we don't know the patient's gender,
-    //we assume it's appropriate
-    return requiredGender == null
-        ? true
-        : patient.sex == null
-            ? requiredGender.toLowerCase() == 'male'
-            : !(requiredGender.toLowerCase() == 'male' &&
-                    patient.sex.toLowerCase() == 'female' ||
-                requiredGender.toLowerCase() == 'female' &&
-                    patient.sex.toLowerCase() == 'male' ||
-                requiredGender.toLowerCase() == 'unknown' &&
-                    patient.sex.toLowerCase() == 'male');
-  }
+  bool isAppropriateGender(String requiredGender) =>
+      //if for some reason we don't know the patient's gender,
+      //we assume it's appropriate
+      requiredGender == null
+          ? true
+          : patient.sex == null
+              ? requiredGender.toLowerCase() == 'male'
+              : !(requiredGender.toLowerCase() == 'male' &&
+                      patient.sex.toLowerCase() == 'female' ||
+                  requiredGender.toLowerCase() == 'female' &&
+                      patient.sex.toLowerCase() == 'male' ||
+                  requiredGender.toLowerCase() == 'unknown' &&
+                      patient.sex.toLowerCase() == 'male');
 
   bool doesIndicationApply(Map<String, Indication> indications) {
     if (patient.conditions.isNotEmpty) {

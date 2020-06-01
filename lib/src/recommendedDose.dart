@@ -147,6 +147,7 @@ class RecommendedDose {
       seasonRecStartDate,
       lastInadvertentDose?.dateGiven,
     ]);
+
     unadjustedRecommendedDate =
         earliestRecAgeDate ?? earliestRecIntDate ?? earliestDate;
     unadjustedPastDueDate = latestRecAgeDate != null

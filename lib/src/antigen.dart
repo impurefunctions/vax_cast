@@ -26,17 +26,15 @@ class Antigen {
     if (series != null) {
       if (series.seriesDose != null) {
         if (groups == null) {
-          groups = <Group>[];
-          groups.add(Group(series, patient));
+          groups = <Group>[Group(series, patient)];
           seriesVaccineGroup = series.seriesVaccineGroup;
         } else {
-          var groupIndex = groups
-              .indexWhere((group) => group.seriesGroup == series.seriesGroup);
-          if (groupIndex == -1) {
-            groups.add(Group(series, patient));
-          } else {
-            groups[groupIndex].vaxSeries.add(VaxSeries(series, patient));
-          }
+          var group = groups.firstWhere(
+              (group) => group.seriesGroup == series.seriesGroup,
+              orElse: () => null);
+          group == null
+              ? groups.add(Group(series, patient))
+              : group.vaxSeries.add(VaxSeries(series, patient));
         }
       }
     }

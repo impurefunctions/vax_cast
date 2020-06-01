@@ -81,7 +81,13 @@ class Dose {
   bool canBeEvaluated() => dateGiven <= lotExp && doseCondition == null;
 
   bool isInadvertentDose(SeriesDose seriesDose) =>
-      seriesDose.isInadvertentDose(cvx);
+      seriesDose.inadvertentVaccine == null
+          ? false
+          : seriesDose.inadvertentVaccine
+                      .indexWhere((vaccine) => vaccine.cvx == cvx) ==
+                  -1
+              ? false
+              : true;
 
   void setInadvertentStatus() {
     targetDose = null;
