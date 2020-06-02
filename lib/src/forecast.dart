@@ -153,7 +153,7 @@ class Forecast {
       if (SupportingData.isAgInCvx(dose.cvx, ag)) {
         for (final group in antigens[ag].groups) {
           for (final series in group.vaxSeries) {
-            series.pastDoses.add(Dose.copy(dose));
+            series.pastDoses.add(dose);
           }
         }
       }

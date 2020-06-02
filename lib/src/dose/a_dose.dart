@@ -1,100 +1,70 @@
-import 'supportingData/antigenSupportingData/classes/seasonalRecommendation.dart';
-import 'supportingData/antigenSupportingData/classes/seriesDose.dart';
-import 'supportingData/antigenSupportingData/classes/vaxAge.dart';
-import 'supportingData/scheduleSupportingData/classes/liveVirusConflict.dart';
-import 'supportingData/supportingData.dart';
-import 'vaxDate.dart';
-import 'vaxPatient/vaxPatient.dart';
+import 'package:dartz/dartz.dart';
+
+import '../shared.dart';
+
+part 'b_evaluate_dose_condition.dart';
+part 'c_inadvertent.dart';
+part 'd_age.dart';
 
 class Dose {
   VaxDate dateGiven;
   VaxDate lotExp;
   String doseCondition;
   String cvx;
-  int targetDose;
-  String targetDoseStatus; //not satisfied, satisfied, skipped
-  bool valid;
-  String status; //extranous, not valid, sub-standard, valid
-  String evalReason;
-  VaxPatient patient;
   String mvx;
   int vol;
-  bool preferVax;
-  String preferVaxReason;
-  bool allowVax;
-  String allowVaxReason;
-  bool validAge;
-  String ageReason;
-  bool prefInt;
-  String prefReason;
-  bool allowInt;
-  String allowReason;
+  VaxPatient patient;
+  Tuple2<int, TargetStatus> target;
+  Tuple2<EvalStatus, String> evaluation;
+  bool inadvertent;
+  Tuple2<bool, AgeReason> age;
+  Tuple2<bool, IntReason> prefInt;
+  Tuple2<bool, IntReason> allowInt;
+  Tuple2<bool, Dose> conflict;
+  Tuple2<bool, VaxReason> prefVax;
+  Tuple2<bool, VaxReason> allowVax;
+  bool valid;
+
   Dose({
     this.dateGiven,
-    lotExp,
-    this.doseCondition,
     this.cvx,
-    this.targetDose,
-    this.targetDoseStatus,
-    this.valid = false,
-    this.status,
-    this.evalReason,
-    this.patient,
     this.mvx,
-    this.vol,
-    this.preferVax,
-    this.preferVaxReason = '',
-    this.allowVax,
-    this.allowVaxReason = '',
-    this.validAge = false,
-    this.ageReason = '',
-    this.prefInt,
-    this.prefReason,
-    this.allowInt,
-    this.allowReason,
-  }) : lotExp = VaxDate(2999, 12, 31);
-
-  Dose.copy(Dose oldDose) {
-    status = oldDose.status;
-    targetDoseStatus = oldDose.targetDoseStatus;
-    targetDose = oldDose.targetDose;
-    dateGiven = oldDose.dateGiven;
-    lotExp = oldDose.lotExp;
-    doseCondition = oldDose.doseCondition;
-    cvx = oldDose.cvx;
-    mvx = oldDose.mvx;
-    vol = oldDose.vol;
-    evalReason = oldDose.evalReason;
-    preferVax = oldDose.preferVax;
-    preferVaxReason = oldDose.preferVaxReason;
-    allowVax = oldDose.allowVax;
-    allowVaxReason = oldDose.allowVaxReason;
-    valid = oldDose.valid;
-    validAge = oldDose.validAge;
-    ageReason = oldDose.ageReason;
-    prefInt = oldDose.prefInt;
-    prefReason = oldDose.prefReason;
-    allowInt = oldDose.allowInt;
-    allowReason = oldDose.allowReason;
+  }) {
+    this.valid = true;
   }
 
-  bool canBeEvaluated() => dateGiven <= lotExp && doseCondition == null;
+  void setStatus(
+    Tuple2<int, TargetStatus> targetStatus,
+    Tuple2<EvalStatus, String> evalStatus,
+    bool isValid,
+  ) {
+    target = targetStatus;
+    evaluation = evalStatus;
+    valid &= isValid;
+  }
 
-  bool isInadvertentDose(SeriesDose seriesDose) =>
-      seriesDose.inadvertentVaccine == null
-          ? false
-          : seriesDose.inadvertentVaccine
-                      .indexWhere((vaccine) => vaccine.cvx == cvx) ==
-                  -1
-              ? false
-              : true;
+  void evaluateDoseCondition() {
+    EvaluateDoseCondition attributes =
+        EvaluateDoseCondition(dateGiven, lotExp, doseCondition);
+    if (attributes.cannotBeEvaluated()) {
+      setStatus(attributes.getTarget(), attributes.getEvaluation(), false);
+    }
+  }
 
-  void setInadvertentStatus() {
-    targetDose = null;
-    targetDoseStatus = 'not satisfied';
-    valid = false;
-    status = 'not valid';
-    evalReason = 'inadvertent administration';
+  void evaluateInadvertent(SeriesDose seriesDose) {
+    if (Inadvertent().isInadvertentDose(seriesDose, cvx)) {
+      setStatus(
+          Inadvertent().getTarget(), Inadvertent().getEvaluation(), false);
+    }
+  }
+
+  void evaluateAge(List<VaxAge> ageList, Dose previousDose, int targetDose) {
+    Age evalAge =
+        Age(ageList, previousDose, targetDose, dateGiven, patient.dob);
+    age = evalAge.givenAtValidAge();
+    if (!evalAge.validAge) {
+      setStatus(evalAge.getTarget(), evalAge.getEvaluation(), false);
+    }
   }
 
   bool givenOutsideSeason(SeasonalRecommendation recommendation) =>
@@ -109,71 +79,6 @@ class Dose {
     targetDose = null;
     targetDoseStatus = 'not satisfied';
     evalReason = 'given outside seasonal recommendation';
-  }
-
-  bool givenAtValidAge(List<VaxAge> ageList, Dose pastDose, int targetDose) {
-    var vaxAge = setDoseAge(ageList);
-    validateAge(vaxAge, pastDose, targetDose);
-    return validAge;
-  }
-
-  VaxAge setDoseAge(List<VaxAge> ageList) {
-    for (var age in ageList) {
-      if (age.effectiveDate == null && age.cessationDate == null) {
-        return age;
-      }
-      if (age.effectiveDate != null && age.cessationDate == null) {
-        if (VaxDate.mmddyyyy(age.effectiveDate) <= dateGiven) {
-          return age;
-        }
-      } else if (age.cessationDate != null && age.effectiveDate == null) {
-        if (dateGiven < VaxDate.mmddyyyy(age.cessationDate)) {
-          return age;
-        }
-      } else if (dateGiven < VaxDate.mmddyyyy(age.cessationDate) &&
-          VaxDate.mmddyyyy(age.effectiveDate) <= dateGiven) {
-        return age;
-      }
-    }
-    return ageList[0];
-  }
-
-  void validateAge(VaxAge age, Dose pastDose, int targetDose) {
-    var absMinAgeDate = patient.dob.minIfNull(age.absMinAge);
-    var minAgeDate = patient.dob.minIfNull(age.minAge);
-    var maxAgeDate = patient.dob.maxIfNull(age.maxAge);
-    if (dateGiven < absMinAgeDate) {
-      setAgeStatus(false, 'too young');
-    } else if (absMinAgeDate <= dateGiven && dateGiven < minAgeDate) {
-      if (pastDose == null) {
-        setAgeStatus(true, 'grace period');
-      } else if (targetDose == 0) {
-        setAgeStatus(true, 'grace period');
-      } else if (pastDose.validAge && (pastDose.allowInt || pastDose.prefInt)) {
-        setAgeStatus(true, 'grace period');
-      } else {
-        setAgeStatus(false, 'too young');
-      }
-    } else if (minAgeDate <= dateGiven && dateGiven < maxAgeDate) {
-      setAgeStatus(true, 'valid age');
-    } else if (dateGiven >= maxAgeDate) {
-      setAgeStatus(false, 'too old');
-    } else {
-      setAgeStatus(false, 'unable to evaluate date');
-    }
-  }
-
-  void setAgeStatus(bool valid, String reason) {
-    validAge = valid;
-    ageReason = reason;
-  }
-
-  void notValidAge() {
-    targetDose = null;
-    targetDoseStatus = 'not satisfied';
-    valid = false;
-    status = 'not valid';
-    evalReason = ageReason;
   }
 
   bool hasValidIntervals(SeriesDose seriesDose, List<Dose> pastDoses) {

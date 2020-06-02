@@ -8,7 +8,13 @@ VaxPatient _$VaxPatientFromDstu2(
 ) {
   var newPatient = VaxPatient(
     dob: VaxDate.fromString(patient.birthDate.toString()),
-    sex: patient.gender.toString() == 'female' ? 'Female' : 'Male',
+    gender: patient.gender == null
+        ? VaxGender.unknown
+        : patient.gender.toString().toLowerCase() == 'female'
+            ? VaxGender.female
+            : patient.gender.toString().toLowerCase() == 'male'
+                ? VaxGender.male
+                : VaxGender.unknown,
     liveVirusList: <Dose>[],
     pastImmunizations: <Dose>[],
     conditions: <String>[],
@@ -52,12 +58,13 @@ VaxPatient _$VaxPatientFromDstu2Bundles(
       recommendationBundle.entry[0].resource.toJson());
   var newPatient = VaxPatient(
     dob: VaxDate.fromString(patient.birthDate.toString()),
-    sex: patient.gender.toString() == 'other'
-        ? 'Unknown'
-        : patient.gender.toString()[0].toUpperCase() +
-            patient.gender
-                .toString()
-                .substring(1, patient.gender.toString().length),
+    gender: patient.gender == null
+        ? VaxGender.unknown
+        : patient.gender.toString().toLowerCase() == 'female'
+            ? VaxGender.female
+            : patient.gender.toString().toLowerCase() == 'male'
+                ? VaxGender.male
+                : VaxGender.unknown,
     liveVirusList: <Dose>[],
     pastImmunizations: <Dose>[],
     conditions: <String>[],

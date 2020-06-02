@@ -2,7 +2,7 @@ import 'package:fhir/fhir_r4.dart' as fhir_r4;
 import 'package:fhir/fhir_stu3.dart' as fhir_stu3;
 import 'package:fhir/fhir_dstu2.dart' as fhir_dstu2;
 
-import '../../shared.dart';
+import '../shared.dart';
 
 part 'vax_patient_from_R4.dart';
 part 'vax_patient_from_Stu3.dart';
@@ -10,7 +10,7 @@ part 'vax_patient_from_Dstu2.dart';
 
 class VaxPatient {
   VaxDate dob;
-  String sex;
+  VaxGender gender;
   List<String> conditions;
   VaxDate assessmentDate;
   List<Dose> liveVirusList;
@@ -20,7 +20,7 @@ class VaxPatient {
 
   VaxPatient({
     this.dob,
-    this.sex,
+    this.gender,
     this.conditions,
     this.assessmentDate,
     this.liveVirusList,
@@ -29,22 +29,22 @@ class VaxPatient {
     this.seriesGroup,
   });
 
-  factory VaxPatient.fromFhir(Version version, bool bundles, patient,
+  factory VaxPatient.fromFhir(FHIR_V version, bool bundles, patient,
       immunizations, recommendations, conditions) {
     switch (version) {
-      case Version.r4:
+      case FHIR_V.r4:
         return bundles
             ? _$VaxPatientFromR4Bundles(
                 patient, immunizations, recommendations, conditions)
             : _$VaxPatientFromR4(
                 patient, immunizations, recommendations, conditions);
-      case Version.stu3:
+      case FHIR_V.stu3:
         return bundles
             ? _$VaxPatientFromStu3Bundles(
                 patient, immunizations, recommendations, conditions)
             : _$VaxPatientFromStu3(
                 patient, immunizations, recommendations, conditions);
-      case Version.dstu2:
+      case FHIR_V.dstu2:
         return bundles
             ? _$VaxPatientFromDstu2Bundles(
                 patient, immunizations, recommendations, conditions)
