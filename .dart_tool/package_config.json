@@ -33,9 +33,9 @@
     },
     {
       "name": "build",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/build-1.2.2",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/build-1.3.0",
       "packageUri": "lib/",
-      "languageVersion": "2.3"
+      "languageVersion": "2.7"
     },
     {
       "name": "build_config",
@@ -51,19 +51,19 @@
     },
     {
       "name": "build_resolvers",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/build_resolvers-1.3.7",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/build_resolvers-1.3.9",
       "packageUri": "lib/",
       "languageVersion": "2.7"
     },
     {
       "name": "build_runner",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/build_runner-1.9.0",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/build_runner-1.10.0",
       "packageUri": "lib/",
       "languageVersion": "2.6"
     },
     {
       "name": "build_runner_core",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/build_runner_core-5.1.0",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/build_runner_core-5.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.7"
     },
@@ -99,9 +99,9 @@
     },
     {
       "name": "code_builder",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/code_builder-3.2.1",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/code_builder-3.3.0",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "2.6"
     },
     {
       "name": "collection",
@@ -123,9 +123,9 @@
     },
     {
       "name": "crypto",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.4",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.5",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "2.3"
     },
     {
       "name": "csslib",
@@ -141,7 +141,7 @@
     },
     {
       "name": "dartz",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/dartz-0.8.9",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/dartz-0.9.1",
       "packageUri": "lib/",
       "languageVersion": "1.24"
     },
@@ -153,7 +153,7 @@
     },
     {
       "name": "equatable",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/equatable-1.1.1",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/equatable-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -171,7 +171,7 @@
     },
     {
       "name": "freezed",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/freezed-0.10.7",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/freezed-0.10.9",
       "packageUri": "lib/",
       "languageVersion": "2.7"
     },
@@ -285,19 +285,19 @@
     },
     {
       "name": "node_interop",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/node_interop-1.0.3",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/node_interop-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
     {
       "name": "node_io",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/node_io-1.0.1+2",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/node_io-1.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "2.2"
     },
     {
       "name": "node_preamble",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/node_preamble-1.4.8",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/node_preamble-1.4.9",
       "packageUri": "lib/",
       "languageVersion": "1.24"
     },
@@ -429,19 +429,19 @@
     },
     {
       "name": "test",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/test-1.14.3",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/test-1.14.6",
       "packageUri": "lib/",
       "languageVersion": "2.7"
     },
     {
       "name": "test_api",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/test_api-0.2.15",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/test_api-0.2.16",
       "packageUri": "lib/",
-      "languageVersion": "2.4"
+      "languageVersion": "2.7"
     },
     {
       "name": "test_core",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/test_core-0.3.4",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/test_core-0.3.6",
       "packageUri": "lib/",
       "languageVersion": "2.7"
     },
@@ -459,7 +459,7 @@
     },
     {
       "name": "vm_service",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/vm_service-4.0.2",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/vm_service-4.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.6"
     },
@@ -477,7 +477,7 @@
     },
     {
       "name": "webkit_inspection_protocol",
-      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/webkit_inspection_protocol-0.5.1",
+      "rootUri": "file:///home/grey/.pub-cache/hosted/pub.dartlang.org/webkit_inspection_protocol-0.7.3",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -494,7 +494,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-05-30T19:03:13.319188Z",
+  "generated": "2020-06-02T19:19:45.364625Z",
   "generator": "pub",
   "generatorVersion": "2.8.3"
 }
