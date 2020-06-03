@@ -1,20 +1,14 @@
-import 'dose.dart';
-import 'group.dart';
-import 'recommendedDose.dart';
-import 'supportingData/antigenSupportingData/classes/condition.dart';
-import 'supportingData/antigenSupportingData/classes/conditionalSkip.dart';
-import 'supportingData/antigenSupportingData/classes/series.dart';
-import 'supportingData/antigenSupportingData/classes/seriesDose.dart';
-import 'supportingData/antigenSupportingData/classes/vaxSet.dart';
-import 'supportingData/supportingData.dart';
-import 'vaxDate.dart';
-import 'vaxPatient/vaxPatient.dart';
+import '../shared.dart';
+
+part 'b_skippable.dart';
+part 'c_complete_target_dose.dart';
+part 'd_contraindicated_series.dart';
+part 'e_another_target_dose.dart';
 
 class VaxSeries {
   VaxPatient patient;
   List<Dose> pastDoses;
-  String
-      seriesStatus; //aged out, complete, contraindicated, immune, not complete, not recommended
+  SeriesStatus seriesStatus;
   List<SeriesDose> seriesDose;
   int targetDose;
   String seriesName;
@@ -28,8 +22,8 @@ class VaxSeries {
   String seriesPreference;
   String minAgeToStart;
   String maxAgeToStart;
-  List<String> targetDoses;
-  String forecastReason;
+  List<TargetStatus> targetDoses;
+  ForecastReason forecastReason;
   bool prioritized;
   bool scorableSeries;
   bool shouldBeScored;
@@ -39,11 +33,12 @@ class VaxSeries {
   int score;
   bool bestSeries;
   RecommendedDose recommendedDose;
+  bool anotherDose;
 
   VaxSeries(Series series, VaxPatient newPatient) {
     patient = newPatient;
     pastDoses = <Dose>[];
-    seriesStatus = 'not complete';
+    seriesStatus = SeriesStatus.not_complete;
     seriesDose = series.seriesDose;
     targetDose = 0;
     seriesName = series.seriesName;
@@ -59,7 +54,7 @@ class VaxSeries {
     maxAgeToStart = series.maxAgeToStart;
     targetDoses = series.seriesDose == null
         ? null
-        : List.filled(series.seriesDose.length, 'not satisfied');
+        : List.filled(series.seriesDose.length, TargetStatus.not_satisfied);
     prioritized = false;
     scorableSeries = false;
     shouldBeScored = false;
@@ -71,206 +66,88 @@ class VaxSeries {
     recommendedDose;
   }
 
-//****************************************** */
-//   Evaluation Section
-//****************************************** */
   void evaluateVaccineDosesAdministered(bool anySeriesComplete) {
     if (pastDoses != null && pastDoses.isNotEmpty) {
       pastDoses.sort((a, b) => a.dateGiven.compareTo(b.dateGiven));
       for (final dose in pastDoses) {
         dose.patient = patient;
-        if (seriesStatus == 'not complete') {
-          if (dose.canBeEvaluated()) {
-            findNonSkippableTargetDose(dose, 'Evaluation', anySeriesComplete);
-            if (seriesStatus == 'not complete') {
-              evaluatePastDose(dose);
-              if (dose.valid && seriesStatus == 'not complete') {
-                completeTargetDose(dose.targetDoseStatus, dose.dateGiven);
-              }
+        if (seriesStatus == SeriesStatus.not_complete) {
+          dose.evaluateDoseCondition();
+          checkForSkippableDose(dose.valid, dose.dateGiven, Context.evaluation,
+              anySeriesComplete);
+          if (seriesStatus == SeriesStatus.not_complete) {
+            dose.evaluatePastDose(
+                seriesDose[targetDose], pastDoses, targetDose);
+            if (dose.valid && seriesStatus == SeriesStatus.not_complete) {
+              completeTargetDose(dose.target.value2, dose.dateGiven);
             }
-          } else {
-            dose.isSubStandard();
           }
         }
       }
     }
   }
 
-  void findNonSkippableTargetDose(
-      Dose dose, String context, bool anySeriesComplete) {
-    var skip = true;
-    while (skip) {
-      var refDate = dose != null ? dose.dateGiven : patient.assessmentDate;
-      skip = checkSkipDate(refDate, context, anySeriesComplete);
-      if (skip) {
-        if (dose != null) {
-          dose.skipDose();
-        }
-        completeTargetDose('skipped', null);
-        skip = seriesStatus == 'not complete';
+  void checkForSkippableDose(
+      bool valid, VaxDate date, Context context, bool anySeriesComplete) {
+    if (valid) {
+      Skippable skippable = Skippable(
+        date ?? patient.assessmentDate,
+        context,
+        anySeriesComplete,
+        patient,
+        pastDoses,
+      );
+      while (skippable.checkForSkip(seriesDose[targetDose]) &&
+          seriesStatus == SeriesStatus.not_complete) {
+        completeTargetDose(
+            TargetStatus.skipped, date ?? patient.assessmentDate);
       }
     }
   }
 
-  bool checkSkipDate(VaxDate refDate, String context, bool anySeriesComplete) {
-    var curTargetSkip = seriesDose[targetDose].conditionalSkip;
-    return curTargetSkip == null
-        ? false
-        : curTargetSkip[0].correctContext(context)
-            ? IsSkippable(curTargetSkip[0], refDate, anySeriesComplete)
-            : curTargetSkip.length == 1
-                ? false
-                : curTargetSkip[1].correctContext(context)
-                    ? IsSkippable(curTargetSkip[1], refDate, anySeriesComplete)
-                    : false;
+  void completeTargetDose(TargetStatus status, VaxDate dateGiven) {
+    CompleteTargetDose complete = CompleteTargetDose(
+      status,
+      dateGiven,
+      this.targetDose,
+      this.seriesDose,
+      this.seriesStatus,
+      this.targetDoses,
+    );
+    complete.completeTargetDose();
+    targetDose = complete.targetDose;
+    seriesStatus = complete.seriesStatus;
+    targetDoses = complete.targetDoses;
   }
 
-  void evaluatePastDose(Dose dose) {
-    if (dose.isInadvertentDose(seriesDose[targetDose])) {
-      dose.setInadvertentStatus();
-    } else {
-      if (dose
-          .givenOutsideSeason(seriesDose[targetDose].seasonalRecommendation)) {
-        dose.setSeasonStatus();
-      }
-      var ageList = seriesDose[targetDose].age;
-      var currentIndex = pastDoses.indexWhere((pastDose) => pastDose == dose);
-      var pastDose = currentIndex == 0 ? null : pastDoses[currentIndex - 1];
-      if (dose.givenAtValidAge(ageList, pastDose, targetDose)) {
-        if (dose.hasValidIntervals(seriesDose[targetDose], pastDoses)) {
-          if (dose.hasNoLiveVirusConflict()) {
-            dose.wasPreferable(seriesDose[targetDose]);
-            if (dose.wasAllowable(seriesDose[targetDose])) {
-              dose.validDose(targetDose);
-            } else {
-              dose.notAllowable();
-            }
-          } else {
-            dose.hasLiveVirusConflict();
-          }
-        } else {
-          dose.notValidIntervals();
-        }
-      } else {
-        dose.notValidAge();
-      }
-    }
-  }
-
-  void completeTargetDose(String status, VaxDate dateGiven) {
-    targetDose += 1;
-    if (targetDose == seriesDose.length &&
-        seriesDose.last.recurringDose == 'Yes') {
-      if (seriesDose.last.seasonalRecommendation == null) {
-        targetDose -= 1;
-      } else if (status == 'skipped') {
-        seriesStatus = 'complete';
-        targetDoses[targetDose - 1] = status;
-      } else if (VaxDate.max().fromNullableString(
-                  seriesDose.last.seasonalRecommendation.endDate) >
-              dateGiven &&
-          dateGiven >=
-              VaxDate.min().fromNullableString(
-                  seriesDose.last.seasonalRecommendation.startDate)) {
-        seriesStatus = 'complete';
-        targetDoses[targetDose - 1] = status;
-      } else {
-        targetDose -= 1;
-      }
-    } else {
-      if (seriesDose[targetDose - 1].seasonalRecommendation != null) {
-        if (status == 'not satisfied') {
-          targetDose -= 1;
-        } else {
-          targetDoses[targetDose - 1] = status;
-        }
-      } else {
-        if (targetDose == seriesDose.length) seriesStatus = 'complete';
-        targetDoses[targetDose - 1] = status;
-      }
-    }
-  }
-
-//****************************************************************************/
-//    Forecast Section
-//****************************************************************************/
   void checkForSkippable(bool anySeriesComplete) {
-    if (seriesStatus == 'not complete') {
-      findNonSkippableTargetDose(null, 'Forecast', anySeriesComplete);
+    if (seriesStatus == SeriesStatus.not_complete) {
+      checkForSkippableDose(true, null, Context.forecast, anySeriesComplete);
     }
   }
 
   void checkContraindication() {
-    if (seriesStatus != 'contraindicated') {
-      if (patient.conditions != null &&
-          SupportingData.antigenSupportingData[targetDisease].contraindications
-                  .vaccine !=
-              null) {
-        for (final condition in patient.conditions) {
-          var obsCondition = SupportingData.antigenSupportingData[targetDisease]
-              .contraindications.vaccine[condition];
-          if (obsCondition != null) {
-            var dob = patient.dob;
-            var assessmentDate = patient.assessmentDate;
-            if (dob.minIfNull(obsCondition.beginAge) <= assessmentDate &&
-                assessmentDate < dob.maxIfNull(obsCondition.endAge)) {
-              var contraindicatedCvx = <String>[];
-              obsCondition.contraindicatedVaccine
-                  .forEach((vaccine) => contraindicatedCvx.add(vaccine.cvx));
-              seriesDose[targetDose]
-                  .preferableVaccine
-                  .removeWhere((vax) => contraindicatedCvx.contains(vax.cvx));
-            }
-          }
-        }
-      }
-      if (seriesDose[targetDose].preferableVaccine.isEmpty) {
-        seriesStatus = 'contraindicated';
-      }
+    if (ContraindicatedSeries.check(
+      seriesStatus,
+      patient,
+      targetDisease,
+      seriesDose[targetDose],
+    )) {
+      seriesStatus = SeriesStatus.contraindicated;
     }
   }
 
-  bool shouldReceiveAnotherTargetDose(
+  void shouldReceiveAnotherTargetDose(
       bool immunity, bool antigenContraindicated) {
-    var dob = patient.dob;
-    var needsAnotherDose = false;
-    if (!targetDoses.contains('not satisfied')) {
-      if (targetDoses.contains('satisfied')) {
-        needsAnotherDose = false;
-        seriesStatus = 'complete';
-        forecastReason = 'patient series is complete.';
-      } else {
-        needsAnotherDose = false;
-        seriesStatus = 'not recommended';
-        forecastReason =
-            'not recommended at this time due to past immunization history.';
-      }
-    } else if (seriesStatus == 'immune' || immunity) {
-      needsAnotherDose = false;
-      forecastReason = 'patient has evidence of immunity';
-    } else if (seriesStatus == 'contraindicated' || antigenContraindicated) {
-      needsAnotherDose = false;
-      seriesStatus = 'contraindicated';
-      forecastReason = 'patient has a contraindication';
-    } else if (patient.assessmentDate >=
-        dob.maxIfNull(seriesDose[targetDose].age[0].maxAge)) {
-      needsAnotherDose = false;
-      seriesStatus = 'aged out';
-      forecastReason = 'patient has exceeded the maximum age.';
-    } else if (seriesDose[targetDose].seasonalRecommendation == null) {
-      needsAnotherDose = true;
-      seriesStatus = 'not complete';
-    } else if (patient.assessmentDate >
-        VaxDate.mmddyyyy(
-            seriesDose[targetDose].seasonalRecommendation.endDate)) {
-      needsAnotherDose = false;
-      seriesStatus = 'not complete';
-      forecastReason = 'past seasonal recommendation end date.';
-    } else {
-      needsAnotherDose = true;
-      seriesStatus = 'not complete';
-    }
-    return needsAnotherDose;
+    AnotherTargetDose another = AnotherTargetDose(
+      seriesDose[targetDose],
+      patient,
+      seriesStatus,
+    );
+    another.evaluateAnotherDose(targetDoses, immunity, antigenContraindicated);
+    anotherDose = another.anotherDose;
+    seriesStatus = another.status;
+    forecastReason = another.forecastReason;
   }
 
   void generateForecastDates(bool anySeriesComplete) {
@@ -279,12 +156,14 @@ class VaxSeries {
       recommendedDose = RecommendedDose();
       recommendedDose.generateForecastDates(
           seriesDose[targetDose], patient, pastDoses);
-      if (checkSkipDate(
-          recommendedDose.earliestDate, 'Forecast', anySeriesComplete)) {
-        completeTargetDose('skipped', null);
-      } else {
-        forecast = false;
-      }
+      int oldTarget = targetDose;
+      checkForSkippableDose(
+        true,
+        recommendedDose.earliestDate,
+        Context.forecast,
+        anySeriesComplete,
+      );
+      forecast = oldTarget == targetDose;
     }
     validateForecastedDates();
   }
@@ -293,9 +172,8 @@ class VaxSeries {
     if (recommendedDose.earliestDate != null &&
         recommendedDose.latestDate != null) {
       if (recommendedDose.earliestDate >= recommendedDose.latestDate) {
-        seriesStatus = 'aged out';
-        forecastReason =
-            'Patient is unable to finish the series prior to the maximum age';
+        seriesStatus = SeriesStatus.aged_out;
+        forecastReason = ForecastReason.exceeded_maximum_age;
         recommendedDose.invalidate();
       }
     }

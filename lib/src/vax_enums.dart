@@ -59,4 +59,16 @@ enum VaxReason {
   not_preferable,
   out_of_age_range,
   wrong_trade_name,
+  none_specified,
+  allowable,
+  not_allowable,
+}
+
+enum ForecastReason {
+  not_recommended_due_to_past_immunizations,
+  evidence_of_immunity,
+  contraindication,
+  exceeded_maximum_age,
+  past_seasonal_recommendation,
+  complete,
 }
