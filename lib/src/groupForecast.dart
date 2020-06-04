@@ -1,7 +1,4 @@
-import 'recommendedDose.dart';
-import 'supportingData/antigenSupportingData/classes/vaccine.dart';
-import 'vaxDate.dart';
-import 'vaxSeries.dart';
+import 'package:vax_cast/src/shared.dart';
 
 class GroupForecast {
   List<String> seriesName;
@@ -74,8 +71,8 @@ class GroupForecast {
   void applyMultiAgLogic(VaxSeries series) {
     if (series.seriesStatus == 'not complete') {
       _selectDates(series.recommendedDose);
-      _addToReasons(series.forecastReason, series.targetDisease);
-      _addToAntigens(series.seriesStatus, series.targetDisease);
+      _addToReasons(series.forecastReason.toString(), series.targetDisease);
+      _addToAntigens(series.seriesStatus.toString(), series.targetDisease);
       _addRecommendedVaccines(
           series.seriesDose[series.targetDose].preferableVaccine);
       recommendedDoses.add(series.recommendedDose);

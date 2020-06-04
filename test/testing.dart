@@ -1,5 +1,5 @@
 import 'package:fhir/fhir_r4.dart';
-import 'package:vax_cast/vax_cast.dart';
+import 'package:vax_cast/src/shared.dart';
 
 import 'getRemotePatient.dart';
 
@@ -18,7 +18,8 @@ void main() async {
       newBundles[3],
     );
     total += 1;
-    var rec = ImmunizationRecommendation.fromJson(newBundles[2].entry[0].resource.toJson());
+    var rec = ImmunizationRecommendation.fromJson(
+        newBundles[2].entry[0].resource.toJson());
 
     if (vaccineForecast[0].seriesVaccineGroup == rec.recommendation[0].series) {
       // printAntigen(vaccineForecast, 'Diphtheria');
@@ -90,27 +91,24 @@ bool differentThanCDC(GroupForecast group, ImmunizationRecommendation rec) {
 }
 
 bool differentEarliest(GroupForecast group, ImmunizationRecommendation rec) {
-  var vaxDate = rec.recommendation[0].dateCriterion[0].value
-      .toString()
-      .substring(0, 10);
+  var vaxDate =
+      rec.recommendation[0].dateCriterion[0].value.toString().substring(0, 10);
   return group.groupEarliestDate == null
       ? vaxDate.contains('9999') ? false : true
       : group.groupEarliestDate.toString().substring(0, 10) != vaxDate;
 }
 
 bool differentRecommended(GroupForecast group, ImmunizationRecommendation rec) {
-  var vaxDate = rec.recommendation[0].dateCriterion[1].value
-      .toString()
-      .substring(0, 10);
+  var vaxDate =
+      rec.recommendation[0].dateCriterion[1].value.toString().substring(0, 10);
   return group.groupAdjRecDate == null
       ? vaxDate.contains('9999') ? false : true
       : group.groupAdjRecDate.toString().substring(0, 10) != vaxDate;
 }
 
 bool differentPastDue(GroupForecast group, ImmunizationRecommendation rec) {
-  var vaxDate = rec.recommendation[0].dateCriterion[2].value
-      .toString()
-      .substring(0, 10);
+  var vaxDate =
+      rec.recommendation[0].dateCriterion[2].value.toString().substring(0, 10);
   return group.groupAdjPastDueDate == null
       ? vaxDate.contains('9999') ? false : true
       : group.groupAdjPastDueDate.toString().substring(0, 10) != vaxDate;
@@ -121,7 +119,7 @@ var patientTestList = [
   '2013-0346',
   '2013-0348',
   '2013-0416'
-  '2013-0423',
+      '2013-0423',
   '2013-0424',
   '2013-0426',
   '2013-0430',
@@ -153,7 +151,6 @@ var patientTestList = [
   '20-',
   '20-',
   '20-',
-
 ];
 
 var patientFullList = [

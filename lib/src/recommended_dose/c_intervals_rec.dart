@@ -4,6 +4,7 @@ class IntervalRec {
   VaxDate minIntDate;
   VaxDate earliestRecIntDate;
   VaxDate latestRecIntDate;
+  String intervalPriority;
 
   IntervalRec();
 
@@ -11,6 +12,7 @@ class IntervalRec {
       List<Dose> pastImmunizations) {
     if (intervals != null) {
       for (final interval in intervals) {
+        intervalPriority = interval.intervalPriority;
         if (interval.fromPrevious == 'Y') {
           checkFromPrevious(pastDoses, interval);
         } else if (interval.fromTargetDose != null) {

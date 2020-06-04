@@ -4,6 +4,8 @@ part 'b_skippable.dart';
 part 'c_complete_target_dose.dart';
 part 'd_contraindicated_series.dart';
 part 'e_another_target_dose.dart';
+part 'f_pre_filter.dart';
+part 'g_prepare_series.dart';
 
 class VaxSeries {
   VaxPatient patient;
@@ -28,7 +30,7 @@ class VaxSeries {
   bool scorableSeries;
   bool shouldBeScored;
   bool allDosesValid;
-  bool completeable;
+  bool completable;
   VaxDate forecastFinishDate;
   int score;
   bool bestSeries;
@@ -59,7 +61,7 @@ class VaxSeries {
     scorableSeries = false;
     shouldBeScored = false;
     allDosesValid = false;
-    completeable = true;
+    completable = true;
     forecastFinishDate = VaxDate.max();
     score = 0;
     bestSeries = false;
@@ -152,7 +154,7 @@ class VaxSeries {
 
   void generateForecastDates(bool anySeriesComplete) {
     var forecast = true;
-    while (seriesStatus == 'not complete' && forecast) {
+    while (seriesStatus == SeriesStatus.not_complete && forecast) {
       recommendedDose = RecommendedDose();
       recommendedDose.generateForecastDates(
           seriesDose[targetDose], patient, pastDoses);
@@ -165,10 +167,6 @@ class VaxSeries {
       );
       forecast = oldTarget == targetDose;
     }
-    validateForecastedDates();
-  }
-
-  void validateForecastedDates() {
     if (recommendedDose.earliestDate != null &&
         recommendedDose.latestDate != null) {
       if (recommendedDose.earliestDate >= recommendedDose.latestDate) {
@@ -179,79 +177,16 @@ class VaxSeries {
     }
   }
 
-//***************************************************************************/
-//   Selection Section
-//***************************************************************************/
-  void preFilterPatientSeries(String highPriority) {
-    var assessmentDate = patient.assessmentDate;
-    var dob = patient.dob;
-
-    bool highEnoughPriority() => seriesPriority.compareTo(highPriority) != 1;
-
-    bool isOldEnough() =>
-        dob.minIfNull(minAgeToStart) <= assessmentDate ||
-        seriesStatus == 'complete';
-
-    bool startedOnTime() {
-      if (pastDoses.isEmpty) return true;
-      var dose = pastDoses.indexWhere((dose) => dose.valid);
-      return dose == -1
-          ? true
-          : pastDoses[dose].dateGiven < dob.maxIfNull(maxAgeToStart);
-    }
-
-    if (highEnoughPriority() && isOldEnough() && startedOnTime()) {
-      scorableSeries = true;
-    } else {
-      scorableSeries = false;
-    }
-  }
+  void preFilterSeries(String highPriority) =>
+      scorableSeries = PreFilter.scorable(this, highPriority);
 
   void prepareToScoreSeries() {
-    var dob = patient.dob;
-    allDosesValid = pastDoses.indexWhere((dose) => !dose.valid) == -1;
-    if (seriesStatus == 'complete') {
-      forecastFinishDate = VaxDate.min();
-    } else {
-      forecastFinishDate = recommendedDose.earliestDate;
-      for (var i = targetDose + 1; i < seriesDose.length; i++) {
-        if (seriesDose[i].interval != null) {
-          if (seriesDose[i].interval[0].fromPrevious == 'Y') {
-            forecastFinishDate =
-                forecastFinishDate.change(seriesDose[i].interval[0].absMinInt);
-          }
-        }
-        forecastFinishDate =
-            forecastFinishDate > dob.minIfNull(seriesDose[i].age[0].absMinAge)
-                ? forecastFinishDate
-                : dob.minIfNull(seriesDose[i].age[0].absMinAge);
-      }
-    }
-    completeable =
-        forecastFinishDate < dob.maxIfNull(seriesDose.last.age[0].maxAge);
+    PrepareSeries prepare = PrepareSeries();
+    prepare.toScore(this);
+    allDosesValid = prepare.allDosesValid;
+    forecastFinishDate = prepare.forecastFinishDate;
+    completable = prepare.completable;
   }
-
-  void notProdValidSeries(int points) =>
-      score += isProductSeries && allDosesValid ? 0 : points;
-
-  void notProdSeries(int points) => score += isProductSeries ? 0 : points;
-
-  void notCompletable(int points) => score += completeable ? 0 : points;
-
-  void notHighestNumValidDoses(int highestNumValidDoses, int points) =>
-      score += targetDose == highestNumValidDoses ? 0 : points;
-
-  void notClosestToCompletion(int lowestNumDosesFromCompletion, int points) =>
-      score +=
-          seriesDose.length - targetDose + 1 == lowestNumDosesFromCompletion
-              ? 0
-              : points;
-
-  void notEarliestToFinish(VaxDate earliestFinishDate, int points) =>
-      score += forecastFinishDate == earliestFinishDate ? 0 : points;
-
-  void notEarliestToStart(VaxDate earliestFinishDate, int points) =>
-      score += recommendedDose.earliestDate == earliestFinishDate ? 0 : points;
 
 //***************************************************************************/
 //   Checks for Best Series

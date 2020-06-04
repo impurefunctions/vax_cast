@@ -14,6 +14,7 @@ class RecommendedDose {
   VaxDate adjustedRecommendedDate;
   VaxDate adjustedPastDueDate;
   String vaccineGuidance;
+  String intervalPriority;
   List<Vaccine> recommendedVaccines;
 
   RecommendedDose();
@@ -28,6 +29,8 @@ class RecommendedDose {
       pastDoses,
       patient.pastImmunizations,
     );
+
+    intervalPriority = intervalRec.intervalPriority;
 
     VaxDate conflict =
         ConflictRec.checkForConflicts(seriesDose, patient.liveVirusList);

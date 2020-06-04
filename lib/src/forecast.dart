@@ -1,14 +1,7 @@
 import 'package:fhir/fhir_r4.dart' as fhir_r4;
 import 'package:fhir/fhir_stu3.dart' as fhir_stu3;
 import 'package:fhir/fhir_dstu2.dart' as fhir_dstu2;
-
-import 'antigen.dart';
-import 'dose.dart';
-import 'groupForecast.dart';
-import 'supportingData/antigenSupportingData/classes/indication.dart';
-import 'supportingData/antigenSupportingData/classes/series.dart';
-import 'supportingData/supportingData.dart';
-import 'vaxPatient/vaxPatient.dart';
+import 'package:vax_cast/src/shared.dart';
 
 class Forecast {
   Map<String, Antigen> antigens;
@@ -31,7 +24,9 @@ class Forecast {
       List<fhir_r4.ImmunizationRecommendation> recommendations,
       List<fhir_r4.Condition> conditions) async {
     await readSupportingData();
-    this.patient = VaxPatient.fromR4(
+    this.patient = VaxPatient.fromFhir(
+      FHIR_V.r4,
+      false,
       patient,
       immunizations,
       recommendations,
@@ -49,7 +44,9 @@ class Forecast {
     fhir_r4.Bundle conditionBundle,
   ) async {
     await readSupportingData();
-    patient = VaxPatient.fromR4Bundles(
+    patient = VaxPatient.fromFhir(
+      FHIR_V.r4,
+      true,
       patientBundle,
       immunizationBundle,
       recommendationBundle,
@@ -67,7 +64,9 @@ class Forecast {
     fhir_stu3.Bundle conditionBundle,
   ) async {
     await readSupportingData();
-    patient = VaxPatient.fromStu3Bundles(
+    patient = VaxPatient.fromFhir(
+      FHIR_V.stu3,
+      false,
       patientBundle,
       immunizationBundle,
       recommendationBundle,
@@ -85,7 +84,9 @@ class Forecast {
     fhir_dstu2.Bundle conditionBundle,
   ) async {
     await readSupportingData();
-    patient = VaxPatient.fromDstu2Bundles(
+    patient = VaxPatient.fromFhir(
+      FHIR_V.dstu2,
+      true,
       patientBundle,
       immunizationBundle,
       recommendationBundle,
@@ -120,16 +121,11 @@ class Forecast {
   bool isAppropriateGender(String requiredGender) =>
       //if for some reason we don't know the patient's gender,
       //we assume it's appropriate
-      requiredGender == null
+      requiredGender == null || patient.gender == null
           ? true
-          : patient.sex == null
-              ? requiredGender.toLowerCase() == 'male'
-              : !(requiredGender.toLowerCase() == 'male' &&
-                      patient.sex.toLowerCase() == 'female' ||
-                  requiredGender.toLowerCase() == 'female' &&
-                      patient.sex.toLowerCase() == 'male' ||
-                  requiredGender.toLowerCase() == 'unknown' &&
-                      patient.sex.toLowerCase() == 'male');
+          : requiredGender.toLowerCase() == 'male'
+              ? patient.gender == VaxGender.male
+              : patient.gender != VaxGender.male;
 
   bool doesIndicationApply(Map<String, Indication> indications) {
     if (patient.conditions.isNotEmpty) {

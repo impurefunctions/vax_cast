@@ -1,15 +1,14 @@
 part of 'a_vax_series.dart';
 
 class Skippable {
-  VaxDate date;
+  VaxDate refDate;
   Context context;
   bool anySeriesComplete;
   VaxPatient patient;
-  VaxDate refDate;
   List<Dose> pastDoses;
 
   Skippable(
-    this.date,
+    this.refDate,
     this.context,
     this.anySeriesComplete,
     this.patient,
