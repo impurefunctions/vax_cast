@@ -5,7 +5,9 @@ class EvaluateDoseCondition {
   VaxDate lotExp;
   String doseCondition;
 
-  EvaluateDoseCondition(this.dateGiven, this.lotExp, this.doseCondition);
+  EvaluateDoseCondition(this.dateGiven, this.lotExp, this.doseCondition) {
+    lotExp ??= VaxDate.max();
+  }
 
   bool cannotBeEvaluated() => dateGiven > lotExp || doseCondition != null;
 

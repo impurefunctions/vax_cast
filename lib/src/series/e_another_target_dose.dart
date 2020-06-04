@@ -40,7 +40,7 @@ class AnotherTargetDose {
       );
     } else {
       String maxAge;
-      if (seriesDose.age.length == 1) {
+      if (seriesDose.age.length == 2) {
         if (VaxDate.mmddyyyy(seriesDose.age[1].effectiveDate) >=
             patient.assessmentDate) {
           maxAge = seriesDose.age[1].maxAge;

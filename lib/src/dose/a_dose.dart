@@ -37,6 +37,7 @@ class Dose {
     this.mvx,
   }) {
     this.valid = true;
+    this.evaluation = Tuple2(EvalStatus.valid, '');
   }
 
   void setStatus(
@@ -47,10 +48,10 @@ class Dose {
     target = targetStatus;
     valid &= isValid;
     evaluation = Tuple2(
-      evaluation.value1 == EvalStatus.valid
+      evaluation?.value1 == EvalStatus.valid
           ? evalStatus.value1
-          : evaluation.value1,
-      '${evaluation.value2}, ${evalStatus.value2}',
+          : evaluation?.value1,
+      '${evaluation?.value2}, ${evalStatus.value2}',
     );
   }
 
@@ -180,7 +181,7 @@ class Dose {
   }
 
   void validDose(int targetDose) {
-    target = Tuple2(targetDose, target.value2 ?? TargetStatus.satisfied);
+    target = Tuple2(targetDose, target?.value2 ?? TargetStatus.satisfied);
     valid = true;
     evaluation = Tuple2(EvalStatus.valid, 'valid dose');
   }

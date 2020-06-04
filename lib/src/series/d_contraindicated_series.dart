@@ -7,20 +7,23 @@ abstract class ContraindicatedSeries {
     String targetDisease,
     SeriesDose seriesDose,
   ) {
+    bool contraindicated = false;
     if (status != SeriesStatus.contraindicated) {
       if (patient.conditions != null &&
           SupportingData.antigenSupportingData[targetDisease].contraindications
                   .vaccine !=
               null) {
         for (final condition in patient.conditions) {
-          var obsCondition = SupportingData.antigenSupportingData[targetDisease]
-              .contraindications.vaccine[condition];
+          Contraindication obsCondition = SupportingData
+              .antigenSupportingData[targetDisease]
+              .contraindications
+              .vaccine[condition];
           if (obsCondition != null) {
-            var dob = patient.dob;
-            var assessmentDate = patient.assessmentDate;
+            VaxDate dob = patient.dob;
+            VaxDate assessmentDate = patient.assessmentDate;
             if (dob.minIfNull(obsCondition.beginAge) <= assessmentDate &&
                 assessmentDate < dob.maxIfNull(obsCondition.endAge)) {
-              var contraindicatedCvx = <String>[];
+              List<String> contraindicatedCvx = <String>[];
               obsCondition.contraindicatedVaccine
                   .forEach((vaccine) => contraindicatedCvx.add(vaccine.cvx));
               seriesDose.preferableVaccine
@@ -28,12 +31,15 @@ abstract class ContraindicatedSeries {
             }
           }
           if (seriesDose.preferableVaccine.isEmpty) {
-            return true;
+            contraindicated = true;
           }
         }
-      } else
-        return false;
+      } else {
+        contraindicated = false;
+      }
+    } else {
+      contraindicated = true;
     }
-    return true;
+    return contraindicated;
   }
 }

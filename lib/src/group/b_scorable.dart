@@ -5,7 +5,11 @@ class Scorable {
   int numSeriesInProcess;
   int numCompleteSeries;
 
-  Scorable();
+  Scorable() {
+    numScorableSeries = 0;
+    numSeriesInProcess = 0;
+    numCompleteSeries = 0;
+  }
 
   void getNumbers(List<VaxSeries> vaxSeries) {
     for (final series in vaxSeries) {

@@ -165,7 +165,7 @@ class VaxSeries {
         Context.forecast,
         anySeriesComplete,
       );
-      forecast = oldTarget == targetDose;
+      forecast = oldTarget != targetDose;
     }
     if (recommendedDose.earliestDate != null &&
         recommendedDose.latestDate != null) {

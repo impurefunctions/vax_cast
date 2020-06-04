@@ -9,6 +9,7 @@ class PreferableIntervals {
 
   PreferableIntervals(this.seriesDose, this.pastDoses, this.dose) {
     valid = true;
+    prefIntReason = '';
   }
 
   Tuple2<bool, String> checkPreferred() {
@@ -73,7 +74,7 @@ class PreferableIntervals {
               var previousDose = pastDoses[index];
               if ((previousDose?.age?.value1 ?? true) &&
                   ((previousDose?.allowInt?.value1 ?? true) ||
-                      (previousDose?.prefInt ?? true))) {
+                      (previousDose?.prefInt?.value1 ?? true))) {
                 addToReason('grace period from $compareDose', true);
               } else {
                 addToReason('too soon from $compareDose', false);

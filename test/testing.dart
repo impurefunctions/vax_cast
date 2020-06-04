@@ -22,7 +22,7 @@ void main() async {
         newBundles[2].entry[0].resource.toJson());
 
     if (vaccineForecast[0].seriesVaccineGroup == rec.recommendation[0].series) {
-      // printAntigen(vaccineForecast, 'Diphtheria');
+      printAntigen(vaccineForecast[0], 'Diphtheria');
       // printAntigen(vaccineForecast, 'Pertussis');
       // printAntigen(vaccineForecast, 'Tetanus');
       // printAntigen(vaccineForecast[0], 'Influenza');
