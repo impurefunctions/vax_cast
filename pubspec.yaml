@@ -10,14 +10,17 @@ dependencies:
   http: ^0.12.0+4
   meta: ^1.1.8
   intl: ^0.16.1
-  freezed: ^0.10.7
   dartz: ^0.9.1
+  freezed_annotation: ^0.7.1
+  enum_to_string: ^1.0.9
+  
   fhir:
     path: /home/grey/dev/fhir
 
 dev_dependencies:
   json_serializable: ^3.2.5
   build_runner: ^1.8.1
+  freezed: ^0.10.9
 
 flutter:
   uses-material-design: true

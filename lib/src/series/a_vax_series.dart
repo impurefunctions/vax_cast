@@ -1,17 +1,14 @@
-// import '../shared.dart';
+import 'package:vax_cast/src/shared.dart';
 
-// part 'b_skippable.dart';
-// part 'c_complete_target_dose.dart';
-// part 'd_contraindicated_series.dart';
-// part 'e_another_target_dose.dart';
-// part 'f_pre_filter.dart';
-// part 'g_prepare_series.dart';
+class VaxSeries {
+  Series series;
 
-// class VaxSeries {
+  VaxSeries();
+}
 //   VaxPatient patient;
 //   List<Dose> pastDoses;
 //   SeriesStatus seriesStatus;
-//   List<SeriesDose> seriesDose;
+
 //   int targetDose;
 //   String seriesName;
 //   String targetDisease;
@@ -40,23 +37,7 @@
 //   VaxSeries(Series series, VaxPatient newPatient) {
 //     patient = newPatient;
 //     pastDoses = <Dose>[];
-//     seriesStatus = SeriesStatus.not_complete;
-//     seriesDose = series.seriesDose;
-//     targetDose = 0;
-//     seriesName = series.seriesName;
-//     targetDisease = series.targetDisease;
-//     seriesVaccineGroup = series.seriesVaccineGroup;
-//     seriesAdminGuidance = series.seriesAdminGuidance;
-//     isStandardSeries = series.seriesType == 'Standard';
-//     isDefaultSeries = series.defaultSeries == 'Yes';
-//     isProductSeries = series.productPath == 'Yes';
-//     seriesPriority = series.seriesPriority;
-//     seriesPreference = series.seriesPreference;
-//     minAgeToStart = series.minAgeToStart;
-//     maxAgeToStart = series.maxAgeToStart;
-//     targetDoses = series.seriesDose == null
-//         ? null
-//         : List.filled(series.seriesDose.length, TargetStatus.not_satisfied);
+
 //     prioritized = false;
 //     scorableSeries = false;
 //     shouldBeScored = false;

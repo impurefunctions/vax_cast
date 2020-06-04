@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:fhir/fhir_r4.dart' as fhir_r4;
 import 'package:fhir/r4/resource_types/foundation/other/other.enums.dart';
 import 'package:fhir/r4/resource_types/resource_types.enums.dart';
-import 'package:vax_cast/src/forecast.dart';
+import 'package:vax_cast/src/shared.dart';
 
 var rec = fhir_r4.ImmunizationRecommendation(
   resourceType: 'ImmunizationRecommendation',
@@ -205,21 +205,27 @@ var testBundle = fhir_r4.Bundle(
 );
 
 void main() async {
-  var forecast = await Forecast().r4Forecast(pat, [
-    hepB1,
-    hepB2,
-    dtap1,
-    hib1,
-    rv1,
-    polio,
-    pcv1,
-  ], [
-    rec
-  ], <fhir_r4.Condition>[]);
-  forecast.forEach((group) {
-    print(
-        '${group.seriesVaccineGroup}:${group.targetDisease}:${group.groupEarliestDate}');
-  });
+  await VaxCast().cast(
+    FHIR_V.r4,
+    false,
+    pat,
+    [
+      hepB1,
+      hepB2,
+      dtap1,
+      hib1,
+      rv1,
+      polio,
+      pcv1,
+    ],
+    [rec],
+    <fhir_r4.Condition>[],
+    null,
+  );
+  // forecast.forEach((group) {
+  //   print(
+  //       '${group.seriesVaccineGroup}:${group.targetDisease}:${group.groupEarliestDate}');
+  // });
 }
 
 var immBundle = fhir_r4.Bundle.fromJson(jsonDecode("""{
