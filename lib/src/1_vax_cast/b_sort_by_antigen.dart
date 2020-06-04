@@ -1,15 +1,15 @@
 part of 'a_vax_cast.dart';
 
-Map<VaxAg, Antigen> sortByAntigen(VaxPatient patient) {
-  Map<VaxAg, Antigen> ag = <VaxAg, Antigen>{};
+Map<Dz, Antigen> sortByAntigen(VaxPatient patient) {
+  Map<Dz, Antigen> ag = <Dz, Antigen>{};
   for (final vaccine in patient.pastImmunizations) {
     for (final association in SupportingData
         .scheduleSupportingData.cvxToAntigenMap[vaccine.cvx].association) {
       if (datesApply(patient.dob, vaccine.dateGiven,
           association.associationBeginAge, association.associationEndAge)) {
-        ag.keys.contains(getVaxAg(association.antigen))
-            ? ag[getVaxAg(association.antigen)].pastDoses.add(vaccine)
-            : ag[getVaxAg(association.antigen)] =
+        ag.keys.contains(Dz.parse(association.antigen))
+            ? ag[Dz.parse(association.antigen)].pastDoses.add(vaccine)
+            : ag[Dz.parse(association.antigen)] =
                 Antigen(pastDoses: <Dose>[vaccine]);
       }
     }

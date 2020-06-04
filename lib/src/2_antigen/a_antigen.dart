@@ -8,11 +8,19 @@ class Antigen {
 
   Antigen({this.pastDoses});
 
-  void sortDoses() =>
+  void sortDoses() {
+    if (pastDoses != null) {
       pastDoses.sort((a, b) => a.dateGiven.compareTo(b.dateGiven));
+    }
+  }
 
-  void selectRelevantSeries(VaxPatient patient, VaxAg vaxAg) {
-    series = relevantSeries(patient, vaxAg);
+  void createRelevantSeries(VaxPatient patient, Dz dz) {
+    series = relevantSeries(patient, dz);
+    series.forEach((series) => series.pastDoses = pastDoses);
+  }
+
+  void evaluateDoses(VaxPatient patient) {
+    series.forEach((series) => series.evaluateDoses(patient));
   }
 }
 

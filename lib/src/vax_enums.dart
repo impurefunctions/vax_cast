@@ -1,5 +1,3 @@
-import 'package:json_annotation/json_annotation.dart';
-
 enum VaxGender {
   female,
   male,
@@ -12,33 +10,33 @@ enum FHIR_V {
   dstu2,
 }
 
-// enum SeriesStatus {
-//   aged_out,
-//   complete,
-//   contraindicated,
-//   immune,
-//   not_complete,
-//   not_recommended,
-// }
+enum TargetStatus {
+  not_satisfied,
+  satisfied,
+  skipped,
+}
 
-// enum TargetStatus {
-//   not_satisfied,
-//   satisfied,
-//   skipped,
-// }
+enum EvalStatus {
+  extraneous,
+  not_valid,
+  sub_standard,
+  valid,
+  skipped,
+}
 
-// enum EvalStatus {
-//   extraneous,
-//   not_valid,
-//   sub_standard,
-//   valid,
-//   skipped,
-// }
+enum SeriesStatus {
+  aged_out,
+  complete,
+  contraindicated,
+  immune,
+  not_complete,
+  not_recommended,
+}
 
-// enum Context {
-//   evaluation,
-//   forecast,
-// }
+enum Context {
+  evaluation,
+  forecast,
+}
 
 // enum AgeReason {
 //   too_young,

@@ -1,12 +1,13 @@
 export 'group/a_group.dart';
 export 'recommended_dose/a_recommended_dose.dart';
-export 'series/a_vax_series.dart';
-export 'dose/a_dose.dart';
+export '3_series/a_vax_series.dart';
+export '4_dose/a_dose.dart';
 export 'supporting_data/supporting_data.dart';
 export 'vax_patient/vax_patient.dart';
 export 'vax_enums.dart';
 export 'vax_date.dart';
-export 'antigen/a_antigen.dart';
+export '2_antigen/a_antigen.dart';
 export 'groupForecast.dart';
 export 'forecast.dart';
 export '1_vax_cast/a_vax_cast.dart';
+export 'dz.dart';

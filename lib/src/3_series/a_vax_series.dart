@@ -1,53 +1,59 @@
+import 'package:dartz/dartz.dart';
 import 'package:vax_cast/src/shared.dart';
+
+part 'b_skippable.dart';
+part 'c_complete_target_dose.dart';
 
 class VaxSeries {
   Series series;
+  List<Dose> pastDoses;
+  List<TargetStatus> targetDoses;
+  SeriesStatus seriesStatus;
 
-  VaxSeries();
+  VaxSeries(this.series) {
+    targetDoses =
+        List.filled(series.seriesDose.length, TargetStatus.not_satisfied);
+  }
+
+  int targetDose() => targetDoses
+      .indexWhere((targetStatus) => targetStatus == TargetStatus.not_satisfied);
+
+  void evaluateDoses(VaxPatient patient) {
+    if (pastDoses != null) {
+      pastDoses.forEach((dose) {
+        dose.evalCondition();
+        if (dose.target.value1 != -1) {
+          checkForSkip(patient, Context.evaluation, dose.dateGiven);
+        }
+      });
+    }
+  }
+
+  void checkForSkip(VaxPatient patient, Context context, VaxDate dateGiven) {
+    bool skip = true;
+    while (skip) {
+      Skip skippable = Skip(
+          series.seriesDose[targetDose()], patient, context, false, pastDoses);
+      if (skippable.skipNextDose() &&
+          seriesStatus == SeriesStatus.not_complete) {
+        completeTargetDose(TargetStatus.skipped, dateGiven);
+      }
+    }
+  }
+
+  void completeTargetDose(TargetStatus status, VaxDate dateGiven) {
+    Tuple2<SeriesStatus, TargetStatus> statuses;
+    if (isRecurring(series.seriesDose, targetDose())) {
+      statuses =
+          completeRecurringDose(series.seriesDose.last, status, dateGiven);
+    } else {
+      statuses =
+          completeNonRecurringDose(series.seriesDose, status, targetDose());
+    }
+    seriesStatus = statuses?.value1 ?? seriesStatus;
+    targetDoses[targetDose()] = statuses.value2;
+  }
 }
-//   VaxPatient patient;
-//   List<Dose> pastDoses;
-//   SeriesStatus seriesStatus;
-
-//   int targetDose;
-//   String seriesName;
-//   String targetDisease;
-//   String seriesVaccineGroup;
-//   String seriesAdminGuidance;
-//   bool isStandardSeries;
-//   bool isDefaultSeries;
-//   bool isProductSeries;
-//   String seriesPriority;
-//   String seriesPreference;
-//   String minAgeToStart;
-//   String maxAgeToStart;
-//   List<TargetStatus> targetDoses;
-//   ForecastReason forecastReason;
-//   bool prioritized;
-//   bool scorableSeries;
-//   bool shouldBeScored;
-//   bool allDosesValid;
-//   bool completable;
-//   VaxDate forecastFinishDate;
-//   int score;
-//   bool bestSeries;
-//   RecommendedDose recommendedDose;
-//   bool anotherDose;
-
-//   VaxSeries(Series series, VaxPatient newPatient) {
-//     patient = newPatient;
-//     pastDoses = <Dose>[];
-
-//     prioritized = false;
-//     scorableSeries = false;
-//     shouldBeScored = false;
-//     allDosesValid = false;
-//     completable = true;
-//     forecastFinishDate = VaxDate.max();
-//     score = 0;
-//     bestSeries = false;
-//     recommendedDose;
-//   }
 
 //   void evaluateVaccineDosesAdministered(bool anySeriesComplete) {
 //     if (pastDoses != null && pastDoses.isNotEmpty) {
@@ -68,39 +74,6 @@ class VaxSeries {
 //         }
 //       }
 //     }
-//   }
-
-//   void checkForSkippableDose(
-//       bool valid, VaxDate date, Context context, bool anySeriesComplete) {
-//     if (valid) {
-//       Skippable skippable = Skippable(
-//         date ?? patient.assessmentDate,
-//         context,
-//         anySeriesComplete,
-//         patient,
-//         pastDoses,
-//       );
-//       while (skippable.checkForSkip(seriesDose[targetDose]) &&
-//           seriesStatus == SeriesStatus.not_complete) {
-//         completeTargetDose(
-//             TargetStatus.skipped, date ?? patient.assessmentDate);
-//       }
-//     }
-//   }
-
-//   void completeTargetDose(TargetStatus status, VaxDate dateGiven) {
-//     CompleteTargetDose complete = CompleteTargetDose(
-//       status,
-//       dateGiven,
-//       this.targetDose,
-//       this.seriesDose,
-//       this.seriesStatus,
-//       this.targetDoses,
-//     );
-//     complete.completeTargetDose();
-//     targetDose = complete.targetDose;
-//     seriesStatus = complete.seriesStatus;
-//     targetDoses = complete.targetDoses;
 //   }
 
 //   void checkForSkippable(bool anySeriesComplete) {
