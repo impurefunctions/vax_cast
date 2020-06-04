@@ -162,8 +162,8 @@ class Forecast {
 
   void getForecast() {
 //remove after testing ******************************************************//
-    antigens.removeWhere(
-        (ag, antigen) => antigen.seriesVaccineGroup != patient.seriesGroup);
+    // antigens.removeWhere(
+    //     (ag, antigen) => antigen.seriesVaccineGroup != patient.seriesGroup);
 // ***************************************************************************//
     antigens.forEach((ag, antigen) => antigen.getForecast());
     groupForecast = <GroupForecast>[];

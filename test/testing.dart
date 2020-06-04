@@ -18,29 +18,42 @@ void main() async {
       newBundles[3],
     );
     total += 1;
-    var rec = ImmunizationRecommendation.fromJson(newBundles[2].entry[0].resource.toJson());
+    var rec = ImmunizationRecommendation.fromJson(
+        newBundles[2].entry[0].resource.toJson());
 
-    if (vaccineForecast[0].seriesVaccineGroup == rec.recommendation[0].series) {
-      // printAntigen(vaccineForecast, 'Diphtheria');
-      // printAntigen(vaccineForecast, 'Pertussis');
-      // printAntigen(vaccineForecast, 'Tetanus');
-      // printAntigen(vaccineForecast[0], 'Influenza');
-      // printAntigen(vaccineForecast, 'HPV');
-      // printAntigen(vaccineForecast, 'HepB');
-      // printAntigen(vaccineForecast, 'Hib');
-      // printAntigen(vaccineForecast, 'Measles');
-      // printAntigen(vaccineForecast, 'Mumps');
-      // printAntigen(vaccineForecast, 'Rubella');
-      // printAntigen(vaccineForecast, 'Polio');
-      if (differentThanCDC(vaccineForecast[0], rec)) {
-        print(rec.recommendation[0].series);
-        totalWrong += 1;
-        printEarliest(vaccineForecast[0], rec);
-        printRecommended(vaccineForecast[0], rec);
-        printPastDue(vaccineForecast[0], rec);
-      }
+    // if (vaccineForecast[0].seriesVaccineGroup == rec.recommendation[0].series) {
+    //   // printAntigen(vaccineForecast, 'Diphtheria');
+    //   // printAntigen(vaccineForecast, 'Pertussis');
+    //   // printAntigen(vaccineForecast, 'Tetanus');
+    //   // printAntigen(vaccineForecast[0], 'Influenza');
+    //   // printAntigen(vaccineForecast, 'HPV');
+    //   // printAntigen(vaccineForecast, 'HepB');
+    //   // printAntigen(vaccineForecast, 'Hib');
+    //   // printAntigen(vaccineForecast, 'Measles');
+    //   // printAntigen(vaccineForecast, 'Mumps');
+    //   // printAntigen(vaccineForecast, 'Rubella');
+    //   // printAntigen(vaccineForecast, 'Polio');
+    //   if (differentThanCDC(vaccineForecast[0], rec)) {
+    //     print(rec.recommendation[0].series);
+    //     totalWrong += 1;
+    //     printEarliest(vaccineForecast[0], rec);
+    //     printRecommended(vaccineForecast[0], rec);
+    //     printPastDue(vaccineForecast[0], rec);
+    //   }
+    // }
+    print('***************************************************************');
+    print(
+        'patient: ${Patient.fromJson(newBundles[0].entry[0].resource.toJson()).id}');
+    print('***************************************************************');
+    for (var forecast in vaccineForecast) {
+      print(forecast.targetDisease);
+      print(forecast.seriesVaccineGroup);
+      print('earliest date: ${printEarliest(vaccineForecast[0], rec)}');
+      print('recommended date: ${printRecommended(vaccineForecast[0], rec)}');
+      print('past due date: ${printPastDue(vaccineForecast[0], rec)}');
     }
-    print(Patient.fromJson(newBundles[0].entry[0].resource.toJson()).id);
+    // print(Patient.fromJson(newBundles[0].entry[0].resource.toJson()).id);
+    print('\n\n');
   }
   print('total wrong: $totalWrong');
   print('total: $total');
@@ -50,21 +63,18 @@ void printAntigen(GroupForecast vaccineForecast, String antigen) {
   print(vaccineForecast.seriesName.toString());
 }
 
-void printEarliest(GroupForecast group, ImmunizationRecommendation rec) {
-  print(
-      '${group.groupEarliestDate == null ? null : group.groupEarliestDate.toString().substring(0, 10)}:'
+String printEarliest(GroupForecast group, ImmunizationRecommendation rec) {
+  return ('${group.groupEarliestDate == null ? null : group.groupEarliestDate.toString().substring(0, 10)}:'
       '${rec.recommendation[0].dateCriterion[0].value.toString().substring(0, 10)}');
 }
 
-void printRecommended(GroupForecast group, ImmunizationRecommendation rec) {
-  print(
-      '${group.groupAdjRecDate == null ? null : group.groupAdjRecDate.toString().substring(0, 10)}:'
+String printRecommended(GroupForecast group, ImmunizationRecommendation rec) {
+  return ('${group.groupAdjRecDate == null ? null : group.groupAdjRecDate.toString().substring(0, 10)}:'
       '${rec.recommendation[0].dateCriterion[1].value.toString().substring(0, 10)}');
 }
 
-void printPastDue(GroupForecast group, ImmunizationRecommendation rec) {
-  print(
-      '${group.groupAdjPastDueDate == null ? null : group.groupAdjPastDueDate.toString().substring(0, 10)}:'
+String printPastDue(GroupForecast group, ImmunizationRecommendation rec) {
+  return ('${group.groupAdjPastDueDate == null ? null : group.groupAdjPastDueDate.toString().substring(0, 10)}:'
       '${rec.recommendation[0].dateCriterion[2].value.toString().substring(0, 10)}');
 }
 
@@ -90,27 +100,24 @@ bool differentThanCDC(GroupForecast group, ImmunizationRecommendation rec) {
 }
 
 bool differentEarliest(GroupForecast group, ImmunizationRecommendation rec) {
-  var vaxDate = rec.recommendation[0].dateCriterion[0].value
-      .toString()
-      .substring(0, 10);
+  var vaxDate =
+      rec.recommendation[0].dateCriterion[0].value.toString().substring(0, 10);
   return group.groupEarliestDate == null
       ? vaxDate.contains('9999') ? false : true
       : group.groupEarliestDate.toString().substring(0, 10) != vaxDate;
 }
 
 bool differentRecommended(GroupForecast group, ImmunizationRecommendation rec) {
-  var vaxDate = rec.recommendation[0].dateCriterion[1].value
-      .toString()
-      .substring(0, 10);
+  var vaxDate =
+      rec.recommendation[0].dateCriterion[1].value.toString().substring(0, 10);
   return group.groupAdjRecDate == null
       ? vaxDate.contains('9999') ? false : true
       : group.groupAdjRecDate.toString().substring(0, 10) != vaxDate;
 }
 
 bool differentPastDue(GroupForecast group, ImmunizationRecommendation rec) {
-  var vaxDate = rec.recommendation[0].dateCriterion[2].value
-      .toString()
-      .substring(0, 10);
+  var vaxDate =
+      rec.recommendation[0].dateCriterion[2].value.toString().substring(0, 10);
   return group.groupAdjPastDueDate == null
       ? vaxDate.contains('9999') ? false : true
       : group.groupAdjPastDueDate.toString().substring(0, 10) != vaxDate;
@@ -121,7 +128,7 @@ var patientTestList = [
   '2013-0346',
   '2013-0348',
   '2013-0416'
-  '2013-0423',
+      '2013-0423',
   '2013-0424',
   '2013-0426',
   '2013-0430',
@@ -153,7 +160,6 @@ var patientTestList = [
   '20-',
   '20-',
   '20-',
-
 ];
 
 var patientFullList = [
