@@ -9,3 +9,4 @@ export 'vax_date.dart';
 export 'antigen.dart';
 export 'groupForecast.dart';
 export 'forecast.dart';
+export 'vax_cast.dart';
