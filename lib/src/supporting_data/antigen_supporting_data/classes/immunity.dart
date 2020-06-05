@@ -1,5 +1,4 @@
-import 'clinicalHistory.dart';
-import 'dateOfBirth.dart';
+import '../export_antigen_supporting_data.dart';
 
 class Immunity {
   List<ClinicalHistory> clinicalHistory;

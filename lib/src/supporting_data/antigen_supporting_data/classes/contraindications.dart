@@ -1,4 +1,4 @@
-import 'contraindication.dart';
+import '../export_antigen_supporting_data.dart';
 
 class Contraindications {
   Map<String, Contraindication> group;

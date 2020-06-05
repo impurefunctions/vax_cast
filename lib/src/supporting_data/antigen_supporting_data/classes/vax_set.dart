@@ -1,4 +1,4 @@
-import 'condition.dart';
+import '../export_antigen_supporting_data.dart';
 
 class VaxSet {
   String setID;

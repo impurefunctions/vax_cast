@@ -1,4 +1,4 @@
-import 'association.dart';
+import '../export_schedule_supporting_data.dart';
 
 class CvxMap {
   String shortDescription;

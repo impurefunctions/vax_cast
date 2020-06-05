@@ -313,13 +313,23 @@ class Dose {
                 .indexWhere((dose) => dose.cvx == conflict.previousCvx);
             if (index != -1) {
               liveConflict = liveConflict ||
-                  conflict.isThereConflict(liveVaccines[index], dateGiven);
+                  isThereConflict(conflict, liveVaccines[index], dateGiven);
             }
           }
         }
       }
     }
     return !liveConflict;
+  }
+
+  bool isThereConflict(
+      LiveVirusConflict conflict, Dose dose, VaxDate dateGiven) {
+    var conflictBeginIntDate =
+        dose.dateGiven.maxIfNull(conflict.conflictBeginInterval);
+    var conflictEndIntDate = dose.dateGiven.minIfNull(dose.valid
+        ? conflict.minConflictEndInterval
+        : conflict.conflictEndInterval);
+    return conflictBeginIntDate <= dateGiven && dateGiven < conflictEndIntDate;
   }
 
   void hasLiveVirusConflict() {

@@ -1,5 +1,4 @@
-import '../../../dose.dart';
-import '../../../vaxDate.dart';
+import '../export_schedule_supporting_data.dart';
 
 class LiveVirusConflict {
   String previousType;
@@ -40,12 +39,5 @@ class LiveVirusConflict {
     data['minConflictEndInterval'] = minConflictEndInterval;
     data['conflictEndInterval'] = conflictEndInterval;
     return data;
-  }
-
-  bool isThereConflict(Dose dose, VaxDate dateGiven) {
-    var conflictBeginIntDate = dose.dateGiven.maxIfNull(conflictBeginInterval);
-    var conflictEndIntDate = dose.dateGiven
-        .minIfNull(dose.valid ? minConflictEndInterval : conflictEndInterval);
-    return conflictBeginIntDate <= dateGiven && dateGiven < conflictEndIntDate;
   }
 }

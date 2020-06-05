@@ -1,4 +1,4 @@
-import 'observationCode.dart';
+import '../export_antigen_supporting_data.dart';
 
 class Interval {
   String fromPrevious;

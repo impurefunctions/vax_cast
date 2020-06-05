@@ -1,4 +1,4 @@
-import 'exclusion.dart';
+import '../export_antigen_supporting_data.dart';
 
 class DateOfBirth {
   String immunityBirthDate;

@@ -1,4 +1,4 @@
-import 'vaccine.dart';
+import '../export_antigen_supporting_data.dart';
 
 class Contraindication {
   String observationTitle;
