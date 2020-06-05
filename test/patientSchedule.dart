@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:fhir/fhir_r4.dart' as fhir_r4;
 import 'package:fhir/r4/resource_types/foundation/other/other.enums.dart';
 import 'package:fhir/r4/resource_types/resource_types.enums.dart';
-import 'package:vax_cast/src/forecast.dart';
 import 'package:vax_cast/src/shared.dart';
 
 var rec = fhir_r4.ImmunizationRecommendation(
@@ -35,7 +34,7 @@ var pat = fhir_r4.Patient(
   resourceType: 'Patient',
   id: fhir_r4.Id('testBaby'),
   name: [fhir_r4.HumanName(family: 'testBaby')],
-  gender: Gender.female,
+  // gender: fhir_r4.Gender.female,
   birthDate: fhir_r4.Date('2020-01-01'),
 );
 

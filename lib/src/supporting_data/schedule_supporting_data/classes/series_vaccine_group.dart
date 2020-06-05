@@ -12,11 +12,4 @@ class SeriesVaccineGroup {
     administerFullseriesVaccineGroup =
         json['administerFullseriesVaccineGroup'] as bool;
   }
-
-  Map<String, dynamic> toJson() {
-    var data = <String, dynamic>{};
-    data['antigens'] = antigens;
-    data['administerFullSeriesVaccineGroup'] = administerFullseriesVaccineGroup;
-    return data;
-  }
 }

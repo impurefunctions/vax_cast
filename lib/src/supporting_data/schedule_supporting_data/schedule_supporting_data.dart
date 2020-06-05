@@ -37,29 +37,4 @@ class ScheduleSupportingData {
           .forEach((k, v) => observations[k] = Observation.fromJson(v));
     }
   }
-
-  Map<String, dynamic> toJson() {
-    var data = <String, dynamic>{};
-    if (liveVirusConflicts != null) {
-      data['liveVirusConflicts'] =
-          liveVirusConflicts.map((v) => v.toJson()).toList();
-    }
-    if (seriesVaccineGroups != null) {
-      data['seriesVaccineGroups'] = <String, dynamic>{};
-      seriesVaccineGroups
-          .forEach((k, v) => data['seriesVaccineGroups'][k] = v.toJson());
-    }
-    if (cvxToAntigenMap != null) {
-      data['cvxToAntigenMap'] = <String, dynamic>{};
-      cvxToAntigenMap
-          .forEach((k, v) => data['cvxToAntigenMap'][k] = v.toJson());
-    }
-    if (observations != null) {
-      data['observations'] = <String, dynamic>{};
-      observations.forEach((k, v) => data['observations'][k] = v.toJson());
-    }
-    return data;
-  }
-
-  bool isAgInCvx(String cvx, String ag) => cvxToAntigenMap[cvx].isAgInCvx(ag);
 }

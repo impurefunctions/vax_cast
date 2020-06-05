@@ -7,22 +7,15 @@ environment:
 dependencies:
   json_annotation: ^3.0.1
   date_utils: ^0.1.0+3
-  equatable: ^1.1.1
   http: ^0.12.0+4
-  meta: ^1.1.8
   intl: ^0.16.1
-  built_value: ^7.0.9
-  freezed: ^0.10.7
+  dartz: ^0.9.1
   fhir:
     path: /home/grey/dev/fhir
 
 dev_dependencies:
-  pedantic: ^1.9.0
-  test: ^1.6.0
   json_serializable: ^3.2.5
   build_runner: ^1.8.1
-  mockito: ^4.1.1
-  built_value_generator: ^7.0.9
 
 flutter:
   uses-material-design: true

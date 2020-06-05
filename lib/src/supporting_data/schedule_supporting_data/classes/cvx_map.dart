@@ -18,22 +18,4 @@ class CvxMap {
       });
     }
   }
-
-  Map<String, dynamic> toJson() {
-    var data = <String, dynamic>{};
-    data['shortDescription'] = shortDescription;
-    if (association != null) {
-      data['association'] = association.map((v) => v.toJson()).toList();
-    }
-    return data;
-  }
-
-  bool isAgInCvx(String ag) {
-    if (association.indexWhere((association) => association.antigen == ag) ==
-        -1) {
-      return false;
-    } else {
-      return true;
-    }
-  }
 }

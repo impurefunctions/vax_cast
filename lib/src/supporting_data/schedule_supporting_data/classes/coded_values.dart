@@ -14,12 +14,4 @@ class CodedValues {
     codeSystem = json['codeSystem'];
     text = json['text'];
   }
-
-  Map<String, dynamic> toJson() {
-    var data = <String, dynamic>{};
-    data['code'] = code;
-    data['codeSystem'] = codeSystem;
-    data['text'] = text;
-    return data;
-  }
 }

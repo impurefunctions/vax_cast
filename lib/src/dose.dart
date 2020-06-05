@@ -6,7 +6,7 @@ class Dose {
   String doseCondition;
   String cvx;
   int targetDose;
-  String targetDoseStatus; //not satisfied, satisfied, skipped
+  TargetStatus targetDoseStatus; //not satisfied, satisfied, skipped
   bool valid;
   String status; //extranous, not valid, sub-standard, valid
   String evalReason;
@@ -85,7 +85,7 @@ class Dose {
 
   void setInadvertentStatus() {
     targetDose = null;
-    targetDoseStatus = 'not satisfied';
+    targetDoseStatus = TargetStatus.not_satisfied;
     valid = false;
     status = 'not valid';
     evalReason = 'inadvertent administration';
@@ -101,7 +101,7 @@ class Dose {
 
   void setSeasonStatus() {
     targetDose = null;
-    targetDoseStatus = 'not satisfied';
+    targetDoseStatus = TargetStatus.not_satisfied;
     evalReason = 'given outside seasonal recommendation';
   }
 
@@ -164,7 +164,7 @@ class Dose {
 
   void notValidAge() {
     targetDose = null;
-    targetDoseStatus = 'not satisfied';
+    targetDoseStatus = TargetStatus.not_satisfied;
     valid = false;
     status = 'not valid';
     evalReason = ageReason;
@@ -284,7 +284,7 @@ class Dose {
 
   void notValidIntervals() {
     targetDose = null;
-    targetDoseStatus = 'not satisfied';
+    targetDoseStatus = TargetStatus.not_satisfied;
     valid = false;
     status = 'not valid';
     evalReason = '$prefReason, $allowReason';
@@ -334,7 +334,7 @@ class Dose {
 
   void hasLiveVirusConflict() {
     targetDose = null;
-    targetDoseStatus = 'not satisfied';
+    targetDoseStatus = TargetStatus.not_satisfied;
     valid = false;
     status = 'not valid';
     evalReason = 'live virus conflict';
@@ -401,7 +401,7 @@ class Dose {
 
   void notAllowable() {
     targetDose = null;
-    targetDoseStatus = 'not satisfied';
+    targetDoseStatus = TargetStatus.not_satisfied;
     valid = false;
     status = 'not valid';
     evalReason = 'not allowable';
@@ -409,7 +409,7 @@ class Dose {
 
   void validDose(int targetDose) {
     this.targetDose = targetDose;
-    targetDoseStatus ??= 'satisfied';
+    targetDoseStatus ??= TargetStatus.satisfied;
     valid = true;
     status = 'valid';
     evalReason = 'valid dose';
@@ -417,7 +417,7 @@ class Dose {
 
   void isSubStandard() {
     targetDose = null;
-    targetDoseStatus = 'not satisfied';
+    targetDoseStatus = TargetStatus.not_satisfied;
     valid = false;
     status = 'sub-standard';
     evalReason = 'sub-standard';
@@ -425,7 +425,7 @@ class Dose {
 
   void skipDose() {
     targetDose = null;
-    targetDoseStatus = 'skipped';
+    targetDoseStatus = TargetStatus.skipped;
     status = 'skipped';
     evalReason = 'skipped';
   }

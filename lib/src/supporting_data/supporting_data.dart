@@ -14,8 +14,6 @@ class SupportingData {
       _antigenSupportingData;
   static ScheduleSupportingData get scheduleSupportingData =>
       _scheduleSupportingData;
-  static bool isAgInCvx(String cvx, String ag) =>
-      _scheduleSupportingData.isAgInCvx(cvx, ag);
   static Future<void> load() => _load();
 
   static Future<void> _load() async {

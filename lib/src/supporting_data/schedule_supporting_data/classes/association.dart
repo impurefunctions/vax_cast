@@ -14,12 +14,4 @@ class Association {
     associationBeginAge = json['associationBeginAge'];
     associationEndAge = json['associationEndAge'];
   }
-
-  Map<String, dynamic> toJson() {
-    var data = <String, dynamic>{};
-    data['antigen'] = antigen;
-    data['associationBeginAge'] = associationBeginAge;
-    data['associationEndAge'] = associationEndAge;
-    return data;
-  }
 }

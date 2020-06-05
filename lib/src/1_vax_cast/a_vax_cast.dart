@@ -1,23 +1,19 @@
 import 'package:vax_cast/src/shared.dart';
 
+part 'b_is_relevant.dart';
+
 class Forecast {
   Map<String, Antigen> antigens;
   List<GroupForecast> groupForecast;
   VaxPatient patient;
 
-  Forecast({
-    this.antigens,
-    this.groupForecast,
-    this.patient,
-  }) {
-    this.antigens = <String, Antigen>{};
+  Forecast() {
+    antigens = <String, Antigen>{};
   }
-
-  void readSupportingData() async => await SupportingData.load();
 
   Future<List<GroupForecast>> cast(version, bundles, patient, immunizations,
       recommendations, conditions, allergyInterolerance) async {
-    await readSupportingData();
+    await SupportingData.load();
     this.patient = VaxPatient.fromFhir(
       version,
       bundles,
@@ -26,66 +22,25 @@ class Forecast {
       recommendations,
       conditions,
     );
-    loadHx();
+    prepareAntigens();
     getForecast();
     return groupForecast;
   }
 
-  void loadHx() {
-    loadSupportingData();
-    antigens.removeWhere((ag, antigen) => antigen.groups == null);
-  }
-
-  void loadSupportingData() {
+  void prepareAntigens() {
     SupportingData.antigenSupportingData.forEach((ag, seriesGroup) {
-      antigens[ag] = Antigen(patient: patient, targetDisease: ag);
+      antigens[ag] = Antigen(patient, ag);
       for (var series in seriesGroup.series) {
-        if (isRelevant(series)) antigens[ag].newSeries(series);
+        if (isRelevant(series, patient)) antigens[ag].newSeries(series);
       }
       loadScheduleSupportingData(ag);
     });
-  }
-
-  bool isRelevant(Series series) => isAppropriateGender(series.requiredGender)
-      ? series.seriesType == 'Standard'
-          ? true
-          : doesIndicationApply(series.indication)
-      : false;
-
-  bool isAppropriateGender(String requiredGender) =>
-      //if for some reason we don't know the patient's gender,
-      //we assume it's appropriate
-      requiredGender == null
-          ? true
-          : patient.sex == null
-              ? requiredGender.toLowerCase() == 'male'
-              : !(requiredGender.toLowerCase() == 'male' &&
-                      patient.sex.toLowerCase() == 'female' ||
-                  requiredGender.toLowerCase() == 'female' &&
-                      patient.sex.toLowerCase() == 'male' ||
-                  requiredGender.toLowerCase() == 'unknown' &&
-                      patient.sex.toLowerCase() == 'male');
-
-  bool doesIndicationApply(Map<String, Indication> indications) {
-    if (patient.conditions.isNotEmpty) {
-      for (final condition in patient.conditions) {
-        if (indications.keys.contains(condition)) {
-          var indication = indications[condition];
-          if (patient.dob.minIfNull(indication.beginAge) <=
-                  patient.assessmentDate &&
-              patient.assessmentDate <
-                  patient.dob.maxIfNull(indication.endAge)) {
-            return true;
-          }
-        }
-      }
-    }
-    return false;
+    antigens.removeWhere((ag, antigen) => antigen.groups == null);
   }
 
   void loadScheduleSupportingData(String ag) {
     for (final dose in patient.pastImmunizations) {
-      if (SupportingData.isAgInCvx(dose.cvx, ag)) {
+      if (isAgInCvx(dose.cvx, ag)) {
         for (final group in antigens[ag].groups) {
           for (final series in group.vaxSeries) {
             series.pastDoses.add(Dose.copy(dose));
@@ -94,6 +49,13 @@ class Forecast {
       }
     }
   }
+
+  bool isAgInCvx(String cvx, String ag) =>
+      SupportingData.scheduleSupportingData.cvxToAntigenMap[cvx].association
+                  .indexWhere((association) => association.antigen == ag) ==
+              -1
+          ? false
+          : true;
 
   void getForecast() {
 //remove after testing ******************************************************//

@@ -10,7 +10,7 @@ part 'vax_patient_from_dstu2.dart';
 
 class VaxPatient {
   VaxDate dob;
-  String sex;
+  Gender sex;
   List<String> conditions;
   VaxDate assessmentDate;
   List<Dose> liveVirusList;

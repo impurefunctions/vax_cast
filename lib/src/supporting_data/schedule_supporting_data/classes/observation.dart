@@ -33,18 +33,4 @@ class Observation {
       });
     }
   }
-
-  Map<String, dynamic> toJson() {
-    var data = <String, dynamic>{};
-    data['observationCode'] = observationCode;
-    data['observationTitle'] = observationTitle;
-    data['group'] = group;
-    data['indicationText'] = indicationText;
-    data['contraindicationText'] = contraindicationText;
-    data['clarifyingText'] = clarifyingText;
-    if (codedValues != null) {
-      data['codedValues'] = codedValues.map((v) => v.toJson()).toList();
-    }
-    return data;
-  }
 }

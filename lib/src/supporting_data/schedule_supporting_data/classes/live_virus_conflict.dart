@@ -1,5 +1,3 @@
-import '../export_schedule_supporting_data.dart';
-
 class LiveVirusConflict {
   String previousType;
   String previousCvx;
@@ -27,17 +25,5 @@ class LiveVirusConflict {
     conflictBeginInterval = json['conflictBeginInterval'] as String;
     minConflictEndInterval = json['minConflictEndInterval'] as String;
     conflictEndInterval = json['conflictEndInterval'] as String;
-  }
-
-  Map<String, dynamic> toJson() {
-    var data = <String, dynamic>{};
-    data['previousType'] = previousType;
-    data['previousCvx'] = previousCvx;
-    data['currentType'] = currentType;
-    data['currentCvx'] = currentCvx;
-    data['conflictBeginInterval'] = conflictBeginInterval;
-    data['minConflictEndInterval'] = minConflictEndInterval;
-    data['conflictEndInterval'] = conflictEndInterval;
-    return data;
   }
 }

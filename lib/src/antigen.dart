@@ -8,29 +8,23 @@ class Antigen {
   VaxPatient patient;
   String targetDisease;
 
-  Antigen({
-    this.seriesVaccineGroup,
-    this.groups,
-    this.immunity,
-    this.contraindicated,
+  Antigen(
     this.patient,
     this.targetDisease,
-  });
+  );
 
   void newSeries(Series series) {
-    if (series != null) {
-      if (series.seriesDose != null) {
-        if (groups == null) {
-          groups = <Group>[Group(series, patient)];
-          seriesVaccineGroup = series.seriesVaccineGroup;
-        } else {
-          var group = groups.firstWhere(
-              (group) => group.seriesGroup == series.seriesGroup,
-              orElse: () => null);
-          group == null
-              ? groups.add(Group(series, patient))
-              : group.vaxSeries.add(VaxSeries(series, patient));
-        }
+    if (series?.seriesDose != null) {
+      if (groups == null) {
+        groups = <Group>[Group(series, patient)];
+        seriesVaccineGroup = series.seriesVaccineGroup;
+      } else {
+        var group = groups.firstWhere(
+            (group) => group.seriesGroup == series.seriesGroup,
+            orElse: () => null);
+        group == null
+            ? groups.add(Group(series, patient))
+            : group.vaxSeries.add(VaxSeries(series, patient));
       }
     }
   }
