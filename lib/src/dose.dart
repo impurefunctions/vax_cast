@@ -1,10 +1,4 @@
-import 'supportingData/antigenSupportingData/classes/seasonalRecommendation.dart';
-import 'supportingData/antigenSupportingData/classes/seriesDose.dart';
-import 'supportingData/antigenSupportingData/classes/vaxAge.dart';
-import 'supportingData/scheduleSupportingData/classes/liveVirusConflict.dart';
-import 'supportingData/supportingData.dart';
-import 'vaxDate.dart';
-import 'vaxPatient/vaxPatient.dart';
+import 'package:vax_cast/src/shared.dart';
 
 class Dose {
   VaxDate dateGiven;

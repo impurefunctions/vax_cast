@@ -1,7 +1,4 @@
-import 'supportingData/antigenSupportingData/classes/series.dart';
-import 'vaxDate.dart';
-import 'vaxPatient/vaxPatient.dart';
-import 'vaxSeries.dart';
+import 'package:vax_cast/src/shared.dart';
 
 class Group {
   VaxPatient patient;

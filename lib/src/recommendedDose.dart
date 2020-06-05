@@ -1,9 +1,4 @@
-import 'dose.dart';
-import 'supportingData/antigenSupportingData/classes/seriesDose.dart';
-import 'supportingData/antigenSupportingData/classes/vaccine.dart';
-import 'supportingData/supportingData.dart';
-import 'vaxDate.dart';
-import 'vaxPatient/vaxPatient.dart';
+import 'package:vax_cast/src/shared.dart';
 
 class RecommendedDose {
   VaxDate earliestDate;
@@ -37,12 +32,16 @@ class RecommendedDose {
             : pastDoses.lastWhere(
                 (dose) => dose.evalReason != 'inadvertent administration',
                 orElse: () => null);
-    var maxAgeDate = patient.dob.changeIfNotNull(seriesDose.age[0].maxAge);
-    var latestRecAgeDate =
-        patient.dob.changeIfNotNull(seriesDose.age[0].latestRecAge);
-    var earliestRecAgeDate =
-        patient.dob.changeIfNotNull(seriesDose.age[0].earliestRecAge);
-    var minAgeDate = patient.dob.changeIfNotNull(seriesDose.age[0].minAge);
+    var age = seriesDose.age.length == 1
+        ? seriesDose.age[0]
+        : VaxDate.mmddyyyy(seriesDose.age[0].cessationDate) >=
+                patient.assessmentDate
+            ? seriesDose.age[0]
+            : seriesDose.age[1];
+    var maxAgeDate = patient.dob.changeIfNotNull(age.maxAge);
+    var latestRecAgeDate = patient.dob.changeIfNotNull(age.latestRecAge);
+    var earliestRecAgeDate = patient.dob.changeIfNotNull(age.earliestRecAge);
+    var minAgeDate = patient.dob.changeIfNotNull(age.minAge);
 
     var minIntDate;
     var earliestRecIntDate;

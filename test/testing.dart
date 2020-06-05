@@ -1,5 +1,5 @@
 import 'package:fhir/fhir_r4.dart';
-import 'package:vax_cast/vax_cast.dart';
+import 'package:vax_cast/src/shared.dart';
 
 import 'getRemotePatient.dart';
 
@@ -11,49 +11,52 @@ void main() async {
   for (final patientId in patientIdList) {
     var newBundles = await GetRemotePatientData(patientId);
 
-    var vaccineForecast = await Forecast().createR4Forecast(
+    var vaccineForecast = await Forecast().cast(
+      FHIR_V.r4,
+      true,
       newBundles[0],
       newBundles[1],
       newBundles[2],
       newBundles[3],
+      null,
     );
     total += 1;
     var rec = ImmunizationRecommendation.fromJson(
         newBundles[2].entry[0].resource.toJson());
 
-    // if (vaccineForecast[0].seriesVaccineGroup == rec.recommendation[0].series) {
-    //   // printAntigen(vaccineForecast, 'Diphtheria');
-    //   // printAntigen(vaccineForecast, 'Pertussis');
-    //   // printAntigen(vaccineForecast, 'Tetanus');
-    //   // printAntigen(vaccineForecast[0], 'Influenza');
-    //   // printAntigen(vaccineForecast, 'HPV');
-    //   // printAntigen(vaccineForecast, 'HepB');
-    //   // printAntigen(vaccineForecast, 'Hib');
-    //   // printAntigen(vaccineForecast, 'Measles');
-    //   // printAntigen(vaccineForecast, 'Mumps');
-    //   // printAntigen(vaccineForecast, 'Rubella');
-    //   // printAntigen(vaccineForecast, 'Polio');
-    //   if (differentThanCDC(vaccineForecast[0], rec)) {
-    //     print(rec.recommendation[0].series);
-    //     totalWrong += 1;
-    //     printEarliest(vaccineForecast[0], rec);
-    //     printRecommended(vaccineForecast[0], rec);
-    //     printPastDue(vaccineForecast[0], rec);
-    //   }
-    // }
-    print('***************************************************************');
-    print(
-        'patient: ${Patient.fromJson(newBundles[0].entry[0].resource.toJson()).id}');
-    print('***************************************************************');
-    for (var forecast in vaccineForecast) {
-      print(forecast.targetDisease);
-      print(forecast.seriesVaccineGroup);
-      print('earliest date: ${printEarliest(vaccineForecast[0], rec)}');
-      print('recommended date: ${printRecommended(vaccineForecast[0], rec)}');
-      print('past due date: ${printPastDue(vaccineForecast[0], rec)}');
+    if (vaccineForecast[0].seriesVaccineGroup == rec.recommendation[0].series) {
+      //   // printAntigen(vaccineForecast, 'Diphtheria');
+      //   // printAntigen(vaccineForecast, 'Pertussis');
+      //   // printAntigen(vaccineForecast, 'Tetanus');
+      //   // printAntigen(vaccineForecast[0], 'Influenza');
+      //   // printAntigen(vaccineForecast, 'HPV');
+      //   // printAntigen(vaccineForecast, 'HepB');
+      //   // printAntigen(vaccineForecast, 'Hib');
+      //   // printAntigen(vaccineForecast, 'Measles');
+      //   // printAntigen(vaccineForecast, 'Mumps');
+      //   // printAntigen(vaccineForecast, 'Rubella');
+      //   // printAntigen(vaccineForecast, 'Polio');
+      if (differentThanCDC(vaccineForecast[0], rec)) {
+        print(rec.recommendation[0].series);
+        totalWrong += 1;
+        print(printEarliest(vaccineForecast[0], rec));
+        print(printRecommended(vaccineForecast[0], rec));
+        print(printPastDue(vaccineForecast[0], rec));
+      }
     }
-    // print(Patient.fromJson(newBundles[0].entry[0].resource.toJson()).id);
-    print('\n\n');
+    // print('***************************************************************');
+    // print(
+    //     'patient: ${Patient.fromJson(newBundles[0].entry[0].resource.toJson()).id}');
+    // print('***************************************************************');
+    // for (var forecast in vaccineForecast) {
+    //   print(forecast.targetDisease);
+    //   print(forecast.seriesVaccineGroup);
+    //   print('earliest date: ${printEarliest(vaccineForecast[0], rec)}');
+    //   print('recommended date: ${printRecommended(vaccineForecast[0], rec)}');
+    //   print('past due date: ${printPastDue(vaccineForecast[0], rec)}');
+    // }
+    print(Patient.fromJson(newBundles[0].entry[0].resource.toJson()).id);
+    // print('\n\n');
   }
   print('total wrong: $totalWrong');
   print('total: $total');

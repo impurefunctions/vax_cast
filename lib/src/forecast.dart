@@ -1,14 +1,4 @@
-import 'package:fhir/fhir_r4.dart' as fhir_r4;
-import 'package:fhir/fhir_stu3.dart' as fhir_stu3;
-import 'package:fhir/fhir_dstu2.dart' as fhir_dstu2;
-
-import 'antigen.dart';
-import 'dose.dart';
-import 'groupForecast.dart';
-import 'supportingData/antigenSupportingData/classes/indication.dart';
-import 'supportingData/antigenSupportingData/classes/series.dart';
-import 'supportingData/supportingData.dart';
-import 'vaxPatient/vaxPatient.dart';
+import 'package:vax_cast/src/shared.dart';
 
 class Forecast {
   Map<String, Antigen> antigens;
@@ -25,71 +15,16 @@ class Forecast {
 
   void readSupportingData() async => await SupportingData.load();
 
-  Future<List<GroupForecast>> r4Forecast(
-      fhir_r4.Patient patient,
-      List<fhir_r4.Immunization> immunizations,
-      List<fhir_r4.ImmunizationRecommendation> recommendations,
-      List<fhir_r4.Condition> conditions) async {
+  Future<List<GroupForecast>> cast(version, bundles, patient, immunizations,
+      recommendations, conditions, allergyInterolerance) async {
     await readSupportingData();
-    this.patient = VaxPatient.fromR4(
+    this.patient = VaxPatient.fromFhir(
+      version,
+      bundles,
       patient,
       immunizations,
       recommendations,
       conditions,
-    );
-    loadHx();
-    getForecast();
-    return groupForecast;
-  }
-
-  Future<List<GroupForecast>> createR4Forecast(
-    fhir_r4.Bundle patientBundle,
-    fhir_r4.Bundle immunizationBundle,
-    fhir_r4.Bundle recommendationBundle,
-    fhir_r4.Bundle conditionBundle,
-  ) async {
-    await readSupportingData();
-    patient = VaxPatient.fromR4Bundles(
-      patientBundle,
-      immunizationBundle,
-      recommendationBundle,
-      conditionBundle,
-    );
-    loadHx();
-    getForecast();
-    return groupForecast;
-  }
-
-  Future<List<GroupForecast>> createStu3Forecast(
-    fhir_stu3.Bundle patientBundle,
-    fhir_stu3.Bundle immunizationBundle,
-    fhir_stu3.Bundle recommendationBundle,
-    fhir_stu3.Bundle conditionBundle,
-  ) async {
-    await readSupportingData();
-    patient = VaxPatient.fromStu3Bundles(
-      patientBundle,
-      immunizationBundle,
-      recommendationBundle,
-      conditionBundle,
-    );
-    loadHx();
-    getForecast();
-    return groupForecast;
-  }
-
-  Future<List<GroupForecast>> createDstu2Forecast(
-    fhir_dstu2.Bundle patientBundle,
-    fhir_dstu2.Bundle immunizationBundle,
-    fhir_dstu2.Bundle recommendationBundle,
-    fhir_dstu2.Bundle conditionBundle,
-  ) async {
-    await readSupportingData();
-    patient = VaxPatient.fromDstu2Bundles(
-      patientBundle,
-      immunizationBundle,
-      recommendationBundle,
-      conditionBundle,
     );
     loadHx();
     getForecast();
@@ -162,8 +97,8 @@ class Forecast {
 
   void getForecast() {
 //remove after testing ******************************************************//
-    // antigens.removeWhere(
-    //     (ag, antigen) => antigen.seriesVaccineGroup != patient.seriesGroup);
+    antigens.removeWhere(
+        (ag, antigen) => antigen.seriesVaccineGroup != patient.seriesGroup);
 // ***************************************************************************//
     antigens.forEach((ag, antigen) => antigen.getForecast());
     groupForecast = <GroupForecast>[];

@@ -1,7 +1,4 @@
-import 'recommendedDose.dart';
-import 'supportingData/antigenSupportingData/classes/vaccine.dart';
-import 'vaxDate.dart';
-import 'vaxSeries.dart';
+import 'package:vax_cast/src/shared.dart';
 
 class GroupForecast {
   List<String> seriesName;

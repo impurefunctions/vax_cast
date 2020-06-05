@@ -1,14 +1,4 @@
-import 'dose.dart';
-import 'group.dart';
-import 'recommendedDose.dart';
-import 'supportingData/antigenSupportingData/classes/condition.dart';
-import 'supportingData/antigenSupportingData/classes/conditionalSkip.dart';
-import 'supportingData/antigenSupportingData/classes/series.dart';
-import 'supportingData/antigenSupportingData/classes/seriesDose.dart';
-import 'supportingData/antigenSupportingData/classes/vaxSet.dart';
-import 'supportingData/supportingData.dart';
-import 'vaxDate.dart';
-import 'vaxPatient/vaxPatient.dart';
+import 'package:vax_cast/src/shared.dart';
 
 class VaxSeries {
   VaxPatient patient;
@@ -343,15 +333,22 @@ class VaxSeries {
                 forecastFinishDate.change(seriesDose[i].interval[0].absMinInt);
           }
         }
-        forecastFinishDate =
-            forecastFinishDate > dob.minIfNull(seriesDose[i].age[0].absMinAge)
-                ? forecastFinishDate
-                : dob.minIfNull(seriesDose[i].age[0].absMinAge);
+        forecastFinishDate = forecastFinishDate >
+                dob.minIfNull(seriesDoseAge(seriesDose[i]).absMinAge)
+            ? forecastFinishDate
+            : dob.minIfNull(seriesDoseAge(seriesDose[i]).absMinAge);
       }
     }
-    completeable =
-        forecastFinishDate < dob.maxIfNull(seriesDose.last.age[0].maxAge);
+    completeable = forecastFinishDate <
+        dob.maxIfNull(seriesDoseAge(seriesDose.last).maxAge);
   }
+
+  VaxAge seriesDoseAge(SeriesDose seriesDose) => seriesDose.age.length == 1
+      ? seriesDose.age[0]
+      : VaxDate.mmddyyyy(seriesDose.age[0].cessationDate) >=
+              patient.assessmentDate
+          ? seriesDose.age[0]
+          : seriesDose.age[1];
 
   void notProdValidSeries(int points) =>
       score += isProductSeries && allDosesValid ? 0 : points;
