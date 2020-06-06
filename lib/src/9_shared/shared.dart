@@ -3,7 +3,7 @@ export '../1_antigen/a_antigen.dart';
 export '../2_group/a_group.dart';
 export '../3_vax_series/a_vax_series.dart';
 export '../4_dose/a_dose.dart';
-export '../5_recommended_dose/a_recommendedDose.dart';
+export '../5_recommended_dose/a_recommended_dose.dart';
 export '../6_group_forecast/a_group_forecast.dart';
 export '../7_vax_patient/vax_patient.dart';
 export '../8_supporting_data/export_supporting_data.dart';
