@@ -8,8 +8,7 @@ class Dose {
   String cvx;
   Tuple2<int, TargetStatus> target;
   bool valid;
-  EvalStatus status; //extranous, not valid, sub-standard, valid
-  String evalReason;
+  Tuple2<EvalStatus, String> evaluation;
   VaxPatient patient;
   String mvx;
   int vol;
@@ -29,8 +28,6 @@ class Dose {
     this.doseCondition,
     this.cvx,
     this.valid = false,
-    this.status,
-    this.evalReason,
     this.patient,
     this.mvx,
     this.vol,
@@ -47,7 +44,6 @@ class Dose {
   }) : lotExp = VaxDate(2999, 12, 31);
 
   Dose.copy(Dose oldDose) {
-    status = oldDose.status;
     target = oldDose.target;
     dateGiven = oldDose.dateGiven;
     lotExp = oldDose.lotExp;
@@ -55,7 +51,7 @@ class Dose {
     cvx = oldDose.cvx;
     mvx = oldDose.mvx;
     vol = oldDose.vol;
-    evalReason = oldDose.evalReason;
+    evaluation = oldDose.evaluation;
     preferVax = oldDose.preferVax;
     preferVaxReason = oldDose.preferVaxReason;
     allowVax = oldDose.allowVax;
@@ -71,6 +67,14 @@ class Dose {
 
   bool canBeEvaluated() => dateGiven <= lotExp && doseCondition == null;
 
+  void unsatisfiedTarget() =>  target = Tuple2(-1, TargetStatus.not_satisfied);
+
+  void setNotValid(String reason){ 
+    unsatisfiedTarget();
+    evaluation = Tuple2(EvalStatus.not_valid, '$reason');
+
+  }
+
   bool isInadvertentDose(SeriesDose seriesDose) =>
       seriesDose.inadvertentVaccine == null
           ? false
@@ -81,10 +85,8 @@ class Dose {
               : true;
 
   void setInadvertentStatus() {
-    target = Tuple2(-1,TargetStatus.not_satisfied);
+    setNotValid('inadvertent administration');
     valid = false;
-    status = EvalStatus.not_valid;
-    evalReason = 'inadvertent administration';
   }
 
   bool givenOutsideSeason(SeasonalRecommendation recommendation) =>
@@ -96,8 +98,8 @@ class Dose {
                   VaxDate.min().fromNullableString(recommendation.startDate);
 
   void setSeasonStatus() {
-    target = Tuple2(-1,TargetStatus.not_satisfied);
-    evalReason = 'given outside seasonal recommendation';
+    unsatisfiedTarget();
+    evaluation = Tuple2(null, '${evaluation.value2}, given outside seasonal recommendation');
   }
 
   bool givenAtValidAge(List<VaxAge> ageList, Dose pastDose, int targetDose) {
@@ -158,10 +160,8 @@ class Dose {
   }
 
   void notValidAge() {
-    target = Tuple2(-1,TargetStatus.not_satisfied);
+    setNotValid(ageReason);
     valid = false;
-    status = EvalStatus.not_valid;
-    evalReason = ageReason;
   }
 
   bool hasValidIntervals(SeriesDose seriesDose, List<Dose> pastDoses) {
@@ -200,8 +200,8 @@ class Dose {
       index = pastDoses.indexWhere((pastDose) => pastDose == this) - 1;
       compareDose = 'previous dose';
     } else if (allowable.fromTargetDose != null) {
-      index = pastDoses.indexWhere(
-          (dose) => dose.target.value1 == int.parse(allowable.fromTargetDose) - 1);
+      index = pastDoses.indexWhere((dose) =>
+          dose.target.value1 == int.parse(allowable.fromTargetDose) - 1);
       compareDose = 'dose ${allowable.fromTargetDose}';
     }
     allowInt =
@@ -277,10 +277,8 @@ class Dose {
   }
 
   void notValidIntervals() {
-    target = Tuple2(-1,TargetStatus.not_satisfied);
+    setNotValid('$prefReason, $allowReason');
     valid = false;
-    status = EvalStatus.not_valid;
-    evalReason = '$prefReason, $allowReason';
   }
 
   bool hasNoLiveVirusConflict() {
@@ -326,10 +324,8 @@ class Dose {
   }
 
   void hasLiveVirusConflict() {
-    target = Tuple2(-1,TargetStatus.not_satisfied);
+    setNotValid('live virus conflict');
     valid = false;
-    status = EvalStatus.not_valid;
-    evalReason = 'live virus conflict';
   }
 
   void wasPreferable(SeriesDose seriesDose) {
@@ -392,29 +388,24 @@ class Dose {
   }
 
   void notAllowable() {
-    target = Tuple2(-1,TargetStatus.not_satisfied);
+    setNotValid('not allowable');
     valid = false;
-    status = EvalStatus.not_valid;
-    evalReason = 'not allowable';
   }
 
   void validDose(int targetDose) {
-    target = Tuple2(targetDose,TargetStatus.satisfied);
+    target = Tuple2(targetDose, TargetStatus.satisfied);
     valid = true;
-    status = EvalStatus.valid;
-    evalReason = 'valid dose';
+    evaluation = Tuple2(EvalStatus.valid,'valid dose');
   }
 
   void isSubStandard() {
-    target = Tuple2(-1,TargetStatus.not_satisfied);
+    unsatisfiedTarget();
     valid = false;
-    status = EvalStatus.sub_standard;
-    evalReason = 'sub-standard';
+    evaluation = Tuple2(EvalStatus.sub_standard, 'sub-standard');
   }
 
   void skipDose() {
-    target = Tuple2(-1,TargetStatus.skipped);
-        status = EvalStatus.skipped;
-    evalReason = 'skipped';
+    target = Tuple2(-1, TargetStatus.skipped);
+    evaluation = Tuple2(EvalStatus.skipped, 'skipped');
   }
 }

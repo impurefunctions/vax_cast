@@ -30,7 +30,7 @@ class RecommendedDose {
         : pastDoses.isEmpty
             ? null
             : pastDoses.lastWhere(
-                (dose) => dose.evalReason != 'inadvertent administration',
+                (dose) => dose.evaluation.value2 != 'inadvertent administration',
                 orElse: () => null);
     var age = seriesDose.age.length == 1
         ? seriesDose.age[0]
@@ -130,7 +130,7 @@ class RecommendedDose {
     }
 
     var inadvertent = pastDoses.lastIndexWhere(
-        (dose) => dose.evalReason == 'inadvertent administration');
+        (dose) => dose.evaluation.value2 != 'inadvertent administration');
     var lastInadvertentDose = inadvertent == -1 ? null : pastDoses[inadvertent];
 
     var seasonRecStartDate = seriesDose.seasonalRecommendation != null

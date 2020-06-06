@@ -22,7 +22,7 @@ class SupportingData {
 
   static void _getSupportingData() async {
     var json = jsonDecode(
-        await File('lib/src/supporting_data/supporting_data.json')
+        await File('lib/src/8_supporting_data/supporting_data.json')
             .readAsString());
     if (json['antigenSupportingData'] != null) {
       _antigenSupportingData = <String, AntigenSupportingData>{};
