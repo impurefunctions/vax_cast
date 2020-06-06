@@ -1,6 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:vax_cast/src/9_shared/shared.dart';
 
+part 'b_inadvertent.dart';
+
 class Dose {
   VaxDate dateGiven;
   VaxDate lotExp;
@@ -76,7 +78,7 @@ class Dose {
 
   void evaluatePastDose(
       SeriesDose seriesDose, int targetDose, List<Dose> pastDoses) {
-    if (isInadvertentDose(seriesDose)) {
+    if (isInadvertentDose(seriesDose, cvx)) {
       setInadvertentStatus();
     } else {
       if (givenOutsideSeason(seriesDose.seasonalRecommendation)) {
@@ -105,15 +107,6 @@ class Dose {
       }
     }
   }
-
-  bool isInadvertentDose(SeriesDose seriesDose) =>
-      seriesDose.inadvertentVaccine == null
-          ? false
-          : seriesDose.inadvertentVaccine
-                      .indexWhere((vaccine) => vaccine.cvx == cvx) ==
-                  -1
-              ? false
-              : true;
 
   void setInadvertentStatus() {
     setNotValid('inadvertent administration');
