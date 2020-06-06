@@ -73,7 +73,7 @@ class VaxSeries {
           if (dose.canBeEvaluated()) {
             findNonSkippableTargetDose(dose, 'Evaluation', anySeriesComplete);
             if (seriesStatus == 'not complete') {
-              evaluatePastDose(dose);
+              dose.evaluatePastDose(seriesDose[targetDose], targetDose, pastDoses);
               if (dose.valid && seriesStatus == 'not complete') {
                 completeTargetDose(dose.target.value2, dose.dateGiven);
               }
@@ -113,38 +113,6 @@ class VaxSeries {
                 : curTargetSkip[1].correctContext(context)
                     ? IsSkippable(curTargetSkip[1], refDate, anySeriesComplete)
                     : false;
-  }
-
-  void evaluatePastDose(Dose dose) {
-    if (dose.isInadvertentDose(seriesDose[targetDose])) {
-      dose.setInadvertentStatus();
-    } else {
-      if (dose
-          .givenOutsideSeason(seriesDose[targetDose].seasonalRecommendation)) {
-        dose.setSeasonStatus();
-      }
-      var ageList = seriesDose[targetDose].age;
-      var currentIndex = pastDoses.indexWhere((pastDose) => pastDose == dose);
-      var pastDose = currentIndex == 0 ? null : pastDoses[currentIndex - 1];
-      if (dose.givenAtValidAge(ageList, pastDose, targetDose)) {
-        if (dose.hasValidIntervals(seriesDose[targetDose], pastDoses)) {
-          if (dose.hasNoLiveVirusConflict()) {
-            dose.wasPreferable(seriesDose[targetDose]);
-            if (dose.wasAllowable(seriesDose[targetDose])) {
-              dose.validDose(targetDose);
-            } else {
-              dose.notAllowable();
-            }
-          } else {
-            dose.hasLiveVirusConflict();
-          }
-        } else {
-          dose.notValidIntervals();
-        }
-      } else {
-        dose.notValidAge();
-      }
-    }
   }
 
   void completeTargetDose(TargetStatus status, VaxDate dateGiven) {

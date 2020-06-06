@@ -67,26 +67,56 @@ class Dose {
 
   bool canBeEvaluated() => dateGiven <= lotExp && doseCondition == null;
 
-  void unsatisfiedTarget() =>  target = Tuple2(-1, TargetStatus.not_satisfied);
+  void unsatisfiedTarget() => target = Tuple2(-1, TargetStatus.not_satisfied);
 
-  void setNotValid(String reason){ 
+  void setNotValid(String reason) {
     unsatisfiedTarget();
     evaluation = Tuple2(EvalStatus.not_valid, '$reason');
-
   }
 
-  bool isInadvertentDose(SeriesDose seriesDose) =>
-      seriesDose.inadvertentVaccine == null
-          ? false
-          : seriesDose.inadvertentVaccine
-                      .indexWhere((vaccine) => vaccine.cvx == cvx) ==
-                  -1
-              ? false
-              : true;
+  bool invalid() => target?.value1 == -1;
 
-  void setInadvertentStatus() {
-    setNotValid('inadvertent administration');
-    valid = false;
+  void evaluatePastDose(
+      SeriesDose seriesDose, int targetDose, List<Dose> pastDoses) {
+    evalInadvertent(seriesDose);
+    if (!invalid()) {
+      if (givenOutsideSeason(seriesDose.seasonalRecommendation)) {
+        setSeasonStatus();
+      }
+      var ageList = seriesDose.age;
+      var currentIndex = pastDoses.indexOf(this);
+      var pastDose = currentIndex == 0 ? null : pastDoses[currentIndex - 1];
+      if (givenAtValidAge(ageList, pastDose, targetDose)) {
+        if (hasValidIntervals(seriesDose, pastDoses)) {
+          if (hasNoLiveVirusConflict()) {
+            wasPreferable(seriesDose);
+            if (wasAllowable(seriesDose)) {
+              validDose(targetDose);
+            } else {
+              notAllowable();
+            }
+          } else {
+            hasLiveVirusConflict();
+          }
+        } else {
+          notValidIntervals();
+        }
+      } else {
+        notValidAge();
+      }
+    } else {
+      valid = false;
+    }
+  }
+
+  void evalInadvertent(SeriesDose seriesDose) {
+    if (seriesDose.inadvertentVaccine != null) {
+      if (seriesDose.inadvertentVaccine
+              .indexWhere((vaccine) => vaccine.cvx == cvx) ==
+          -1) {
+        setNotValid('inadvertent administration');
+      }
+    }
   }
 
   bool givenOutsideSeason(SeasonalRecommendation recommendation) =>
@@ -99,7 +129,8 @@ class Dose {
 
   void setSeasonStatus() {
     unsatisfiedTarget();
-    evaluation = Tuple2(null, '${evaluation?.value2}, given outside seasonal recommendation');
+    evaluation = Tuple2(
+        null, '${evaluation?.value2}, given outside seasonal recommendation');
   }
 
   bool givenAtValidAge(List<VaxAge> ageList, Dose pastDose, int targetDose) {
@@ -395,7 +426,7 @@ class Dose {
   void validDose(int targetDose) {
     target = Tuple2(targetDose, TargetStatus.satisfied);
     valid = true;
-    evaluation = Tuple2(EvalStatus.valid,'valid dose');
+    evaluation = Tuple2(EvalStatus.valid, 'valid dose');
   }
 
   void isSubStandard() {
