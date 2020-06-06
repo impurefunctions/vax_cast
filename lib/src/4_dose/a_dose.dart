@@ -99,7 +99,7 @@ class Dose {
 
   void setSeasonStatus() {
     unsatisfiedTarget();
-    evaluation = Tuple2(null, '${evaluation.value2}, given outside seasonal recommendation');
+    evaluation = Tuple2(null, '${evaluation?.value2}, given outside seasonal recommendation');
   }
 
   bool givenAtValidAge(List<VaxAge> ageList, Dose pastDose, int targetDose) {
