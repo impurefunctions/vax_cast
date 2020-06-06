@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:fhir/fhir_r4.dart' as fhir_r4;
 import 'package:fhir/r4/resource_types/foundation/other/other.enums.dart';
 import 'package:fhir/r4/resource_types/resource_types.enums.dart';
-import 'package:vax_cast/src/shared.dart';
+import 'package:vax_cast/src/9_shared/shared.dart';
 
 var rec = fhir_r4.ImmunizationRecommendation(
   resourceType: 'ImmunizationRecommendation',

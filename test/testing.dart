@@ -1,5 +1,5 @@
 import 'package:fhir/fhir_r4.dart';
-import 'package:vax_cast/src/shared.dart';
+import 'package:vax_cast/src/9_shared/shared.dart';
 
 import 'getRemotePatient.dart';
 

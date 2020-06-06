@@ -1,4 +1,4 @@
-import 'package:vax_cast/src/shared.dart';
+import 'package:vax_cast/src/9_shared/shared.dart';
 
 class VaxSeries {
   VaxPatient patient;
@@ -75,7 +75,7 @@ class VaxSeries {
             if (seriesStatus == 'not complete') {
               evaluatePastDose(dose);
               if (dose.valid && seriesStatus == 'not complete') {
-                completeTargetDose(dose.targetDoseStatus, dose.dateGiven);
+                completeTargetDose(dose.target.value2, dose.dateGiven);
               }
             }
           } else {

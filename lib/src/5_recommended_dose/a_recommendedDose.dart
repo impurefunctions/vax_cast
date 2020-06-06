@@ -1,4 +1,4 @@
-import 'package:vax_cast/src/shared.dart';
+import 'package:vax_cast/src/9_shared/shared.dart';
 
 class RecommendedDose {
   VaxDate earliestDate;
@@ -67,7 +67,7 @@ class RecommendedDose {
         } else if (interval.fromTargetDose != null) {
           var prevDose = pastDoses.firstWhere(
               (dose) =>
-                  dose.targetDose == int.parse(interval.fromTargetDose) - 1,
+                  dose.target.value1 == int.parse(interval.fromTargetDose) - 1,
               orElse: () => null);
           if (prevDose != null) {
             minIntDate = LatestOf([

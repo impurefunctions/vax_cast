@@ -2,7 +2,7 @@ import 'package:fhir/fhir_r4.dart' as fhir_r4;
 import 'package:fhir/fhir_stu3.dart' as fhir_stu3;
 import 'package:fhir/fhir_dstu2.dart' as fhir_dstu2;
 
-import 'package:vax_cast/src/shared.dart';
+import 'package:vax_cast/src/9_shared/shared.dart';
 
 part 'vax_patient_from_r4.dart';
 part 'vax_patient_from_stu3.dart';

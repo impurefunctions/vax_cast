@@ -21,4 +21,5 @@ enum EvalStatus {
   not_valid,
   sub_standard,
   valid,
+  skipped,
 }

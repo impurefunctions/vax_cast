@@ -1,4 +1,4 @@
-import 'package:vax_cast/src/shared.dart';
+import 'package:vax_cast/src/9_shared/shared.dart';
 
 class Group {
   VaxPatient patient;
