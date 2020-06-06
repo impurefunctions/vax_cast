@@ -1,4 +1,3 @@
- 
 import 'package:dartz/dartz.dart';
 import 'package:vax_cast/src/9_shared/shared.dart';
 
@@ -68,12 +67,43 @@ class Dose {
 
   bool canBeEvaluated() => dateGiven <= lotExp && doseCondition == null;
 
-  void unsatisfiedTarget() =>  target = Tuple2(-1, TargetStatus.not_satisfied);
+  void unsatisfiedTarget() => target = Tuple2(-1, TargetStatus.not_satisfied);
 
-  void setNotValid(String reason){ 
+  void setNotValid(String reason) {
     unsatisfiedTarget();
     evaluation = Tuple2(EvalStatus.not_valid, '$reason');
+  }
 
+  void evaluatePastDose(
+      SeriesDose seriesDose, int targetDose, List<Dose> pastDoses) {
+    if (isInadvertentDose(seriesDose)) {
+      setInadvertentStatus();
+    } else {
+      if (givenOutsideSeason(seriesDose.seasonalRecommendation)) {
+        setSeasonStatus();
+      }
+      var ageList = seriesDose.age;
+      var currentIndex = pastDoses.indexOf(this);
+      var pastDose = currentIndex == 0 ? null : pastDoses[currentIndex - 1];
+      if (givenAtValidAge(ageList, pastDose, targetDose)) {
+        if (hasValidIntervals(seriesDose, pastDoses)) {
+          if (hasNoLiveVirusConflict()) {
+            wasPreferable(seriesDose);
+            if (wasAllowable(seriesDose)) {
+              validDose(targetDose);
+            } else {
+              notAllowable();
+            }
+          } else {
+            hasLiveVirusConflict();
+          }
+        } else {
+          notValidIntervals();
+        }
+      } else {
+        notValidAge();
+      }
+    }
   }
 
   bool isInadvertentDose(SeriesDose seriesDose) =>
@@ -100,7 +130,8 @@ class Dose {
 
   void setSeasonStatus() {
     unsatisfiedTarget();
-    evaluation = Tuple2(null, '${evaluation?.value2}, given outside seasonal recommendation');
+    evaluation = Tuple2(
+        null, '${evaluation?.value2}, given outside seasonal recommendation');
   }
 
   bool givenAtValidAge(List<VaxAge> ageList, Dose pastDose, int targetDose) {
@@ -396,7 +427,7 @@ class Dose {
   void validDose(int targetDose) {
     target = Tuple2(targetDose, TargetStatus.satisfied);
     valid = true;
-    evaluation = Tuple2(EvalStatus.valid,'valid dose');
+    evaluation = Tuple2(EvalStatus.valid, 'valid dose');
   }
 
   void isSubStandard() {
