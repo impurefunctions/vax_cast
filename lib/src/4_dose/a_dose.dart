@@ -2,6 +2,8 @@ import 'package:dartz/dartz.dart';
 import 'package:vax_cast/src/9_shared/shared.dart';
 
 part 'b_inadvertent.dart';
+part 'c_seasonal.dart';
+part 'd_age_dose.dart';
 
 class Dose {
   VaxDate dateGiven;
@@ -14,12 +16,11 @@ class Dose {
   VaxPatient patient;
   String mvx;
   int vol;
+  Tuple2<bool, String> validAge;
   bool preferVax;
   String preferVaxReason;
   bool allowVax;
   String allowVaxReason;
-  bool validAge;
-  String ageReason;
   bool prefInt;
   String prefReason;
   bool allowInt;
@@ -37,8 +38,6 @@ class Dose {
     this.preferVaxReason = '',
     this.allowVax,
     this.allowVaxReason = '',
-    this.validAge = false,
-    this.ageReason = '',
     this.prefInt,
     this.prefReason,
     this.allowInt,
@@ -59,8 +58,6 @@ class Dose {
     allowVax = oldDose.allowVax;
     allowVaxReason = oldDose.allowVaxReason;
     valid = oldDose.valid;
-    validAge = oldDose.validAge;
-    ageReason = oldDose.ageReason;
     prefInt = oldDose.prefInt;
     prefReason = oldDose.prefReason;
     allowInt = oldDose.allowInt;
@@ -81,13 +78,14 @@ class Dose {
     if (isInadvertentDose(seriesDose, cvx)) {
       setInadvertentStatus();
     } else {
-      if (givenOutsideSeason(seriesDose.seasonalRecommendation)) {
+      if (givenOutsideSeason(seriesDose.seasonalRecommendation, dateGiven)) {
         setSeasonStatus();
       }
-      var ageList = seriesDose.age;
       var currentIndex = pastDoses.indexOf(this);
       var pastDose = currentIndex == 0 ? null : pastDoses[currentIndex - 1];
-      if (givenAtValidAge(ageList, pastDose, targetDose)) {
+      validAge = setAgeStatus(
+          seriesDose.age, pastDose, targetDose, dateGiven, patient.dob);
+      if(validAge.value1) {
         if (hasValidIntervals(seriesDose, pastDoses)) {
           if (hasNoLiveVirusConflict()) {
             wasPreferable(seriesDose);
@@ -103,7 +101,7 @@ class Dose {
           notValidIntervals();
         }
       } else {
-        notValidAge();
+        setInvalidAge();
       }
     }
   }
@@ -113,79 +111,14 @@ class Dose {
     valid = false;
   }
 
-  bool givenOutsideSeason(SeasonalRecommendation recommendation) =>
-      recommendation == null
-          ? false
-          : VaxDate.max().fromNullableString(recommendation.endDate) <=
-                  dateGiven ||
-              dateGiven <
-                  VaxDate.min().fromNullableString(recommendation.startDate);
-
   void setSeasonStatus() {
     unsatisfiedTarget();
     evaluation = Tuple2(
         null, '${evaluation?.value2}, given outside seasonal recommendation');
   }
 
-  bool givenAtValidAge(List<VaxAge> ageList, Dose pastDose, int targetDose) {
-    var vaxAge = setDoseAge(ageList);
-    validateAge(vaxAge, pastDose, targetDose);
-    return validAge;
-  }
-
-  VaxAge setDoseAge(List<VaxAge> ageList) {
-    for (var age in ageList) {
-      if (age.effectiveDate == null && age.cessationDate == null) {
-        return age;
-      }
-      if (age.effectiveDate != null && age.cessationDate == null) {
-        if (VaxDate.mmddyyyy(age.effectiveDate) <= dateGiven) {
-          return age;
-        }
-      } else if (age.cessationDate != null && age.effectiveDate == null) {
-        if (dateGiven < VaxDate.mmddyyyy(age.cessationDate)) {
-          return age;
-        }
-      } else if (dateGiven < VaxDate.mmddyyyy(age.cessationDate) &&
-          VaxDate.mmddyyyy(age.effectiveDate) <= dateGiven) {
-        return age;
-      }
-    }
-    return ageList[0];
-  }
-
-  void validateAge(VaxAge age, Dose pastDose, int targetDose) {
-    var absMinAgeDate = patient.dob.minIfNull(age.absMinAge);
-    var minAgeDate = patient.dob.minIfNull(age.minAge);
-    var maxAgeDate = patient.dob.maxIfNull(age.maxAge);
-    if (dateGiven < absMinAgeDate) {
-      setAgeStatus(false, 'too young');
-    } else if (absMinAgeDate <= dateGiven && dateGiven < minAgeDate) {
-      if (pastDose == null) {
-        setAgeStatus(true, 'grace period');
-      } else if (targetDose == 0) {
-        setAgeStatus(true, 'grace period');
-      } else if (pastDose.validAge && (pastDose.allowInt || pastDose.prefInt)) {
-        setAgeStatus(true, 'grace period');
-      } else {
-        setAgeStatus(false, 'too young');
-      }
-    } else if (minAgeDate <= dateGiven && dateGiven < maxAgeDate) {
-      setAgeStatus(true, 'valid age');
-    } else if (dateGiven >= maxAgeDate) {
-      setAgeStatus(false, 'too old');
-    } else {
-      setAgeStatus(false, 'unable to evaluate date');
-    }
-  }
-
-  void setAgeStatus(bool valid, String reason) {
-    validAge = valid;
-    ageReason = reason;
-  }
-
-  void notValidAge() {
-    setNotValid(ageReason);
+  void setInvalidAge() {
+    setNotValid(validAge.value2.toString());
     valid = false;
   }
 
@@ -276,7 +209,7 @@ class Dose {
               setPrefInt(true, compareDose, 'grace period');
             } else {
               var previousDose = pastDoses[index];
-              if ((previousDose?.validAge ?? true) &&
+              if ((previousDose?.validAge?.value1 ?? true) &&
                   ((previousDose?.allowInt ?? true) ||
                       (previousDose?.prefInt ?? true))) {
                 setPrefInt(true, compareDose, 'grace period');
