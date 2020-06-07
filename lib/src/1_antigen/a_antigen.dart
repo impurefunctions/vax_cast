@@ -1,5 +1,8 @@
 import 'package:vax_cast/src/9_shared/shared.dart';
 
+part 'b_immunity.dart';
+part 'c_contraindication.dart';
+
 class Antigen {
   String seriesVaccineGroup;
   List<Group> groups;
@@ -35,8 +38,9 @@ class Antigen {
   void getForecast() {
     groups.forEach((group) {
       group.evaluateAllPatientSeries();
-      checkForImmunity();
-      checkAntigenContraindication();
+      immunity = checkForImmunity(immunity, patient, targetDisease);
+      contraindicated =
+          checkAntigenContraindication(contraindicated, patient, targetDisease);
       group.forecastEachSeries(immunity, contraindicated);
     });
     groups.removeWhere((group) => group.vaxSeries.isEmpty);
@@ -44,48 +48,5 @@ class Antigen {
     groups.retainWhere((group) => group.prioritizedSeries != -1);
     groups.forEach((group) => group.isItABestSeries(groups));
     groups.retainWhere((group) => group.bestGroup);
-  }
-
-  void checkForImmunity() {
-    if (immunity ?? true) {
-      immunity = false;
-      if (patient.conditions != null) {
-        var immuneConditions =
-            SupportingData.antigenSupportingData[targetDisease].immunity;
-        if (immuneConditions != null) {
-          immuneConditions.clinicalHistory.forEach((condition) =>
-              immunity |= patient.conditions.contains(condition.guidelineCode));
-          if (!immunity && immuneConditions.dateOfBirth != null) {
-            if (patient.dob <
-                VaxDate.mmddyyyy(
-                    immuneConditions.dateOfBirth.immunityBirthDate)) {
-              var exclusionCondition = false;
-              immuneConditions.dateOfBirth.exclusion.forEach((exclusion) =>
-                  exclusionCondition |=
-                      patient.conditions.contains(exclusion.exclusionCode));
-              immunity = !exclusionCondition;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  void checkAntigenContraindication() {
-    if (contraindicated ?? true) {
-      contraindicated = false;
-      if (patient.conditions != null) {
-        for (final condition in patient.conditions) {
-          var obsCondition = SupportingData.antigenSupportingData[targetDisease]
-              .contraindications.group[condition];
-          if (obsCondition != null) {
-            contraindicated |= patient.assessmentDate <
-                    patient.dob.maxIfNull(obsCondition.endAge) &&
-                patient.dob.minIfNull(obsCondition.beginAge) <=
-                    patient.assessmentDate;
-          }
-        }
-      }
-    }
   }
 }
