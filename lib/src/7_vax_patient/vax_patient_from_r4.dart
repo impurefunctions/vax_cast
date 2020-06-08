@@ -8,9 +8,9 @@ VaxPatient _$VaxPatientFromR4(
 ) {
   var newPatient = VaxPatient(
     dob: VaxDate.fromString(patient.birthDate.toString()),
-    sex: patient?.gender?.toString()?.toLowerCase() == 'female'
+    sex: patient?.gender?.toString() == Gender.female.toString()
         ? Gender.female
-        : patient?.gender?.toString()?.toLowerCase() == 'male'
+        : patient?.gender?.toString() == Gender.male.toString()
             ? Gender.male
             : Gender.unknown,
     liveVirusList: <Dose>[],
@@ -54,9 +54,9 @@ VaxPatient _$VaxPatientFromR4Bundles(
       recommendationBundle.entry[0].resource.toJson());
   var newPatient = VaxPatient(
     dob: VaxDate.fromString(patient.birthDate.toString()),
-    sex: patient?.gender?.toString()?.toLowerCase() == 'female'
+    sex: patient?.gender?.toString() == Gender.female.toString()
         ? Gender.female
-        : patient?.gender?.toString()?.toLowerCase() == 'male'
+        : patient?.gender?.toString() == Gender.male.toString()
             ? Gender.male
             : Gender.unknown,
     liveVirusList: <Dose>[],

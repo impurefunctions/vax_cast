@@ -28,13 +28,15 @@ class Dose {
   Tuple2<bool, String> allowVax;
   Dose({
     this.dateGiven,
-    lotExp,
+    this.lotExp,
     this.doseCondition,
     this.cvx,
     this.patient,
     this.mvx,
     this.vol,
-  }) : lotExp = VaxDate(2999, 12, 31);
+  }) {
+    lotExp ??= VaxDate.max();
+  }
 
   Dose.copy(Dose oldDose) {
     target = oldDose.target;

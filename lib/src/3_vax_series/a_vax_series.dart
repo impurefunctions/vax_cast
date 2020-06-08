@@ -93,7 +93,7 @@ class VaxSeries {
       Dose dose, String context, bool anySeriesComplete) {
     var skip = true;
     while (skip) {
-      var refDate = dose != null ? dose.dateGiven : patient.assessmentDate;
+      var refDate = dose?.dateGiven ?? patient.assessmentDate;
       skip = Skippable(refDate, anySeriesComplete, patient, pastDoses)
           .checkSkipDate(seriesDose[targetDose], context);
       if (skip) {
