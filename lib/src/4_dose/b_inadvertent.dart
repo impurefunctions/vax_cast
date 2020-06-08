@@ -1,6 +1,6 @@
 part of 'a_dose.dart';
 
-bool isInadvertentDose(SeriesDose seriesDose, String cvx) =>
+bool inadvertentDose(SeriesDose seriesDose, String cvx) =>
     seriesDose.inadvertentVaccine == null
         ? false
         : seriesDose.inadvertentVaccine

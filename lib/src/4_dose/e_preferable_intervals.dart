@@ -55,7 +55,7 @@ Tuple2<bool, String> isPreferableInterval(
           } else {
             var previousDose = pastDoses[index];
             if ((previousDose?.validAge?.value1 ?? true) &&
-                ((previousDose?.allowInt ?? true) ||
+                ((previousDose?.allowInt?.value1 ?? true) ||
                     (previousDose?.prefInt?.value1 ?? true))) {
               prefInt = setPrefInt(true, compareDose, 'grace period', prefInt);
             } else {

@@ -75,7 +75,7 @@ class VaxSeries {
             if (seriesStatus == 'not complete') {
               dose.evaluatePastDose(
                   seriesDose[targetDose], targetDose, pastDoses);
-              if (dose.valid && seriesStatus == 'not complete') {
+              if (dose.valid() && seriesStatus == 'not complete') {
                 completeTargetDose(dose.target.value2, dose.dateGiven);
               }
             }
@@ -275,7 +275,7 @@ class VaxSeries {
 
     bool startedOnTime() {
       if (pastDoses.isEmpty) return true;
-      var dose = pastDoses.indexWhere((dose) => dose.valid);
+      var dose = pastDoses.indexWhere((dose) => dose.valid());
       return dose == -1
           ? true
           : pastDoses[dose].dateGiven < dob.maxIfNull(maxAgeToStart);
@@ -290,7 +290,7 @@ class VaxSeries {
 
   void prepareToScoreSeries() {
     var dob = patient.dob;
-    allDosesValid = pastDoses.indexWhere((dose) => !dose.valid) == -1;
+    allDosesValid = pastDoses.indexWhere((dose) => !dose.valid()) == -1;
     if (seriesStatus == 'complete') {
       forecastFinishDate = VaxDate.min();
     } else {
@@ -470,7 +470,7 @@ class VaxSeries {
         addToCount &= addToCountByType(condition, doses.elementAt(i));
       }
       if (condition.doseType == 'Valid') {
-        addToCount &= pastDoses[i].valid;
+        addToCount &= pastDoses[i].valid();
       }
 
       count += addToCount ? 1 : 0;
