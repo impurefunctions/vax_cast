@@ -4,6 +4,7 @@ import 'package:vax_cast/src/9_shared/shared.dart';
 part 'b_inadvertent.dart';
 part 'c_seasonal.dart';
 part 'd_age_dose.dart';
+part 'e_preferable_intervals.dart';
 
 class Dose {
   VaxDate dateGiven;
@@ -17,14 +18,12 @@ class Dose {
   String mvx;
   int vol;
   Tuple2<bool, String> validAge;
+  Tuple2<bool, String> prefInt;
+  Tuple2<bool, String> allowInt;
   bool preferVax;
   String preferVaxReason;
   bool allowVax;
   String allowVaxReason;
-  bool prefInt;
-  String prefReason;
-  bool allowInt;
-  String allowReason;
   Dose({
     this.dateGiven,
     lotExp,
@@ -38,10 +37,6 @@ class Dose {
     this.preferVaxReason = '',
     this.allowVax,
     this.allowVaxReason = '',
-    this.prefInt,
-    this.prefReason,
-    this.allowInt,
-    this.allowReason,
   }) : lotExp = VaxDate(2999, 12, 31);
 
   Dose.copy(Dose oldDose) {
@@ -58,8 +53,6 @@ class Dose {
     allowVax = oldDose.allowVax;
     allowVaxReason = oldDose.allowVaxReason;
     valid = oldDose.valid;
-    prefInt = oldDose.prefInt;
-    prefReason = oldDose.prefReason;
     allowInt = oldDose.allowInt;
     allowReason = oldDose.allowReason;
   }
@@ -85,8 +78,9 @@ class Dose {
       var pastDose = currentIndex == 0 ? null : pastDoses[currentIndex - 1];
       validAge = setAgeStatus(
           seriesDose.age, pastDose, targetDose, dateGiven, patient.dob);
-      if(validAge.value1) {
-        if (hasValidIntervals(seriesDose, pastDoses)) {
+      if (validAge.value1) {
+        prefInt = preferableIntervals(seriesDose, pastDoses, this);
+        if (hasValidIntervals(seriesDose, pastDoses) || prefInt.value1) {
           if (hasNoLiveVirusConflict()) {
             wasPreferable(seriesDose);
             if (wasAllowable(seriesDose)) {
@@ -132,12 +126,12 @@ class Dose {
     } else {
       checkIntervals(seriesDose, pastDoses);
     }
-    return allowInt || prefInt;
+    return allowInt;
   }
 
   void _sameIntReason(String reason) {
-    prefInt = allowInt = true;
-    prefReason = allowReason = 'no interval requirement';
+    allowInt = true;
+    allowReason = 'no interval requirement';
   }
 
   void checkIntervals(SeriesDose seriesDose, List<Dose> pastDoses) {
@@ -147,7 +141,6 @@ class Dose {
       allowInt = false;
       allowReason = 'no allowable interval specified';
     }
-    isPreferableInterval(seriesDose, pastDoses);
   }
 
   void isAllowableInterval(SeriesDose seriesDose, List<Dose> pastDoses) {
@@ -167,75 +160,8 @@ class Dose {
     allowReason = '$compareDose too soon';
   }
 
-  void isPreferableInterval(SeriesDose seriesDose, List<Dose> pastDoses) {
-    var compareDose;
-    for (final interval in seriesDose.interval) {
-      var applyInterval = interval.effectiveDate != null
-          ? dateGiven >= VaxDate.mmddyyyy(interval.effectiveDate)
-          : true;
-      applyInterval = interval.cessationDate != null
-          ? applyInterval &&
-              dateGiven < VaxDate.mmddyyyy(interval.cessationDate)
-          : applyInterval;
-      if (applyInterval) {
-        var index;
-        if (interval.fromPrevious == 'Y') {
-          index = pastDoses.indexWhere((pastDose) => pastDose == this) - 1;
-          compareDose = 'previous';
-        } else if (interval.fromTargetDose != null) {
-          index = pastDoses.indexWhere((dose) =>
-              dose.target.value1 == int.parse(interval.fromTargetDose) - 1);
-          compareDose = '${interval.fromTargetDose}';
-        } else if (interval.fromMostRecent != null) {
-          index = pastDoses.lastIndexWhere(
-              (pastDose) => interval.fromMostRecent.contains(cvx));
-        }
-
-        var absMinIntDate;
-        var minIntDate;
-        if (index == -1) {
-          absMinIntDate = minIntDate = VaxDate.min();
-        } else {
-          absMinIntDate =
-              pastDoses[index].dateGiven.minIfNull(interval.absMinInt);
-          minIntDate = pastDoses[index].dateGiven.minIfNull(interval.minInt);
-        }
-
-        if (dateGiven < absMinIntDate) {
-          setPrefInt(false, compareDose, 'too soon');
-        } else {
-          if (absMinIntDate <= dateGiven && dateGiven < minIntDate) {
-            if (seriesDose.doseNumber == 1) {
-              setPrefInt(true, compareDose, 'grace period');
-            } else {
-              var previousDose = pastDoses[index];
-              if ((previousDose?.validAge?.value1 ?? true) &&
-                  ((previousDose?.allowInt ?? true) ||
-                      (previousDose?.prefInt ?? true))) {
-                setPrefInt(true, compareDose, 'grace period');
-              } else {
-                setPrefInt(false, compareDose, 'too soon');
-              }
-            }
-          } else if (minIntDate <= dateGiven) {
-            setPrefInt(true, compareDose, 'grace period');
-          } else {
-            setPrefInt(false, compareDose, 'unable to evaluate');
-          }
-        }
-      }
-    }
-  }
-
-  void setPrefInt(bool pref, String compare, String reason) {
-    prefInt = prefInt == null ? pref : prefInt && pref;
-    prefReason = prefReason == null
-        ? '$reason from dose $compare'
-        : prefReason += ', $reason from dose $compare';
-  }
-
   void notValidIntervals() {
-    setNotValid('$prefReason, $allowReason');
+    setNotValid('${prefInt.value2}, $allowReason');
     valid = false;
   }
 

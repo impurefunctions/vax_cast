@@ -4,7 +4,8 @@ import 'package:http/http.dart';
 import 'package:fhir/fhir_r4.dart';
 
 Future<List<Bundle>> GetRemotePatientData(String patientId) async {
-  var server = 'https://r4immunizationtesting.aidbox.app/';
+  // var server = 'https://r4immunizationtesting.aidbox.app/';
+  var server = 'http://localhost:8888/';
   var headers = await getAuthorizationToken(server);
 
   var patientBundle = await getPatientBundle(server, headers, patientId);

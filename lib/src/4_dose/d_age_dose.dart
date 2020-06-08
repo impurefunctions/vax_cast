@@ -39,7 +39,7 @@ Tuple2<bool, String> validateAge(
     } else if (targetDose == 0) {
       return Tuple2(true, 'grace period');
     } else if ((pastDose?.validAge?.value1 ?? true) &&
-        ((pastDose?.allowInt ?? true) || (pastDose?.prefInt ?? true))) {
+        ((pastDose?.allowInt ?? true) || (pastDose?.prefInt?.value1 ?? true))) {
       return Tuple2(true, 'grace period');
     } else {
       return Tuple2(false, 'too young');
