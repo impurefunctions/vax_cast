@@ -21,7 +21,4 @@ class ConditionalSkip {
       });
     }
   }
-
-  bool correctContext(String compareContext) =>
-      (context == 'Both' || context == compareContext);
 }

@@ -1,5 +1,7 @@
 import 'package:vax_cast/src/9_shared/shared.dart';
 
+part 'b_skippable.dart';
+
 class VaxSeries {
   VaxPatient patient;
   List<Dose> pastDoses;
@@ -92,7 +94,8 @@ class VaxSeries {
     var skip = true;
     while (skip) {
       var refDate = dose != null ? dose.dateGiven : patient.assessmentDate;
-      skip = checkSkipDate(refDate, context, anySeriesComplete);
+      skip = Skippable(refDate, anySeriesComplete, patient, pastDoses)
+          .checkSkipDate(seriesDose[targetDose], context);
       if (skip) {
         if (dose != null) {
           dose.skipDose();
@@ -101,19 +104,6 @@ class VaxSeries {
         skip = seriesStatus == 'not complete';
       }
     }
-  }
-
-  bool checkSkipDate(VaxDate refDate, String context, bool anySeriesComplete) {
-    var curTargetSkip = seriesDose[targetDose].conditionalSkip;
-    return curTargetSkip == null
-        ? false
-        : curTargetSkip[0].correctContext(context)
-            ? IsSkippable(curTargetSkip[0], refDate, anySeriesComplete)
-            : curTargetSkip.length == 1
-                ? false
-                : curTargetSkip[1].correctContext(context)
-                    ? IsSkippable(curTargetSkip[1], refDate, anySeriesComplete)
-                    : false;
   }
 
   void completeTargetDose(TargetStatus status, VaxDate dateGiven) {
@@ -238,8 +228,9 @@ class VaxSeries {
       recommendedDose = RecommendedDose();
       recommendedDose.generateForecastDates(
           seriesDose[targetDose], patient, pastDoses);
-      if (checkSkipDate(
-          recommendedDose.earliestDate, 'Forecast', anySeriesComplete)) {
+      if (Skippable(recommendedDose.earliestDate, anySeriesComplete, patient,
+              pastDoses)
+          .checkSkipDate(seriesDose[targetDose], 'Forecast')) {
         completeTargetDose(TargetStatus.skipped, null);
       } else {
         forecast = false;
@@ -368,128 +359,4 @@ class VaxSeries {
 //***************************************************************************/
 //   Checks for Skippable
 //***************************************************************************/
-  bool IsSkippable(
-      ConditionalSkip skip, VaxDate refDate, bool anySeriesComplete) {
-    for (final vaxSet in skip.vaxSet) {
-      if (shouldBeSkipped(vaxSet, refDate, anySeriesComplete)) return true;
-    }
-    return false;
-  }
-
-  bool shouldBeSkipped(
-          VaxSet vaxSet, VaxDate refDate, bool anySeriesComplete) =>
-      canUseOrLogic(vaxSet.conditionLogic)
-          ? orCondition(vaxSet, refDate, anySeriesComplete)
-          : andCondition(vaxSet, refDate, anySeriesComplete);
-
-  bool canUseOrLogic(String logic) => (logic == null || logic == 'OR');
-
-  bool orCondition(VaxSet vaxSet, VaxDate refDate, bool anySeriesComplete) {
-    for (final condition in vaxSet.condition) {
-      if (isSkipConditionMet(condition, refDate, anySeriesComplete)) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  bool andCondition(VaxSet vaxSet, VaxDate refDate, bool anySeriesComplete) {
-    for (final condition in vaxSet.condition) {
-      if (!isSkipConditionMet(condition, refDate, anySeriesComplete)) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  bool isSkipConditionMet(
-      Condition condition, VaxDate refDate, bool anySeriesComplete) {
-    switch (condition.conditionType) {
-      case 'Age':
-        {
-          return ageCondition(condition, refDate);
-        }
-        break;
-      case 'Completed Series':
-        {
-          return anySeriesComplete;
-        }
-        break;
-      case 'Interval':
-        {
-          return intervalCondition(condition, refDate);
-        }
-        break;
-      case 'Vaccine Count by Age':
-        {
-          return countCondition(condition, refDate);
-        }
-        break;
-      case 'Vaccine Count by Date':
-        {
-          return countCondition(condition, refDate);
-        }
-        break;
-    }
-    return false;
-  }
-
-  bool ageCondition(Condition condition, VaxDate refDate) =>
-      patient.dob.minIfNull(condition.beginAge) <= refDate &&
-      refDate < patient.dob.maxIfNull(condition.endAge);
-
-  bool intervalCondition(Condition condition, VaxDate refDate) {
-    if (pastDoses.isEmpty) return false;
-    var date = VaxDate.min();
-    pastDoses.forEach((dose) {
-      //=?
-      if (dose.dateGiven < refDate && dose.dateGiven > date) {
-        date = dose.dateGiven;
-      }
-    });
-    return date == VaxDate.min()
-        ? false
-        : refDate >= date.change(condition.interval);
-  }
-
-  bool countCondition(Condition condition, VaxDate refDate) {
-    if (pastDoses.isEmpty) return false;
-    var count = 0;
-    var doses = <Dose>[];
-    pastDoses.forEach((dose) {
-      if (dose.dateGiven <= refDate) doses.add(dose);
-    });
-    for (var i = 0; i < doses.length; i++) {
-      var addToCount = true;
-      if (condition.conditionType == 'Vaccine Count by Age') {
-        addToCount = addToCountByAge(condition, doses.elementAt(i));
-      } else if (condition.conditionType == 'Vaccine Count by Date') {
-        addToCount = addToCountByDate(condition, doses.elementAt(i));
-      }
-      if (condition.vaccineTypes != null) {
-        addToCount &= addToCountByType(condition, doses.elementAt(i));
-      }
-      if (condition.doseType == 'Valid') {
-        addToCount &= pastDoses[i].valid();
-      }
-
-      count += addToCount ? 1 : 0;
-    }
-    return condition.doseCountLogic == 'greater than'
-        ? count > int.parse(condition.doseCount)
-        : condition.doseCountLogic == 'equal to'
-            ? count == int.parse(condition.doseCount)
-            : count < int.parse(condition.doseCount);
-  }
-
-  bool addToCountByAge(Condition condition, Dose dose) =>
-      patient.dob.maxIfNull(condition.endAge) > dose.dateGiven &&
-      dose.dateGiven >= patient.dob.minIfNull(condition.beginAge);
-
-  bool addToCountByDate(Condition condition, Dose dose) =>
-      VaxDate.min().fromNullableString(condition.startDate) <= dose.dateGiven &&
-      dose.dateGiven < VaxDate.max().fromNullableString(condition.endDate);
-
-  bool addToCountByType(Condition condition, Dose dose) =>
-      condition.vaccineTypes.contains(dose.cvx);
 }
