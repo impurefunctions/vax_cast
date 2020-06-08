@@ -129,9 +129,11 @@ class VaxSeries {
     } else {
       if (seriesDose[targetDose - 1].seasonalRecommendation != null) {
         if (status == TargetStatus.satisfied) {
-          targetDose -= 1;
-        } else {
           targetDoses[targetDose - 1] = status;
+        } else if (status == TargetStatus.skipped) {
+          targetDoses[targetDose - 1] = status;
+        } else {
+          targetDose -= 1;
         }
       } else {
         if (targetDose == seriesDose.length) seriesStatus = 'complete';

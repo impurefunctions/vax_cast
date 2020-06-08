@@ -70,7 +70,6 @@ class Dose {
 
   void evaluateNotInadvertentDose(
       SeriesDose seriesDose, int targetDose, List<Dose> pastDoses) {
-    evalSeasonal(seriesDose);
     var currentIndex = pastDoses.indexOf(this);
     var pastDose = currentIndex == 0 ? null : pastDoses[currentIndex - 1];
     validAge = setAgeStatus(
@@ -100,20 +99,20 @@ class Dose {
   void evaluateNonConflictedDose(SeriesDose seriesDose, int targetDose) {
     preferVax = preferable(seriesDose, this);
     allowVax = allowable(seriesDose, this);
-    allowVax.value1 ? validDose(targetDose) : setNotValid('not allowable');
+    allowVax.value1
+        ? evalValidDoseSeasonal(seriesDose, targetDose)
+        : setNotValid('not allowable');
   }
 
-  void evalSeasonal(SeriesDose seriesDose) {
+  void evalValidDoseSeasonal(SeriesDose seriesDose, int targetDose) {
     if (givenOutsideSeason(seriesDose.seasonalRecommendation, dateGiven)) {
       unsatisfiedTarget();
-      evaluation = Tuple2(
-          null, '${evaluation?.value2}, given outside seasonal recommendation');
+      evaluation = Tuple2(EvalStatus.valid,
+          '${evaluation?.value2}, given outside seasonal recommendation');
+    } else {
+      target = Tuple2(targetDose, TargetStatus.satisfied);
+      evaluation = Tuple2(EvalStatus.valid, 'valid dose');
     }
-  }
-
-  void validDose(int targetDose) {
-    target = Tuple2(targetDose, TargetStatus.satisfied);
-    evaluation = Tuple2(EvalStatus.valid, 'valid dose');
   }
 
   void isSubStandard() {
