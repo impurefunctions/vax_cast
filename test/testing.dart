@@ -28,14 +28,15 @@ void main() async {
         // printAntigen(vaccineForecast[0], 'Diphtheria');
         // printAntigen(vaccineForecast[0], 'Pertussis');
         // printAntigen(vaccineForecast[0], 'Tetanus');
-      //   // printAntigen(vaccineForecast[0], 'Influenza');
+        // printAntigen(vaccineForecast[0], 'Influenza');
       // printAntigen(vaccineForecast[0], 'HPV');
-      //   // printAntigen(vaccineForecast, 'HepB');
-      //   // printAntigen(vaccineForecast, 'Hib');
-      //   // printAntigen(vaccineForecast, 'Measles');
-      //   // printAntigen(vaccineForecast, 'Mumps');
-      //   // printAntigen(vaccineForecast, 'Rubella');
-      //   // printAntigen(vaccineForecast, 'Polio');
+        // printAntigen(vaccineForecast, 'HepB');
+        // printAntigen(vaccineForecast, 'Hib');
+        // printAntigen(vaccineForecast, 'Measles');
+        // printAntigen(vaccineForecast, 'Mumps');
+        // printAntigen(vaccineForecast, 'Rubella');
+        // printAntigen(vaccineForecast, 'Polio');
+        // printAntigen(vaccineForecast[0], 'Varicella');
       if (differentThanCDC(vaccineForecast[0], rec)) {
         print(rec.recommendation[0].series);
         totalWrong += 1;
@@ -127,15 +128,9 @@ bool differentPastDue(GroupForecast group, ImmunizationRecommendation rec) {
 }
 
 var patientTestList = [
-  '2013-0060',
   '2013-0346',
   '2013-0348',
-  '2013-0426',
-  '2013-0430',
-  '2013-0437',
-  '2013-0438',
   '2013-0476',
-  '2013-0483',
   '2013-0571',
   '2013-0574',
   '2019-0022',
@@ -144,6 +139,7 @@ var patientTestList = [
   '2019-0008',
   '2013-0811',
   '2019-0025',
+  '2018-0022',
 ];
 
 var patientFullList = [
