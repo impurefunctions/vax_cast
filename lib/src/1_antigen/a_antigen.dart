@@ -48,5 +48,9 @@ class Antigen {
     groups.retainWhere((group) => group.prioritizedSeries != -1);
     groups.forEach((group) => group.isItABestSeries(groups));
     groups.retainWhere((group) => group.bestGroup);
+    // groups.forEach((group) => group.vaxSeries.forEach((series) { 
+    //   print(series.seriesName);
+    //   print(series.targetDoses);
+    // }));
   }
 }

@@ -25,9 +25,9 @@ void main() async {
         newBundles[2].entry[0].resource.toJson());
 
     if (vaccineForecast[0].seriesVaccineGroup == rec.recommendation[0].series) {
-      //   // printAntigen(vaccineForecast, 'Diphtheria');
-      //   // printAntigen(vaccineForecast, 'Pertussis');
-      //   // printAntigen(vaccineForecast, 'Tetanus');
+        // printAntigen(vaccineForecast[0], 'Diphtheria');
+        // printAntigen(vaccineForecast[0], 'Pertussis');
+        // printAntigen(vaccineForecast[0], 'Tetanus');
       //   // printAntigen(vaccineForecast[0], 'Influenza');
       // printAntigen(vaccineForecast[0], 'HPV');
       //   // printAntigen(vaccineForecast, 'HepB');
@@ -127,10 +127,23 @@ bool differentPastDue(GroupForecast group, ImmunizationRecommendation rec) {
 }
 
 var patientTestList = [
-  // '2018-0022',
-  // '2013-0346',
-  // '2013-0348',
-  '2013-0416'
+  '2013-0060',
+  '2013-0346',
+  '2013-0348',
+  '2013-0426',
+  '2013-0430',
+  '2013-0437',
+  '2013-0438',
+  '2013-0476',
+  '2013-0483',
+  '2013-0571',
+  '2013-0574',
+  '2019-0022',
+  '2013-0584',
+  '2015-0022',
+  '2019-0008',
+  '2013-0811',
+  '2019-0025',
 ];
 
 var patientFullList = [

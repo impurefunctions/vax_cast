@@ -130,7 +130,7 @@ class RecommendedDose {
     }
 
     var inadvertent = pastDoses.lastIndexWhere(
-        (dose) => dose.evaluation.value2 != 'inadvertent administration');
+        (dose) => dose.evaluation.value2 == 'inadvertent administration');
     var lastInadvertentDose = inadvertent == -1 ? null : pastDoses[inadvertent];
 
     var seasonRecStartDate = seriesDose.seasonalRecommendation != null
